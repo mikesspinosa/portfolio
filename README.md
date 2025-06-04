@@ -1,27 +1,27 @@
-# Portfolio Website
+# Sitio Web de Portafolio
 
-This is my personal portfolio website showcasing my work and skills.
+Este es mi sitio web personal donde muestro mi trabajo y habilidades.
 
-## Getting Started
+## Comenzando
 
-To run this project locally:
+Para ejecutar este proyecto localmente:
 
-1. Clone the repository
+1. Clonar el repositorio
 ```bash
 git clone https://github.com/mikesspinosa/Portfolio.git
 ```
 
-2. Install dependencies
+2. Instalar dependencias
 ```bash
 npm install
 ```
 
-3. Run the development server
+3. Ejecutar el servidor de desarrollo
 ```bash
 npm run dev
 ```
 
-## Technologies Used
+## Tecnologías Utilizadas
 
 - React
 - Next.js
