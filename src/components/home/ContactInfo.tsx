@@ -55,7 +55,7 @@ export default function ContactInfo() {
     >
       <div className="w-full bg-foreground pt-[150px] sm:max-w-[1800px]">
         <div className="relative border-b border-gray-600 pb-12 sm:mx-[100px]">
-          <span className="flex flex-col space-y-4">
+          <span className="flex flex-col space-y-8">
             <div className="flex items-center">
               <div className="relative h-16 w-16 overflow-hidden rounded-full sm:h-[100px] sm:w-[100px]">
                 <Image
@@ -66,17 +66,16 @@ export default function ContactInfo() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
-              <div className="ml-6 flex flex-col">
+              <div className="ml-6 flex flex-col space-y-4">
                 <h2 className="text-xl font-medium sm:text-[5vh]">
                   ¡Trabajemos juntos!
                 </h2>
-                <h3 className="text-lg font-medium text-[#16db65] sm:text-2xl">
+                <h3 className="text-lg font-medium text-[#058c42] sm:text-2xl">
                   Miguel Angel Espinosa
                 </h3>
-                <div className="mt-2 flex flex-col text-sm text-gray-400 sm:text-base">
-                  <span>Ingeniero en Tecnologías de la Información</span>
-                  <span>Desarrollador Full Stack & Creador de Contenido</span>
-                  <span className="mt-2">Mérida, Yucatán, México</span>
+                <div className="text-sm text-gray-400 sm:text-base">
+                  <span>Ingeniero en Tecnologías de la Información y Negocios Digitales & Creador de Contenido</span>
+                  <span className="mt-2 block">Mérida, Yucatán, México</span>
                 </div>
               </div>
             </div>
