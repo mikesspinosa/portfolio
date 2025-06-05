@@ -11,10 +11,11 @@ export default function Description() {
     'modernas y enfoques en crear soluciones innovadoras y escalables.';
 
   const phrase2 =
-    'Transformo ideas en experiencias digitales que trascienden. ' +
-    'Mi pasión es crear tecnología que inspire, conecte y genere cambios positivos. ' +
-    'Cada línea de código es una oportunidad para innovar y cada proyecto ' +
-    'una historia que contar en el lenguaje universal de la tecnología.';
+    '🚀 Explorando la intersección entre tecnología y creatividad. ' +
+    'Cada línea de código es una oportunidad para innovar, ' +
+    'cada proyecto una historia que contar. ' +
+    'Construyendo el futuro digital, un commit a la vez. ' +
+    '💡 Donde la lógica encuentra la imaginación.';
 
   const description = useRef(null);
   const isInView = useInView(description);
