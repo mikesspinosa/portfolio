@@ -10,6 +10,7 @@ Welcome to my portfolio website! This site showcases my work as a software engin
 - Tailwind CSS
 - Framer Motion
 - GSAP
+- Spotify API Integration
 
 ## Getting Started
 
@@ -30,6 +31,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Easy to update and maintain
 - Mobile-friendly
 - Responsive design
+- Real-time Spotify integration
+- Interactive animations
+- Dark/Light mode support
 
 ## Getting Started
 
@@ -71,11 +75,6 @@ yarn build
 
 This builds the app for production to the `./dist/` folder.
 
-## License
-
-This project is licensed under the terms of the MIT license.
-
 ### My Portfolio Website
 
-This is my personal portfolio website, showcasing my skills and experience in [list of skills and experience]. It is
-built with Next.js and deployed on Vercel.
+This is my personal portfolio website, showcasing my skills and experience in software development, with a focus on web technologies and creative solutions. Built with Next.js and deployed on Vercel, it features real-time Spotify integration and interactive animations.

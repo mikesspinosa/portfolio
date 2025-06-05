@@ -37,33 +37,33 @@ const SpotifyPlaylists: React.FC<SpotifyPlaylistsProps> = ({ playlists }) => {
             loading="lazy"
           />
         </div>
-        {playlists.map((playlist) => (
-          <a
-            key={playlist.id}
-            href={playlist.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-4 rounded-md bg-white/20 p-4 transition-all duration-300 hover:bg-white/30"
-          >
-            <div className="relative h-16 w-16 flex-shrink-0">
-              <Image
-                src={playlist.imageUrl || '/placeholder-playlist.png'}
-                alt={`${playlist.name} cover`}
-                layout="fill"
-                objectFit="cover"
-                className="rounded-md"
-              />
-            </div>
-            <div className="flex-1 min-w-0">
-              <h4 className="truncate text-lg font-semibold text-white">
+        <div className="grid grid-cols-2 gap-4">
+          {playlists.map((playlist) => (
+            <a
+              key={playlist.id}
+              href={playlist.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col rounded-md bg-white/20 p-4 transition-all duration-300 hover:bg-white/30"
+            >
+              <div className="relative mb-3 aspect-square w-full">
+                <Image
+                  src={playlist.imageUrl || '/placeholder-playlist.png'}
+                  alt={`${playlist.name} cover`}
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-md"
+                />
+              </div>
+              <h4 className="truncate text-base font-semibold text-white">
                 {playlist.name}
               </h4>
               <p className="truncate text-sm text-white/80">
                 Mis canciones más escuchadas
               </p>
-            </div>
-          </a>
-        ))}
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   );
