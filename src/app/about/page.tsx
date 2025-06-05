@@ -85,27 +85,19 @@ export default function About() {
                     Ingeniero en Tecnologías de la Información y Negocios Digitales con pasión por la innovación y la tecnología de vanguardia.
                   </p>
                   <p className="text-lg sm:text-xl">
-                    En Tec de Monterrey, me especialicé en Tecnologías de la Información y Negocios Digitales. 
-                    Durante mi tiempo en la universidad, participé en varios proyectos innovadores que combinaron 
-                    tecnología y negocios, desarrollando soluciones que impactaron positivamente a la comunidad.
+                    Soy <strong>Miguel Ángel Espinosa</strong>, estudiante de Ingeniería en Tecnologías de la Información y Negocios Digitales en la Universidad Anáhuac Mayab, especializado en integrar soluciones técnicas con estrategias de negocio digital. Mi trayectoria combina emprendimiento temprano -colaborando con marcas internacionales desde los 16 años- con una visión global adquirida en proyectos transfronterizos. Creo en la tecnología como herramienta para construir oportunidades inclusivas y escalables.
                   </p>
                   <p className="text-lg sm:text-xl">
-                    Como desarrollador full-stack, he trabajado en diversos proyectos que van desde aplicaciones web 
-                    hasta soluciones de inteligencia artificial. Mi experiencia incluye el desarrollo de aplicaciones 
-                    usando React, Node.js, y tecnologías cloud, siempre enfocándome en crear productos escalables y 
-                    centrados en el usuario.
+                    Mi expertise técnica incluye dominio avanzado de <strong>Java, Python, C++, C# y SQL</strong>, complementado con frameworks como <strong>React, Node.js, Docker y TensorFlow</strong>. Actualmente trabajo como freelancer desarrollando aplicaciones web full-stack para clientes internacionales, priorizando arquitecturas escalables y experiencias de usuario intuitivas. Mi metodología integra prácticas ágiles con documentación precisa para garantizar calidad y mantenibilidad.
                   </p>
                   <p className="text-lg sm:text-xl">
-                    He colaborado en proyectos de innovación tecnológica, donde he aplicado mis conocimientos en 
-                    desarrollo de software y análisis de datos para crear soluciones que mejoran la eficiencia 
-                    operativa y la experiencia del usuario. Mi enfoque siempre ha sido combinar la tecnología 
-                    con una visión estratégica de negocios.
+                    La resiliencia define mi camino: tras superar diabetes tipo 1 y una cirugía cardíaca, transformé la adversidad en un motor de crecimiento. Esta fortaleza se materializa en mi voluntariado enseñando programación a niños vulnerables y en mi disciplina para equilibrar salud, estudios y desarrollo profesional. Cada reto reforzó mi filosofía: <em>los límites existen para ser reprogramados</em>.
                   </p>
                   <p className="text-lg sm:text-xl">
-                    Actualmente, me enfoco en el desarrollo de soluciones de IA y aplicaciones web modernas, 
-                    buscando siempre estar a la vanguardia de las nuevas tecnologías y tendencias del mercado. 
-                    Mi objetivo es crear tecnología que no solo sea funcional, sino que también genere un 
-                    impacto positivo en la sociedad.
+                    A corto plazo, enfoco mis esfuerzos en mi intercambio académico en la <strong>Universidad Francisco de Vitoria (UFV)</strong> en Madrid, donde profundizaré en inteligencia artificial y ciberseguridad. Paralelamente, busco proyectos freelance desafiantes que amplíen mi experiencia en sistemas distribuidos. A largo plazo, aspiro a liderar iniciativas tecnológicas con impacto social significativo, especialmente en economías emergentes.
+                  </p>
+                  <p className="text-lg sm:text-xl">
+                    Mis <strong>soft skills</strong> clave -<em>adaptability, critical thinking, effective communication</em>- se nutren de hobbies como edición profesional de video (<strong>Adobe Premiere, DaVinci Resolve</strong>), diseño de experiencias interactivas y análisis de narrativas digitales. Estas competencias me permiten crear soluciones técnicas con perspectiva humana. Busco colaborar con equipos innovadores que desafíen el status quo.
                   </p>
                 </div>
               </div>
