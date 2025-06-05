@@ -123,38 +123,7 @@ export default function About() {
                         clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)'
                       }}></span>
                     </a> y después de una <span className="heart-beat inline-block text-black animate-heartbeat">cirugía cardíaca</span>, he transformado los desafíos en un motor de crecimiento. Esta fortaleza se materializa en mi voluntariado enseñando programación a niños vulnerables y en mi disciplina para equilibrar salud, estudios y desarrollo profesional. Cada reto reforzó mi filosofía, recordándome que <span className="group inline-block align-baseline whitespace-nowrap">
-                      "<span className="binary-container inline">
-                        <span className="inline transition-opacity duration-500 group-hover:opacity-0">los límites existen para ser reprogramados</span>
-                        <span className="binary-text absolute left-0 top-0 opacity-0 text-[#1DB954] group-hover:opacity-100 font-mono" style={{ textShadow: '0 0 8px rgba(29, 185, 84, 0.5)' }}>
-                          {'los límites existen para ser reprogramados'.split(' ').map((word, wordIndex) => (
-                            <span key={wordIndex} className="inline-block">
-                              {word.split('').map((char, charIndex) => (
-                                <span 
-                                  key={`${wordIndex}-${charIndex}`}
-                                  className="binary-char inline-block opacity-0"
-                                  style={{ 
-                                    animationDelay: `${wordIndex * 1.0 + charIndex * 0.2}s`,
-                                    animationDuration: '0.1s',
-                                    animationName: 'binaryTypewriter',
-                                    animationFillMode: 'forwards',
-                                    animationTimingFunction: 'steps(1)',
-                                  }}
-                                >
-                                  {char}
-                                </span>
-                              ))}
-                              {wordIndex < 'los límites existen para ser reprogramados'.split(' ').length - 1 && (
-                                <span className="binary-char inline-block opacity-0" style={{ 
-                                  animationDelay: `${wordIndex * 1.0 + word.length * 0.2}s`,
-                                  animationDuration: '0.1s',
-                                  animationName: 'binarySpace',
-                                  animationFillMode: 'forwards'
-                                }}> </span>
-                              )}
-                            </span>
-                          ))}
-                        </span>
-                      </span>"
+                      &ldquo;los límites existen para ser reprogramados&rdquo;
                     </span>.
                   </p>
                   <p className="text-lg sm:text-xl">
