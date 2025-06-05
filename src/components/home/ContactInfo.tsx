@@ -56,7 +56,7 @@ export default function ContactInfo() {
       <div className="w-full bg-foreground pt-[150px] sm:max-w-[1800px]">
         <div className="relative border-b border-gray-600 pb-12 sm:mx-[100px]">
           <span className="flex flex-col space-y-8">
-            <div className="flex items-center">
+            <div className="flex items-start">
               <div className="relative h-16 w-16 overflow-hidden rounded-full sm:h-[100px] sm:w-[100px]">
                 <Image
                   fill
