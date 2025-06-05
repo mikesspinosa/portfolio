@@ -55,19 +55,31 @@ export default function ContactInfo() {
     >
       <div className="w-full bg-foreground pt-[150px] sm:max-w-[1800px]">
         <div className="relative border-b border-gray-600 pb-12 sm:mx-[100px]">
-          <span className="flex items-center">
-            <div className="relative h-16 w-16 overflow-hidden rounded-full sm:h-[100px] sm:w-[100px]">
-              <Image
-                fill
-                alt={'profile'}
-                src={`/images/profile2.jpg`}
-                priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
+          <span className="flex flex-col space-y-4">
+            <div className="flex items-center">
+              <div className="relative h-16 w-16 overflow-hidden rounded-full sm:h-[100px] sm:w-[100px]">
+                <Image
+                  fill
+                  alt={'profile'}
+                  src={`/images/profile2.jpg`}
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+              <div className="ml-6 flex flex-col">
+                <h2 className="text-xl font-medium sm:text-[5vh]">
+                  ¡Trabajemos juntos!
+                </h2>
+                <h3 className="text-lg font-medium text-[#16db65] sm:text-2xl">
+                  Miguel Angel Espinosa
+                </h3>
+                <div className="mt-2 flex flex-col text-sm text-gray-400 sm:text-base">
+                  <span>Ingeniero en Tecnologías de la Información</span>
+                  <span>Desarrollador Full Stack & Creador de Contenido</span>
+                  <span className="mt-2">Mérida, Yucatán, México</span>
+                </div>
+              </div>
             </div>
-            <h2 className="ml-3 text-xl font-medium sm:text-[5vh]">
-              ¡Trabajemos juntos!
-            </h2>
           </span>
           <motion.div
             style={{ x }}
@@ -95,10 +107,15 @@ export default function ContactInfo() {
           </RoundedButton>
         </div>
 
-        <div className="mt-20 flex flex-col justify-between p-5 2xs:mt-52 sm:mx-[100px] sm:mt-48 sm:flex-row">
-          <p className="min-w-screen mb-5 text-base sm:max-w-xs">
-            Ingeniero en Tecnologías de la Información y Negocios Digitales | Influencer | AI | Tecnología con impacto positivo, esa es mi misión.
-          </p>
+        <div className="mt-20 flex flex-col justify-between p-5 space-y-12 2xs:mt-52 sm:mx-[100px] sm:mt-48 sm:flex-row sm:space-y-0">
+          <div className="flex flex-col space-y-6">
+            <p className="min-w-screen text-base sm:max-w-md leading-relaxed">
+              Ingeniero en Tecnologías de la Información y Negocios Digitales | Influencer | AI | Tecnología con impacto positivo, esa es mi misión.
+            </p>
+            <p className="text-base text-gray-400 sm:max-w-md leading-relaxed">
+              Especializado en desarrollo web moderno, inteligencia artificial y creación de contenido tecnológico. Comprometido con la innovación y el impacto social positivo a través de la tecnología.
+            </p>
+          </div>
           <div className="flex items-end gap-2">
             <span className="flex flex-col gap-3">
               <h3 className="m-0 cursor-default p-1 text-base font-light text-gray-500">
