@@ -97,7 +97,7 @@ export default function About() {
                     A corto plazo, enfoco mis esfuerzos en mi intercambio académico en la <strong>Universidad Francisco de Vitoria (UFV)</strong> en Madrid, donde profundizaré en inteligencia artificial y ciberseguridad. Paralelamente, busco proyectos freelance desafiantes que amplíen mi experiencia en sistemas distribuidos. A largo plazo, aspiro a liderar iniciativas tecnológicas con impacto social significativo, especialmente en economías emergentes.
                   </p>
                   <p className="text-lg sm:text-xl">
-                    Mis <strong>soft skills</strong> clave -<em>adaptability, critical thinking, effective communication</em>- se nutren de hobbies como edición profesional de video (Adobe Premiere, DaVinci Resolve), diseño de experiencias interactivas y análisis de narrativas digitales. Estas competencias me permiten crear soluciones técnicas con perspectiva humana. Busco colaborar con equipos innovadores que desafíen el status quo.
+                    Mis <strong>soft skills</strong> incluyen liderazgo adaptativo, resolución creativa de problemas, comunicación efectiva, inteligencia emocional, trabajo colaborativo, gestión del tiempo y resiliencia. Estas habilidades se nutren de hobbies como edición profesional de video (Adobe Premiere, DaVinci Resolve), diseño de experiencias interactivas y análisis de narrativas digitales. Estas competencias me permiten crear soluciones técnicas con perspectiva humana. Busco colaborar con equipos innovadores que desafíen el status quo.
                   </p>
                 </div>
               </div>
