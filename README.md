@@ -41,11 +41,11 @@ Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el 
 
 Navega a la carpeta del proyecto e instala sus dependencias:
 
-```
+```bash
 npm install
 ```
 
-```
+```bash
 yarn install
 ```
 
@@ -53,11 +53,11 @@ yarn install
 
 Una vez completada la instalación, puedes ejecutar la aplicación:
 
-```
+```bash
 npm run dev
 ```
 
-```
+```bash
 yarn run dev
 ```
 
@@ -65,11 +65,11 @@ Esto ejecuta la aplicación en modo desarrollo. Abre http://localhost:3000 para 
 
 ### Compilar
 
-```
+```bash
 npm run build
 ```
 
-```
+```bash
 yarn build
 ```
 
@@ -78,3 +78,9 @@ Esto compila la aplicación para producción en la carpeta `./dist/`.
 ### Mi Sitio Web Personal
 
 Este es mi portafolio personal, que muestra mis habilidades y experiencia en desarrollo de software, con énfasis en tecnologías web y soluciones creativas. Construido con Next.js y desplegado en Vercel, cuenta con integración en tiempo real con Spotify y animaciones interactivas.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+
+Copyright (c) 2024 Miguel Espinosa (mike.espinosa1203@gmail.com)
