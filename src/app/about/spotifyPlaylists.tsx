@@ -18,21 +18,23 @@ interface SpotifyPlaylistsProps {
 
 const SpotifyPlaylists: React.FC<SpotifyPlaylistsProps> = ({ playlists }) => {
   return (
-    <div className="rounded-3xl bg-[#1DB954]/20 p-6 pt-12 text-black shadow-lg">
-      <h3 className="mb-4 text-2xl font-bold text-[#1DB954]">
+    <div className="rounded-3xl bg-[#1DB954]/90 p-6 pt-12 text-white shadow-lg">
+      <h3 className="mb-4 text-2xl font-bold text-white">
         Mis canciones más escuchadas
       </h3>
       <div className="flex flex-col gap-6">
-        <iframe
-          title="Spotify Embed: Mi Playlist"
-          src={`https://open.spotify.com/embed/playlist/2lk45v8v1wBksvfiqZzC8x?utm_source=generator&theme=0`}
-          width="100%"
-          height="360"
-          style={{ minHeight: '360px' }}
-          frameBorder="0"
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-        />
+        <div className="relative aspect-square w-full">
+          <iframe
+            title="Spotify Embed: Mi Playlist"
+            src={`https://open.spotify.com/embed/playlist/2lk45v8v1wBksvfiqZzC8x?utm_source=generator&theme=0`}
+            width="100%"
+            height="100%"
+            style={{ position: 'absolute', top: 0, left: 0 }}
+            frameBorder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          />
+        </div>
         {playlists.map((playlist) => (
           <a
             key={playlist.id}
@@ -53,11 +55,8 @@ const SpotifyPlaylists: React.FC<SpotifyPlaylistsProps> = ({ playlists }) => {
             <h4 className="mb-1 truncate text-lg font-semibold">
               {playlist.name}
             </h4>
-            <p className="mb-2 line-clamp-2 text-sm text-gray-600">
+            <p className="mb-2 line-clamp-2 text-sm text-white/70">
               Mis canciones más escuchadas
-            </p>
-            <p className="text-sm text-gray-600">
-              {playlist.trackCount} canciones
             </p>
           </a>
         ))}
