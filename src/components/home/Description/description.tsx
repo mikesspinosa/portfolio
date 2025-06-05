@@ -11,9 +11,10 @@ export default function Description() {
     'modernas y enfoques en crear soluciones innovadoras y escalables.';
 
   const phrase2 =
-    'Desarrollador fullstack con experiencia en React, Node.js, Github. ' +
-    'Me apasiona crear soluciones tecnológicas que impacten positivamente ' +
-    'en la vida de las personas y contribuyan al avance de la industria.';
+    'Mi enfoque es crear experiencias digitales únicas que combinen tecnología y creatividad. ' +
+    'A través de la innovación y el diseño, transformo ideas en soluciones que ' +
+    'inspiran y generan impacto. Cada proyecto es una oportunidad para explorar ' +
+    'nuevas fronteras en el mundo digital.';
 
   const description = useRef(null);
   const isInView = useInView(description);
@@ -21,7 +22,7 @@ export default function Description() {
   return (
     <div
       ref={description}
-      className="relative flex flex-col justify-center gap-12 p-8 sm:mt-[200px] sm:flex-row sm:p-20 "
+      className="relative flex flex-col justify-center gap-12 p-8 sm:mt-[200px] sm:flex-row sm:p-20"
     >
       <div className="space-y-4">
         <p className="m-0 gap-2 leading-snug sm:text-4xl">
@@ -67,7 +68,7 @@ export default function Description() {
         </motion.p>
         <div data-scroll-speed={0.1}>
           <Link href={'/about'}>
-            <RoundedButton className="absolute ml-56 mt-6 flex h-[100px] w-[100px] cursor-pointer items-center justify-center rounded-full bg-destructive text-white sm:ml-16 sm:mt-16 sm:h-[200px] sm:w-[200px]">
+            <RoundedButton className="absolute ml-56 mt-6 flex h-[100px] w-[100px] cursor-pointer items-center justify-center rounded-full bg-[#058c42] text-white sm:ml-16 sm:mt-16 sm:h-[200px] sm:w-[200px]">
               Sobre mí
             </RoundedButton>
           </Link>

@@ -66,17 +66,15 @@ export default function ContactInfo() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
-              <div className="ml-6 flex flex-col space-y-6 sm:space-y-8">
+              <div className="ml-6 flex flex-col space-y-4">
                 <h2 className="text-xl font-medium sm:text-[5vh]">
                   ¡Trabajemos juntos!
                 </h2>
-                <div className="space-y-2">
-                  <h3 className="text-lg font-medium text-[#058c42] sm:text-2xl">
-                    Miguel Angel Espinosa
-                  </h3>
-                  <div className="text-sm text-gray-400 sm:text-base">
-                    <span>Ingeniero en Tecnologías de la Información y Negocios Digitales & Creador de Contenido</span>
-                  </div>
+                <h3 className="text-lg font-medium text-[#058c42] sm:text-2xl">
+                  Miguel Angel Espinosa
+                </h3>
+                <div className="text-sm text-gray-400 sm:text-base">
+                  <span>Ingeniero en Tecnologías de la Información y Negocios Digitales & Creador de Contenido</span>
                 </div>
               </div>
             </div>
