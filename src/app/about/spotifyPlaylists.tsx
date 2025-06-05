@@ -18,11 +18,11 @@ interface SpotifyPlaylistsProps {
 
 const SpotifyPlaylists: React.FC<SpotifyPlaylistsProps> = ({ playlists }) => {
   return (
-    <div className="rounded-3xl bg-[#1DB954]/90 p-6 pt-12 text-white shadow-lg">
+    <div className="rounded-3xl bg-[#1DB954]/90 p-8 pt-12 text-white shadow-lg flex-1">
       <h3 className="mb-8 text-2xl font-bold text-white text-center">
         Mis canciones más escuchadas
       </h3>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 flex-1">
         <div className="aspect-square w-full">
           <iframe
             title="Spotify Embed: Mi Playlist"
