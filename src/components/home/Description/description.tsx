@@ -7,13 +7,13 @@ import Link from 'next/link';
 export default function Description() {
   const phrase1 =
     'Ingeniero en Tecnologías de la Información y Negocios Digitales. ' +
-    'Especializado en AI, desarrollo fullstack, con experiencia en tecnologías ' +
-    'modernas y enfoques en crear soluciones innovadoras y escalables.';
+    'Especializado en desarrollo de soluciones tecnológicas innovadoras, ' +
+    'con enfoque en inteligencia artificial y automatización de procesos.';
 
   const phrase2 =
-    'Creador de contenido apasionado por la tecnología y la innovación. ' +
-    'Mi misión es inspirar y educar a través de contenido que combine creatividad ' +
-    'y conocimiento técnico, compartiendo experiencias y aprendizajes en el mundo digital.';
+    'Mi pasión es transformar ideas en realidad a través de la tecnología. ' +
+    'Comparto mi conocimiento y experiencias como creador de contenido, ' +
+    'inspirando a otros a adentrarse en el mundo de la innovación digital.';
 
   const description = useRef(null);
   const isInView = useInView(description);
