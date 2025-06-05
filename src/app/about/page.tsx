@@ -56,9 +56,9 @@ export default function About() {
             ))}
           </div>
 
-          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-            <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-              <div className="flex flex-col gap-8">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+            <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
+              <div className="flex flex-col gap-10">
                 <div className="relative">
                   <div className="rounded-full blur-3xl" />
                   <Image
@@ -74,7 +74,9 @@ export default function About() {
                 ) : spotifyError ? (
                   <p>Error: {spotifyError}</p>
                 ) : playlists.length > 0 ? (
-                  <SpotifyPlaylists playlists={playlists} />
+                  <div className="flex-1">
+                    <SpotifyPlaylists playlists={playlists} />
+                  </div>
                 ) : null}
               </div>
 
