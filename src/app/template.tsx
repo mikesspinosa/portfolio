@@ -24,7 +24,7 @@ export default function RootTemplate({ children }: PropsWithChildren) {
   const [isLoading, setIsLoading] = useState(true);
   const pathname = usePathname().split('/').pop();
 
-  let bgColour = 'bg-background';
+  let bgColour = 'bg-[#ffd3b6]';
   const darkModeScreens = ['gallery', 'contact', 'm31', 'astra'];
   if (darkModeScreens.includes(pathname!)) {
     bgColour = 'bg-foreground';

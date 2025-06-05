@@ -12,18 +12,18 @@ const creativa = 'creativa.';
 
 function getRandomSpeed() {
   const randomDecimal = Math.random();
-  return 0.8 + randomDecimal * (1.5 - 0.8); // Increased speed range
+  return 0.8 + randomDecimal * (1.5 - 0.8);
 }
 
 function getRandomRotation() {
-  return Math.random() * 60 - 30; // Random rotation between -30 and 30 degrees
+  return Math.random() * 60 - 30;
 }
 
 const animateLettersOnScroll = (containerRef: MutableRefObject<any>) => {
   const lettersContainer = containerRef.current;
   const letterElements = lettersContainer?.querySelectorAll('.letter');
 
-  letterElements.forEach((letter: Element, index: number) => {
+  letterElements.forEach((letter: Element) => {
     gsap.to(letter, {
       y: (i, el) =>
         (1 - parseFloat(el.getAttribute('data-speed'))) *

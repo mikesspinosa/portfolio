@@ -41,8 +41,8 @@ export default function About() {
   }, []);
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-b from-purple-200 via-purple-300 to-yellow-200">
-      <Layout title="I'm Bettina" center>
+    <div className="relative overflow-hidden bg-gradient-to-b from-[#a8e6cf] via-[#dcedc1] to-[#ffd3b6]">
+      <Layout title="I'm Mike" center>
         <div className="relative min-h-screen">
           <div ref={starsRef}>
             {[...Array(50)].map((_, i) => (
@@ -82,12 +82,27 @@ export default function About() {
               <div className="flex flex-col gap-10">
                 <div className="text-primary-950/70 dark:text-primary-200/70 space-y-8">
                   <p className="text-2xl font-semibold">
-                    A software engineer and designer with a passion for
-                    innovation and cutting-edge technology.
+                    Ingeniero en Tecnologías de la Información y Negocios Digitales con pasión por la innovación y la tecnología de vanguardia.
                   </p>
                   <p className="text-lg sm:text-xl">
-                    I have a strong track record of building and deploying
-                    successful products.
+                    Durante mi formación universitaria, me especialicé en el desarrollo de soluciones tecnológicas 
+                    innovadoras. Mi pasión por la tecnología me llevó a explorar diversas áreas, desde el desarrollo 
+                    web hasta la inteligencia artificial.
+                  </p>
+                  <p className="text-lg sm:text-xl">
+                    Como creador de contenido tecnológico, he construido una comunidad en redes sociales donde 
+                    comparto conocimientos sobre programación, IA y tecnologías emergentes. Mi objetivo es hacer 
+                    la tecnología más accesible y comprensible para todos.
+                  </p>
+                  <p className="text-lg sm:text-xl">
+                    He participado en diversos proyectos de innovación tecnológica, enfocándome en el desarrollo 
+                    de soluciones que combinan IA y desarrollo web. Mi experiencia incluye el trabajo con tecnologías 
+                    como React, Next.js, y diversas herramientas de IA.
+                  </p>
+                  <p className="text-lg sm:text-xl">
+                    Actualmente, me dedico a crear contenido educativo y desarrollar proyectos que buscan 
+                    democratizar el acceso al conocimiento tecnológico. Mi enfoque es combinar la innovación 
+                    técnica con un impacto social positivo.
                   </p>
                   <p className="text-lg sm:text-xl">
                     At{' '}
