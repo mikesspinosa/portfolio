@@ -60,6 +60,7 @@ export default function Header() {
                 src="/images/logo.jpg"
                 alt="Bettinas logo"
                 priority
+                style={{ objectFit: 'cover' }}
               />
             </Magnetic>
             {!isMobile() && (
@@ -67,7 +68,7 @@ export default function Header() {
                 <div className="hover:rotate-[360deg]">©</div>
                 <div className="relative flex overflow-hidden">
                   <div className="ease-custom-cubic transition-transform duration-500 group-hover:translate-x-[-100%]">
-                    coded by
+                    diseñado por
                   </div>
                   <div className="ease-custom-cubic px-1 transition-transform duration-500 group-hover:translate-x-[-65px]">
                     Mike
@@ -88,10 +89,10 @@ export default function Header() {
           <div className="flex flex-1 items-center justify-between px-24 font-semibold">
             <div className="group relative z-10 flex cursor-pointer items-center space-x-24 p-3">
               <Magnetic>
-                <Link href={'/about'} className="hover:text-[#16db65] transition-colors duration-300">About</Link>
+                <Link href={'/about'} className="hover:text-[#16db65] transition-colors duration-300">Sobre mí</Link>
               </Magnetic>
               <Magnetic>
-                <Link href={'/projects'} className="hover:text-[#16db65] transition-colors duration-300">Projects</Link>
+                <Link href={'/projects'} className="hover:text-[#16db65] transition-colors duration-300">Proyectos</Link>
               </Magnetic>
             </div>
             <div className="group relative z-10 flex cursor-pointer items-center p-3">
