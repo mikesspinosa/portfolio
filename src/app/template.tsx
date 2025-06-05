@@ -29,7 +29,7 @@ export default function RootTemplate({ children }: PropsWithChildren) {
   if (darkModeScreens.includes(pathname!)) {
     bgColour = 'bg-foreground';
   } else if (pathname === 'about') {
-    bgColour = 'bg-yellow-200';
+    bgColour = 'bg-[#ffd3b6]';
   }
 
   useEffect(() => {

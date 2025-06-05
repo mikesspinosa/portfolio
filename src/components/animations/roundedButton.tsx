@@ -47,7 +47,7 @@ export default function RoundedButton({
     <Magnetic>
       <Button
         variant="rounded"
-        className="relative flex cursor-pointer items-center justify-center overflow-hidden rounded-full border border-secondary px-8 py-10 text-2xl font-medium sm:text-3xl"
+        className="relative flex cursor-pointer items-center justify-center overflow-hidden rounded-full border border-secondary px-6 py-8 text-lg sm:text-xl"
         style={{ overflow: 'hidden' }}
         onMouseEnter={() => {
           manageMouseEnter();

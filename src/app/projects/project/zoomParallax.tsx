@@ -72,7 +72,7 @@ export default function ZoomParallax() {
                   fill
                   alt="image"
                   placeholder="blur"
-                  className="object-cover"
+                  objectFit="cover"
                 />
               </div>
             </motion.div>

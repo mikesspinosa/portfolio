@@ -85,24 +85,56 @@ export default function About() {
                     Ingeniero en Tecnologías de la Información y Negocios Digitales con pasión por la innovación y la tecnología de vanguardia.
                   </p>
                   <p className="text-lg sm:text-xl">
-                    Durante mi formación universitaria, me especialicé en el desarrollo de soluciones tecnológicas 
-                    innovadoras. Mi pasión por la tecnología me llevó a explorar diversas áreas, desde el desarrollo 
-                    web hasta la inteligencia artificial.
+                    En{' '}
+                    <Link
+                      href="https://www.tec.mx/"
+                      className="font-semibold underline"
+                    >
+                      Tecnológico de Monterrey
+                    </Link>
+                    , me especialicé en Ingeniería en Tecnologías de la Información y Negocios Digitales. Durante mi formación, 
+                    desarrollé proyectos innovadores que combinaban tecnología y estrategia empresarial, sentando las bases 
+                    para mi carrera en el desarrollo tecnológico.
                   </p>
                   <p className="text-lg sm:text-xl">
-                    Como creador de contenido tecnológico, he construido una comunidad en redes sociales donde 
-                    comparto conocimientos sobre programación, IA y tecnologías emergentes. Mi objetivo es hacer 
-                    la tecnología más accesible y comprensible para todos.
+                    Mi trayectoria profesional comenzó en{' '}
+                    <Link
+                      href="https://www.empresa1.com"
+                      className="font-semibold underline"
+                    >
+                      una consultora tecnológica
+                    </Link>
+                    , donde participé en el desarrollo de soluciones digitales para empresas líderes. 
+                    Me enfoqué en la creación de aplicaciones web escalables y en la implementación 
+                    de sistemas de inteligencia artificial.
                   </p>
                   <p className="text-lg sm:text-xl">
-                    He participado en diversos proyectos de innovación tecnológica, enfocándome en el desarrollo 
-                    de soluciones que combinan IA y desarrollo web. Mi experiencia incluye el trabajo con tecnologías 
-                    como React, Next.js, y diversas herramientas de IA.
+                    Posteriormente, me sumergí en el mundo del desarrollo web moderno, trabajando con tecnologías como 
+                    React, Next.js y Node.js. Durante este tiempo, contribuí al desarrollo de plataformas educativas 
+                    y sistemas de gestión empresarial, siempre buscando combinar la innovación técnica con un 
+                    impacto social positivo.
                   </p>
                   <p className="text-lg sm:text-xl">
-                    Actualmente, me dedico a crear contenido educativo y desarrollar proyectos que buscan 
-                    democratizar el acceso al conocimiento tecnológico. Mi enfoque es combinar la innovación 
-                    técnica con un impacto social positivo.
+                    Recientemente, he estado enfocado en la creación de contenido educativo y el desarrollo de 
+                    proyectos que utilizan inteligencia artificial. Mi objetivo es democratizar el acceso al 
+                    conocimiento tecnológico y ayudar a otros a aprender programación y desarrollo web.
+                  </p>
+                  <p className="text-lg sm:text-xl">
+                    Durante mi tiempo en la universidad, participé en varios proyectos destacados, incluyendo{' '}
+                    <Link
+                      href="/projects/m31"
+                      className="font-semibold underline"
+                    >
+                      una plataforma de aprendizaje en línea
+                    </Link>
+                    , que fue reconocida por su innovación, y{' '}
+                    <Link
+                      href="/projects/axo"
+                      className="font-semibold underline"
+                    >
+                      un sistema de gestión educativa
+                    </Link>
+                    , que fue implementado en varias instituciones educativas.
                   </p>
                   <p className="text-lg sm:text-xl">
                     At{' '}
