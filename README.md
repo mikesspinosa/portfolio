@@ -1,8 +1,8 @@
-# Mike's Portfolio
+# Portafolio de Mike
 
-Welcome to my portfolio website! This site showcases my work as a software engineer and designer.
+¡Bienvenido a mi portafolio! Este sitio muestra mi trabajo como ingeniero de software y diseñador.
 
-## Technologies Used
+## Tecnologías Utilizadas
 
 - Next.js
 - React
@@ -10,36 +10,36 @@ Welcome to my portfolio website! This site showcases my work as a software engin
 - Tailwind CSS
 - Framer Motion
 - GSAP
-- Spotify API Integration
+- Integración con API de Spotify
 
-## Getting Started
+## Inicio Rápido
 
-First, run the development server:
+Primero, ejecuta el servidor de desarrollo:
 
 ```bash
 npm run dev
-# or
+# o
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el resultado.
 
-## Features:
+## Características:
 
-- Fast and performant
-- SEO-friendly
-- Easy to update and maintain
-- Mobile-friendly
-- Responsive design
-- Real-time Spotify integration
-- Interactive animations
-- Dark/Light mode support
+- Rápido y eficiente
+- Optimizado para SEO
+- Fácil de actualizar y mantener
+- Compatible con dispositivos móviles
+- Diseño responsivo
+- Integración en tiempo real con Spotify
+- Animaciones interactivas
+- Soporte para modo claro/oscuro
 
-## Getting Started
+## Comenzar
 
-### Install dependencies
+### Instalar dependencias
 
-Navigate to your project folder and install its dependencies:
+Navega a la carpeta del proyecto e instala sus dependencias:
 
 ```
 npm install
@@ -49,9 +49,9 @@ npm install
 yarn install
 ```
 
-### Start
+### Iniciar
 
-Once the installation is done, you can now run your app:
+Una vez completada la instalación, puedes ejecutar la aplicación:
 
 ```
 npm run dev
@@ -61,9 +61,9 @@ npm run dev
 yarn run dev
 ```
 
-This runs the app in development mode. Open http://localhost:3000 to view it in the browser.
+Esto ejecuta la aplicación en modo desarrollo. Abre http://localhost:3000 para verla en el navegador.
 
-### Build
+### Compilar
 
 ```
 npm run build
@@ -73,8 +73,8 @@ npm run build
 yarn build
 ```
 
-This builds the app for production to the `./dist/` folder.
+Esto compila la aplicación para producción en la carpeta `./dist/`.
 
-### My Portfolio Website
+### Mi Sitio Web Personal
 
-This is my personal portfolio website, showcasing my skills and experience in software development, with a focus on web technologies and creative solutions. Built with Next.js and deployed on Vercel, it features real-time Spotify integration and interactive animations.
+Este es mi portafolio personal, que muestra mis habilidades y experiencia en desarrollo de software, con énfasis en tecnologías web y soluciones creativas. Construido con Next.js y desplegado en Vercel, cuenta con integración en tiempo real con Spotify y animaciones interactivas.
