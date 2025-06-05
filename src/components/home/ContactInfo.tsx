@@ -75,7 +75,6 @@ export default function ContactInfo() {
                 </h3>
                 <div className="text-sm text-gray-400 sm:text-base">
                   <span>Ingeniero en Tecnologías de la Información y Negocios Digitales & Creador de Contenido</span>
-                  <span className="mt-2 block">Mérida, Yucatán, México</span>
                 </div>
               </div>
             </div>
@@ -110,9 +109,6 @@ export default function ContactInfo() {
           <div className="flex flex-col space-y-6">
             <p className="min-w-screen text-base sm:max-w-md leading-relaxed">
               Ingeniero en Tecnologías de la Información y Negocios Digitales | Influencer | AI | Tecnología con impacto positivo, esa es mi misión.
-            </p>
-            <p className="text-base text-gray-400 sm:max-w-md leading-relaxed">
-              Especializado en desarrollo web moderno, inteligencia artificial y creación de contenido tecnológico. Comprometido con la innovación y el impacto social positivo a través de la tecnología.
             </p>
           </div>
           <div className="flex items-end gap-2">

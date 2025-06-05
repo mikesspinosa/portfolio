@@ -48,7 +48,6 @@ export default function RoundedButton({
       <Button
         variant="rounded"
         className="relative flex cursor-pointer items-center justify-center overflow-hidden rounded-full border border-secondary px-4 py-6"
-        style={{ overflow: 'hidden' }}
         onMouseEnter={() => {
           manageMouseEnter();
         }}
@@ -63,7 +62,7 @@ export default function RoundedButton({
         <div
           ref={circle}
           className={clsx(
-            'absolute top-[100%] h-[150%] w-full rounded-full',
+            'absolute top-[100%] h-[200%] w-full rounded-full',
             backgroundColor === 'secondary' ? 'bg-[#058c42]' : 'bg-[#16db65]'
           )}
         ></div>
