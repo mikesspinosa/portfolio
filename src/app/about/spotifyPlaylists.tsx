@@ -18,18 +18,28 @@ interface SpotifyPlaylistsProps {
 
 const SpotifyPlaylists: React.FC<SpotifyPlaylistsProps> = ({ playlists }) => {
   return (
-    <div className="rounded-3xl bg-purple-900 p-6 pt-12 text-white shadow-lg">
-      <h3 className="text-spotify-green mb-4 text-2xl font-bold">
-        My Top Working Playlists
+    <div className="rounded-3xl bg-[#1DB954]/10 p-6 pt-12 text-black shadow-lg">
+      <h3 className="mb-4 text-2xl font-bold text-[#1DB954]">
+        Mi Música
       </h3>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="flex flex-col gap-6">
+        <iframe
+          title="Spotify Embed: Mi Playlist"
+          src={`https://open.spotify.com/embed/playlist/2lk45v8v1wBksvfiqZzC8x?utm_source=generator&theme=0`}
+          width="100%"
+          height="360"
+          style={{ minHeight: '360px' }}
+          frameBorder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        />
         {playlists.map((playlist) => (
           <a
             key={playlist.id}
             href={playlist.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-spotify-darker flex flex-col rounded-md p-4 transition-all duration-300 hover:bg-opacity-80"
+            className="flex flex-col rounded-md bg-white/10 p-4 transition-all duration-300 hover:bg-opacity-80"
           >
             <div className="relative mb-4 w-full pb-[100%]">
               <Image
@@ -43,14 +53,11 @@ const SpotifyPlaylists: React.FC<SpotifyPlaylistsProps> = ({ playlists }) => {
             <h4 className="mb-1 truncate text-lg font-semibold">
               {playlist.name}
             </h4>
-            <p className="mb-2 line-clamp-2 text-sm text-gray-400">
+            <p className="mb-2 line-clamp-2 text-sm text-gray-600">
               {playlist.description}
             </p>
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-gray-600">
               {playlist.trackCount} tracks
-            </p>
-            <p className="mt-2 text-sm text-gray-400">
-              First track: {playlist.firstTrack} by {playlist.firstTrackArtist}
             </p>
           </a>
         ))}
