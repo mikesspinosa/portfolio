@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 const mi = 'Mi ';
 const logica = 'lógica ';
 const es = 'es ';
-const creativa = 'creativa';
+const creativa = 'creativa.';
 
 function getRandomSpeed() {
   const randomDecimal = Math.random();
