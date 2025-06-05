@@ -6,7 +6,7 @@ import ProjectHero from '@/app/projects/project/hero';
 import Image from 'next/image';
 import TextGradient from '@/components/animations/textAnimations/textGradient';
 
-export default function AstraProject() {
+export default function AxoProject() {
   useEffect(() => {
     (async () => {
       // @ts-ignore

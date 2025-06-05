@@ -41,7 +41,7 @@ export default function About() {
   }, []);
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-b from-[#a8e6cf] via-[#dcedc1] to-[#ffd3b6]">
+    <div className="relative overflow-hidden bg-gradient-to-b from-[#a8e6cf] via-[#dcedc1] to-[#e8f3dc]">
       <Layout title="I'm Mike" center>
         <div className="relative min-h-screen">
           <div ref={starsRef}>
@@ -85,56 +85,27 @@ export default function About() {
                     Ingeniero en Tecnologías de la Información y Negocios Digitales con pasión por la innovación y la tecnología de vanguardia.
                   </p>
                   <p className="text-lg sm:text-xl">
-                    En{' '}
-                    <Link
-                      href="https://www.tec.mx/"
-                      className="font-semibold underline"
-                    >
-                      Tecnológico de Monterrey
-                    </Link>
-                    , me especialicé en Ingeniería en Tecnologías de la Información y Negocios Digitales. Durante mi formación, 
-                    desarrollé proyectos innovadores que combinaban tecnología y estrategia empresarial, sentando las bases 
-                    para mi carrera en el desarrollo tecnológico.
+                    En Tec de Monterrey, me especialicé en Tecnologías de la Información y Negocios Digitales. 
+                    Durante mi tiempo en la universidad, participé en varios proyectos innovadores que combinaron 
+                    tecnología y negocios, desarrollando soluciones que impactaron positivamente a la comunidad.
                   </p>
                   <p className="text-lg sm:text-xl">
-                    Mi trayectoria profesional comenzó en{' '}
-                    <Link
-                      href="https://www.empresa1.com"
-                      className="font-semibold underline"
-                    >
-                      una consultora tecnológica
-                    </Link>
-                    , donde participé en el desarrollo de soluciones digitales para empresas líderes. 
-                    Me enfoqué en la creación de aplicaciones web escalables y en la implementación 
-                    de sistemas de inteligencia artificial.
+                    Como desarrollador full-stack, he trabajado en diversos proyectos que van desde aplicaciones web 
+                    hasta soluciones de inteligencia artificial. Mi experiencia incluye el desarrollo de aplicaciones 
+                    usando React, Node.js, y tecnologías cloud, siempre enfocándome en crear productos escalables y 
+                    centrados en el usuario.
                   </p>
                   <p className="text-lg sm:text-xl">
-                    Posteriormente, me sumergí en el mundo del desarrollo web moderno, trabajando con tecnologías como 
-                    React, Next.js y Node.js. Durante este tiempo, contribuí al desarrollo de plataformas educativas 
-                    y sistemas de gestión empresarial, siempre buscando combinar la innovación técnica con un 
-                    impacto social positivo.
+                    He colaborado en proyectos de innovación tecnológica, donde he aplicado mis conocimientos en 
+                    desarrollo de software y análisis de datos para crear soluciones que mejoran la eficiencia 
+                    operativa y la experiencia del usuario. Mi enfoque siempre ha sido combinar la tecnología 
+                    con una visión estratégica de negocios.
                   </p>
                   <p className="text-lg sm:text-xl">
-                    Recientemente, he estado enfocado en la creación de contenido educativo y el desarrollo de 
-                    proyectos que utilizan inteligencia artificial. Mi objetivo es democratizar el acceso al 
-                    conocimiento tecnológico y ayudar a otros a aprender programación y desarrollo web.
-                  </p>
-                  <p className="text-lg sm:text-xl">
-                    Durante mi tiempo en la universidad, participé en varios proyectos destacados, incluyendo{' '}
-                    <Link
-                      href="/projects/m31"
-                      className="font-semibold underline"
-                    >
-                      una plataforma de aprendizaje en línea
-                    </Link>
-                    , que fue reconocida por su innovación, y{' '}
-                    <Link
-                      href="/projects/axo"
-                      className="font-semibold underline"
-                    >
-                      un sistema de gestión educativa
-                    </Link>
-                    , que fue implementado en varias instituciones educativas.
+                    Actualmente, me enfoco en el desarrollo de soluciones de IA y aplicaciones web modernas, 
+                    buscando siempre estar a la vanguardia de las nuevas tecnologías y tendencias del mercado. 
+                    Mi objetivo es crear tecnología que no solo sea funcional, sino que también genere un 
+                    impacto positivo en la sociedad.
                   </p>
                   <p className="text-lg sm:text-xl">
                     At{' '}

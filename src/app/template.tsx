@@ -24,12 +24,12 @@ export default function RootTemplate({ children }: PropsWithChildren) {
   const [isLoading, setIsLoading] = useState(true);
   const pathname = usePathname().split('/').pop();
 
-  let bgColour = 'bg-[#ffd3b6]';
+  let bgColour = 'bg-background';
   const darkModeScreens = ['gallery', 'contact', 'm31', 'astra'];
   if (darkModeScreens.includes(pathname!)) {
     bgColour = 'bg-foreground';
   } else if (pathname === 'about') {
-    bgColour = 'bg-[#ffd3b6]';
+    bgColour = 'bg-yellow-200';
   }
 
   useEffect(() => {
