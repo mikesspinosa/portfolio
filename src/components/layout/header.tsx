@@ -88,12 +88,12 @@ export default function Header() {
         {!isMobile() && (
           <div className="flex flex-1 items-center justify-between px-24 font-semibold">
             <div className="group relative z-10 flex cursor-pointer items-center space-x-24 p-3">
-              <Magnetic>
+                <Magnetic>
                 <Link href={'/about'} className="hover:text-[#16db65] transition-colors duration-300">Sobre mí</Link>
-              </Magnetic>
-              <Magnetic>
+                </Magnetic>
+                <Magnetic>
                 <Link href={'/projects'} className="hover:text-[#16db65] transition-colors duration-300">Proyectos</Link>
-              </Magnetic>
+                </Magnetic>
             </div>
             <div className="group relative z-10 flex cursor-pointer items-center p-3">
               <Magnetic>

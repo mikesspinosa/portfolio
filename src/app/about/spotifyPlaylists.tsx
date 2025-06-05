@@ -20,13 +20,9 @@ const SpotifyPlaylists: React.FC<SpotifyPlaylistsProps> = ({ playlists }) => {
   return (
     <div className="rounded-3xl bg-[#1DB954]/20 p-6 pt-12 text-black shadow-lg">
       <h3 className="mb-4 text-2xl font-bold text-[#1DB954]">
-        Mi Música
+        Mis canciones más escuchadas
       </h3>
       <div className="flex flex-col gap-6">
-        <div className="space-y-4">
-          <h4 className="text-xl font-semibold text-[#1DB954]">Mis canciones más escuchadas</h4>
-          <p className="text-sm text-gray-600">Mis canciones más escuchadas</p>
-        </div>
         <iframe
           title="Spotify Embed: Mi Playlist"
           src={`https://open.spotify.com/embed/playlist/2lk45v8v1wBksvfiqZzC8x?utm_source=generator&theme=0`}
@@ -58,10 +54,10 @@ const SpotifyPlaylists: React.FC<SpotifyPlaylistsProps> = ({ playlists }) => {
               {playlist.name}
             </h4>
             <p className="mb-2 line-clamp-2 text-sm text-gray-600">
-              {playlist.description}
+              Mis canciones más escuchadas
             </p>
             <p className="text-sm text-gray-600">
-              {playlist.trackCount} tracks
+              {playlist.trackCount} canciones
             </p>
           </a>
         ))}
