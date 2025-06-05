@@ -75,9 +75,6 @@ export function LetterCollision() {
           <LetterDisplay word={creativa} />
         </div>
       </div>
-      <div className="flex flex-wrap">
-        <LetterDisplay word={sentence3} />
-      </div>
     </div>
   );
 }

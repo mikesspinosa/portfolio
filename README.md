@@ -1,17 +1,27 @@
-# My Portfolio Website
+# Mike's Portfolio
 
-<div style="display: flex; align-items: center; justify-content: space-between;">
+Welcome to my portfolio website! This site showcases my work as a software engineer and designer.
 
-[![Built with Next](https://img.shields.io/badge/built%20with-Next.js-000000)](https://nextjs.org)
-[![Deployed on Vercel](https://img.shields.io/badge/deployed%20on-Vercel-000000)](https://vercel.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+## Technologies Used
 
-[![Vercel Deploy](https://deploy-badge.vercel.app/?url=http://www.nextjs.org/&bettinasosa=bettinasosa.com)](https://vercel.com)
-[![Portfolio](https://img.shields.io/badge/link%20to%20website-8A2BE2)](https://www.bettinasosa.com)
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- GSAP
 
-</div>
+## Getting Started
 
-<a href="https://www.bettinasosa.com">Visit my portfolio website</a>
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Features:
 
