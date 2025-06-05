@@ -84,7 +84,7 @@ export default function ContactInfo() {
             className="absolute left-[calc(100%-200px)] top-[calc(100%+65px)] sm:left-[calc(100%-400px)] sm:top-[calc(100%-75px)]"
           >
             <Link href={'/contact'}>
-              <RoundedButton className="absolute h-[100px] w-[100px] cursor-pointer items-center justify-center rounded-full bg-destructive text-white sm:h-[200px] sm:w-[200px]">
+              <RoundedButton className="absolute h-[100px] w-[100px] cursor-pointer items-center justify-center rounded-full bg-destructive text-white text-xl sm:h-[200px] sm:w-[200px] sm:text-3xl">
                 Contáctame
               </RoundedButton>
             </Link>

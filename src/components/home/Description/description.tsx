@@ -7,13 +7,13 @@ import Link from 'next/link';
 export default function Description() {
   const phrase1 =
     'Ingeniero en Tecnologías de la Información y Negocios Digitales. ' +
-    'Especializado en desarrollo de soluciones tecnológicas innovadoras, ' +
-    'con enfoque en inteligencia artificial y automatización de procesos.';
+    'Especializado en innovación tecnológica, inteligencia artificial y ' +
+    'desarrollo de soluciones empresariales que transforman la manera de hacer negocios.';
 
   const phrase2 =
-    'Mi pasión es transformar ideas en realidad a través de la tecnología. ' +
-    'Comparto mi conocimiento y experiencias como creador de contenido, ' +
-    'inspirando a otros a adentrarse en el mundo de la innovación digital.';
+    'Mi enfoque combina la visión estratégica de negocios con conocimientos técnicos avanzados. ' +
+    'Además, comparto mi pasión por la tecnología creando contenido educativo ' +
+    'que inspira a otros a adentrarse en el mundo de la innovación digital.';
 
   const description = useRef(null);
   const isInView = useInView(description);
@@ -67,7 +67,7 @@ export default function Description() {
         </motion.p>
         <div data-scroll-speed={0.1}>
           <Link href={'/about'}>
-            <RoundedButton className="absolute ml-56 mt-6 flex h-[100px] w-[100px] cursor-pointer items-center justify-center rounded-full bg-destructive text-white sm:ml-16 sm:mt-16 sm:h-[200px] sm:w-[200px]">
+            <RoundedButton className="absolute ml-56 mt-6 flex h-[100px] w-[100px] cursor-pointer items-center justify-center rounded-full bg-destructive text-white text-xl sm:ml-16 sm:mt-16 sm:h-[200px] sm:w-[200px] sm:text-3xl">
               Sobre mí
             </RoundedButton>
           </Link>
