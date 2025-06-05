@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { perspective } from '@/components/nav/anim';
-import Magnetic from '@/components/animations/magnetic';
 import Link from 'next/link';
 
 type NavLinksProps = {
@@ -22,15 +21,21 @@ export default function NavLinks({ links, setIsActive }: NavLinksProps) {
               animate="enter"
               exit="exit"
             >
-              <Magnetic>
+              <motion.div
+                whileHover={{ 
+                  x: 10,
+                  transition: { duration: 0.3, ease: "easeInOut" }
+                }}
+                className="relative overflow-hidden"
+              >
                 <Link
                   href={href!}
                   onClick={() => setIsActive(false)}
-                  className="text-[46px] italic text-background no-underline"
+                  className="text-[46px] italic text-white no-underline hover:text-[#16db65] transition-colors duration-300"
                 >
                   {title}
                 </Link>
-              </Magnetic>
+              </motion.div>
             </motion.div>
           </div>
         );

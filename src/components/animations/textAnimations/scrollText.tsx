@@ -8,12 +8,12 @@ const mi = 'Mi ';
 const logica = 'lógica ';
 const es = 'es ';
 const creativa = 'creativa';
-const sentence3 = 'abstract thinking is my passion';
 
 function getRandomSpeed() {
   const randomDecimal = Math.random();
   return 0.8 + randomDecimal * (1.5 - 0.8); // Increased speed range
 }
+
 function getRandomRotation() {
   return Math.random() * 60 - 30; // Random rotation between -30 and 30 degrees
 }

@@ -64,7 +64,7 @@ export default function RoundedButton({
           ref={circle}
           className={clsx(
             'absolute top-[100%] h-[20%] w-full rounded-full sm:h-[150%]',
-            `bg-${backgroundColor}`
+            backgroundColor === 'secondary' ? 'bg-[#058c42]' : 'bg-[#16db65]'
           )}
         ></div>
       </Button>

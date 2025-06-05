@@ -5,12 +5,14 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Magnetic from '@/components/animations/magnetic';
 import RoundedButton from '@/components/animations/roundedButton';
 import Link from 'next/link';
+import { FaGithub, FaLinkedin, FaTiktok } from 'react-icons/fa';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { toast } from 'sonner';
 
 export default function ContactInfo() {
-  const [timeNow, setTimeNow] = useState(
-    new Date().getHours() + ':' + new Date().getMinutes()
-  );
   const container = useRef(null);
+  const [currentTime, setCurrentTime] = useState('');
+  const email = 'mike.espinosa1203@gmail.com';
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ['start end', 'end end']
@@ -23,12 +25,27 @@ export default function ContactInfo() {
     "after:ease-linear after:content-[''] hover:after:w-full";
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setTimeNow(new Date().toLocaleTimeString());
-    }, 1000);
+    const updateTime = () => {
+      const now = new Date();
+      const options: Intl.DateTimeFormatOptions = {
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: true,
+        timeZone: 'America/Merida'
+      };
+      setCurrentTime(now.toLocaleTimeString('es-MX', options));
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
 
     return () => clearInterval(interval);
-  }, [timeNow]);
+  }, []);
+
+  const handleEmailClick = () => {
+    navigator.clipboard.writeText(email);
+    toast.success('Correo copiado al portapapeles');
+  };
 
   return (
     <motion.div
@@ -49,76 +66,126 @@ export default function ContactInfo() {
               />
             </div>
             <h2 className="ml-3 text-xl font-medium sm:text-[5vh]">
-              Let&apos;s work together!
+              ¡Trabajemos juntos!
             </h2>
           </span>
           <motion.div
             style={{ x }}
             className="absolute left-[calc(100%-200px)] top-[calc(100%+65px)] sm:left-[calc(100%-400px)] sm:top-[calc(100%-75px)]"
           >
-            <RoundedButton
-              backgroundColor="secondary"
-              className=" absolute h-[100px] w-[100px] cursor-pointer items-center justify-center rounded-full bg-primary p-0 text-white sm:h-[200px] sm:w-[200px]"
-            >
-              <Link href={'/contact'}>Get in touch</Link>
-            </RoundedButton>
+            <Link href={'/contact'}>
+              <RoundedButton className="absolute h-[100px] w-[100px] cursor-pointer items-center justify-center rounded-full bg-destructive text-white sm:h-[200px] sm:w-[200px]">
+                Contáctame
+              </RoundedButton>
+            </Link>
           </motion.div>
         </div>
         <div className="mt-6 flex gap-5 sm:mx-[100px]">
-          <RoundedButton>bettinasosarohl@gmail.com</RoundedButton>
+          <RoundedButton>
+            <a 
+              href={`mailto:${email}`}
+              onClick={(e) => {
+                e.preventDefault();
+                handleEmailClick();
+              }}
+              className="cursor-pointer"
+            >
+              {email}
+            </a>
+          </RoundedButton>
         </div>
 
         <div className="mt-20 flex flex-col justify-between p-5 2xs:mt-52 sm:mx-[100px] sm:mt-48 sm:flex-row">
           <p className="min-w-screen mb-5 text-base sm:max-w-xs">
-            AI/LLM enthusiast | Cutting-edge tech advocate | Web3 builder |
-            Passionate about using technology to make the world a better place.
+            Ingeniero en Tecnologías de la Información y Negocios Digitales | Influencer | AI | Tecnología con impacto positivo, esa es mi misión.
           </p>
           <div className="flex items-end gap-2">
             <span className="flex flex-col gap-3">
               <h3 className="m-0 cursor-default p-1 text-base font-light text-gray-500">
-                Version
+                Versión
               </h3>
-              <p className="relative m-0 cursor-pointer p-1">2024 © Edition</p>
+              <p className="relative m-0 cursor-pointer p-1">2025.6.4</p>
             </span>
             <span className="flex flex-col gap-3">
               <h3 className="m-0 cursor-default p-1 text-base font-light text-gray-500">
                 Timezone
               </h3>
               <p className="relative m-0 cursor-pointer p-1">
-                {timeNow} UK (GMT+1)
+                {currentTime} (GMT-6) Mérida
               </p>
             </span>
           </div>
           <div className="flex items-end gap-2">
             <span className="flex flex-col gap-3">
               <h3 className="m-0 cursor-default text-base font-light text-gray-500">
-                Socials
+                Redes Sociales
               </h3>
-              <Magnetic>
-                <Link
-                  href="https://twitter.com/bettysrohl"
-                  className={animatedUnderlineStyle}
-                >
-                  Twitter
-                </Link>
-              </Magnetic>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <Link
+                      href="https://github.com/mikesspinosa"
+                      className="flex items-center gap-1 group transition-all duration-300"
+                    >
+                      <FaGithub size={24} className="text-white group-hover:text-[#16db65] transition-colors duration-300" />
+                      <div className="flex items-center">
+                        <span className="mr-2">GitHub</span>
+                        <span className="text-[#16db65] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                          @mikesspinosa
+                        </span>
+                      </div>
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>GitHub: @mikesspinosa</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <Link
+                      href="https://www.linkedin.com/in/miguel-angel-espinosa-b24992291/"
+                      className="flex items-center gap-1 group transition-all duration-300"
+                    >
+                      <FaLinkedin size={24} className="text-white group-hover:text-[#16db65] transition-colors duration-300" />
+                      <div className="flex items-center">
+                        <span className="mr-2">LinkedIn</span>
+                        <span className="text-[#16db65] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                          Miguel Angel Espinosa
+                        </span>
+                      </div>
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>LinkedIn: Miguel Angel Espinosa</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <Link
+                      href="https://www.tiktok.com/@mikespinosa"
+                      className="flex items-center gap-1 group transition-all duration-300"
+                    >
+                      <FaTiktok size={24} className="text-white group-hover:text-[#16db65] transition-colors duration-300" />
+                      <div className="flex items-center">
+                        <span className="mr-2">TikTok</span>
+                        <span className="text-[#16db65] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                          @mikespinosa
+                        </span>
+                      </div>
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>TikTok: @mikespinosa</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             </span>
-            <Magnetic>
-              <Link
-                href="https://github.com/bettinasosa"
-                className={animatedUnderlineStyle}
-              >
-                Github
-              </Link>
-            </Magnetic>
-            <Magnetic>
-              <Link
-                href="https://github.com/bettinasosa"
-                className={animatedUnderlineStyle}
-              >
-                Linkedin
-              </Link>
-            </Magnetic>
           </div>
         </div>
       </div>

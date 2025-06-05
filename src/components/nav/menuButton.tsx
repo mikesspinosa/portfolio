@@ -12,15 +12,17 @@ export default function MenuButton({ isActive, toggleMenu }: ButtonProps) {
         className="relative h-full w-full"
         animate={{ top: isActive ? '-100%' : '0%' }}
         transition={{ duration: 0.5, type: 'tween', ease: [0.76, 0, 0.24, 1] }}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
       >
         <div
-          className="hover:transform-perspective hover:rotate-x-90 h-full w-full bg-secondary text-background"
+          className="h-full w-full bg-[#0B4619] text-white transition-all duration-300 hover:bg-[#16db65]"
           onClick={toggleMenu}
         >
-          <PerspectiveText label="Menu" />
+          <PerspectiveText label="MENÚ" />
         </div>
         <div
-          className="hover:transform-perspective hover:rotate-x-90 h-full w-full bg-[#FFF7E5] text-secondary"
+          className="h-full w-full bg-[#0B4619] text-white transition-all duration-300 hover:bg-[#16db65]"
           onClick={toggleMenu}
         >
           <PerspectiveText label="Close" />

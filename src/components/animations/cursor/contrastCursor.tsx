@@ -52,7 +52,7 @@ export default function ContrastCursor({ isActive, text }: BlurCursorProps) {
         isActive
           ? 'w-400 bg-destructive bg-opacity-50 p-4 text-6xl font-bold text-white'
           : 'h-10 w-10 rounded-full',
-        isClicked ? 'bg-primary' : 'bg-primary'
+        isClicked ? 'bg-[#16db65]' : 'bg-[#16db65]'
       )}
       style={{
         translateX: cursorXSpring,

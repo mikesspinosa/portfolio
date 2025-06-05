@@ -6,27 +6,19 @@ import NavLinks from '@/components/nav/NavLinks';
 
 const links = [
   {
-    title: 'home',
+    title: 'inicio',
     href: '/'
   },
   {
-    title: 'about',
+    title: 'sobre mí',
     href: '/about'
   },
   {
-    title: 'projects',
+    title: 'proyectos',
     href: '/projects'
   },
   {
-    title: 'gallery',
-    href: '/gallery'
-  },
-  {
-    title: 'blog',
-    href: '/blog'
-  },
-  {
-    title: 'contact',
+    title: 'contacto',
     href: '/contact'
   }
 ];
@@ -50,7 +42,7 @@ export default function Menu() {
   return (
     <div className="fixed right-[20px] top-[20px] z-20 lg:right-[30px] lg:top-[30px]">
       <motion.div
-        className={cn('relative rounded-3xl bg-secondary', {
+        className={cn('relative rounded-3xl bg-[#0B4619]', {
           'lg:top-[-25px right-[-15px] top-[-15px] h-[640px] w-[350px] sm:h-[650px] sm:w-[480px] lg:right-[-25px] ':
             isActive,
           'right-0 top-0 h-[40px] w-[100px] opacity-0': !isActive

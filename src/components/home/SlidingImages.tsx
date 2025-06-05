@@ -42,7 +42,7 @@ export default function SlidingImages({ slider1, slider2 }: Props) {
                 alt="image"
                 src={`/images/${project.src}`}
                 fill
-                objectFit="contain"
+                style={{ objectFit: 'contain' }}
               />
             </div>
           </div>
@@ -63,7 +63,7 @@ export default function SlidingImages({ slider1, slider2 }: Props) {
                 fill
                 alt="image"
                 src={`/images/${project.src}`}
-                objectFit="contain"
+                style={{ objectFit: 'contain' }}
               />
             </div>
           </div>
@@ -71,7 +71,7 @@ export default function SlidingImages({ slider1, slider2 }: Props) {
       </motion.div>
       <div className="flex w-full justify-center">
         <Link href={'/projects'}>
-          <RoundedButton>View Projects</RoundedButton>
+          <RoundedButton>Ver Experiencia</RoundedButton>
         </Link>
       </div>
     </div>

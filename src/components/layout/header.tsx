@@ -85,30 +85,18 @@ export default function Header() {
           </Link>
         </div>
         {!isMobile() && (
-          <div className="flex flex-1 items-center justify-between font-semibold">
-            <div className="group relative z-10 flex cursor-pointer flex-col p-3">
-              <div className="flex flex-col">
-                <Magnetic>
-                  <Link href={'/about'}>About</Link>
-                </Magnetic>
-                <Magnetic>
-                  <Link href={'/projects'}>Projects</Link>
-                </Magnetic>
-              </div>
-            </div>
-            <div className="group relative z-10 flex cursor-pointer flex-col p-3">
-              <div className="flex flex-col">
-                <Magnetic>
-                  <Link href={'/gallery'}>Gallery</Link>
-                </Magnetic>
-                <Magnetic>
-                  <Link href={'/blog'}>Blog</Link>
-                </Magnetic>
-              </div>
-            </div>
-            <div className="group relative z-10 flex cursor-pointer flex-col p-3">
+          <div className="flex flex-1 items-center justify-between px-24 font-semibold">
+            <div className="group relative z-10 flex cursor-pointer items-center space-x-24 p-3">
               <Magnetic>
-                <div className="flex">
+                <Link href={'/about'} className="hover:text-[#16db65] transition-colors duration-300">About</Link>
+              </Magnetic>
+              <Magnetic>
+                <Link href={'/projects'} className="hover:text-[#16db65] transition-colors duration-300">Projects</Link>
+              </Magnetic>
+            </div>
+            <div className="group relative z-10 flex cursor-pointer items-center p-3">
+              <Magnetic>
+                <div className="flex items-center space-x-1 hover:text-[#16db65] transition-colors duration-300">
                   <Link href={'/contact'}>Contact</Link>
                   <ArrowUpRight size={18} />
                 </div>

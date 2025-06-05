@@ -6,13 +6,15 @@ import Link from 'next/link';
 
 export default function Description() {
   const phrase1 =
-    'A software engineer with a passion for innovation and\n' +
-    'cutting-edge technology.\n\n ';
+    'Ingeniero en Tecnologías de la Información y Negocios Digitales. ' +
+    'Especializado en AI, desarrollo fullstack, con experiencia en tecnologías ' +
+    'modernas y enfoques en crear soluciones innovadoras y escalables.';
 
   const phrase2 =
-    'Particularly interested in the intersection of art, design, and ' +
-    'software. I believe that these disciplines can be combined to ' +
-    'create truly transformative experiences.';
+    'Desarrollador fullstack con experiencia en React, Node.js, Github. ' +
+    'Me apasiona crear soluciones tecnológicas que impacten positivamente ' +
+    'en la vida de las personas y contribuyan al avance de la industria.';
+
   const description = useRef(null);
   const isInView = useInView(description);
 
@@ -61,22 +63,12 @@ export default function Description() {
           animate={isInView ? 'open' : 'closed'}
           className="m-0 pb-3 font-light sm:text-lg"
         >
-          Currently the founding full stack software engineer @Catapult a DeFi
-          startup.
-        </motion.p>
-        <motion.p
-          variants={opacity}
-          animate={isInView ? 'open' : 'closed'}
-          className="m-0 text-lg font-light"
-        >
-          My projects have received multiple awards in the past, and I am always
-          looking for new and innovative ways to use my skills to make a
-          positive impact on the world.
+          Ingeniero en Tecnologías de la Información y Negocios Digitales | Influencer | AI | Tecnología con impacto positivo, esa es mi misión.
         </motion.p>
         <div data-scroll-speed={0.1}>
           <Link href={'/about'}>
             <RoundedButton className="absolute ml-56 mt-6 flex h-[100px] w-[100px] cursor-pointer items-center justify-center rounded-full bg-destructive text-white sm:ml-16 sm:mt-16 sm:h-[200px] sm:w-[200px]">
-              About me
+              Sobre mí
             </RoundedButton>
           </Link>
         </div>
