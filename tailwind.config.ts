@@ -24,8 +24,14 @@ const config = {
     },
     extend: {
       screens: {
-        xs: '450px',
-        '2xs': '380px'
+        '2xs': '320px',    // iPhone SE
+        'xs': '375px',     // iPhone Mini
+        'sm': '640px',     // Small tablets and large phones
+        'md': '768px',     // Tablets
+        'lg': '1024px',    // Small laptops
+        'xl': '1280px',    // Laptops and desktops
+        '2xl': '1536px',   // Large screens
+        '3xl': '1920px'    // Extra large screens
       },
       gridTemplateColumns: {
         '53': 'repeat(53, minmax(0, 1fr))'
