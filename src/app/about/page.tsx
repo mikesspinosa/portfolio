@@ -26,7 +26,6 @@ export default function About() {
   } = useGitHub();
 
   useEffect(() => {
-    // Animate stars
     if (!starsRef.current) return;
     gsap.to(starsRef.current?.children, {
       y: 'random(-20, 20)',
@@ -57,10 +56,10 @@ export default function About() {
             ))}
           </div>
 
-          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-            <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
-              <div className="flex flex-col gap-10 justify-between">
-                <div className="relative flex-shrink-0">
+          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+            <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+              <div className="flex flex-col gap-8">
+                <div className="relative">
                   <div className="rounded-full blur-3xl" />
                   <Image
                     className="relative z-10 mx-auto h-auto w-full max-w-sm rounded-t-full shadow-lg"
@@ -71,17 +70,15 @@ export default function About() {
                   />
                 </div>
                 {spotifyLoading ? (
-                  <p>Loading Spotify playlists...</p>
+                  <p>Cargando playlists...</p>
                 ) : spotifyError ? (
                   <p>Error: {spotifyError}</p>
                 ) : playlists.length > 0 ? (
-                  <div className="flex-1">
-                    <SpotifyPlaylists playlists={playlists} />
-                  </div>
+                  <SpotifyPlaylists playlists={playlists} />
                 ) : null}
               </div>
 
-              <div className="flex flex-col gap-10">
+              <div className="flex flex-col">
                 <div className="text-primary-950/70 dark:text-primary-200/70 space-y-8">
                   <p className="text-2xl font-semibold">
                     Ingeniero en Tecnologías de la Información y Negocios Digitales con pasión por la innovación y la tecnología de vanguardia.
