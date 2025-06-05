@@ -67,7 +67,7 @@ export default function About() {
                     width={1440}
                     height={1800}
                     src="/images/profile2.jpg"
-                    alt="Profile picture"
+                    alt="Profile picture of Mike Espinosa"
                   />
                 </div>
                 {spotifyLoading ? (
