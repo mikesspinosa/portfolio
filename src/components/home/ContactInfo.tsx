@@ -71,7 +71,7 @@ export default function ContactInfo() {
                   ¡Trabajemos juntos!
                 </h2>
                 <h3 className="text-lg font-medium text-[#058c42] sm:text-2xl">
-                  Miguel Angel Espinosa
+                  Miguel Angel Espinosa de los Monteros
                 </h3>
                 <div className="text-sm text-gray-400 sm:text-base">
                   <span>Ingeniero en Tecnologías de la Información y Negocios Digitales & Creador de Contenido</span>
@@ -105,8 +105,8 @@ export default function ContactInfo() {
           </RoundedButton>
         </div>
 
-        <div className="mt-20 flex flex-col justify-between p-5 space-y-12 2xs:mt-52 sm:mx-[100px] sm:mt-48 sm:flex-row sm:space-y-0">
-          <div className="flex flex-col space-y-6">
+        <div className="mt-20 flex flex-col justify-between p-5 space-y-12 2xs:mt-52 sm:mx-[100px] sm:mt-48 sm:flex-row sm:items-end sm:space-y-0">
+          <div className="flex flex-col">
             <p className="min-w-screen text-base sm:max-w-md leading-relaxed">
               Ingeniero en Tecnologías de la Información y Negocios Digitales | Influencer | AI | Tecnología con impacto positivo, esa es mi misión.
             </p>

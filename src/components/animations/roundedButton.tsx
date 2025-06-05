@@ -47,7 +47,8 @@ export default function RoundedButton({
     <Magnetic>
       <Button
         variant="rounded"
-        className="relative flex cursor-pointer items-center justify-center overflow-hidden rounded-full border border-secondary px-4 py-6"
+        className="relative flex cursor-pointer items-center justify-center overflow-hidden rounded-full border border-secondary px-6 py-8 text-lg sm:text-xl"
+        style={{ overflow: 'hidden' }}
         onMouseEnter={() => {
           manageMouseEnter();
         }}
@@ -62,7 +63,7 @@ export default function RoundedButton({
         <div
           ref={circle}
           className={clsx(
-            'absolute top-[100%] h-[150%] w-full rounded-full transition-transform duration-300 ease-out',
+            'absolute top-[100%] h-[150%] w-full rounded-full',
             backgroundColor === 'secondary' ? 'bg-[#058c42]' : 'bg-[#16db65]'
           )}
         ></div>

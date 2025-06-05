@@ -11,9 +11,9 @@ export default function Description() {
     'modernas y enfoques en crear soluciones innovadoras y escalables.';
 
   const phrase2 =
-    'Desarrollador fullstack con experiencia en React, Node.js, Github. ' +
-    'Me apasiona crear soluciones tecnológicas que impacten positivamente ' +
-    'en la vida de las personas y contribuyan al avance de la industria.';
+    'Creador de contenido apasionado por la tecnología y la innovación. ' +
+    'Mi misión es inspirar y educar a través de contenido que combine creatividad ' +
+    'y conocimiento técnico, compartiendo experiencias y aprendizajes en el mundo digital.';
 
   const description = useRef(null);
   const isInView = useInView(description);
