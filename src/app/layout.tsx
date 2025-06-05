@@ -1,34 +1,29 @@
-import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import React, { ReactNode } from 'react';
+import { Metadata } from 'next';
 import Animations from './animations';
 import Header from '@/components/layout/header';
 import { Analytics } from '@vercel/analytics/react';
-import { Toaster } from 'sonner';
+import { Toaster } from '@/components/ui/toaster';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Miguel Angel Espinosa',
-  description: 'Portfolio personal de Miguel Angel Espinosa'
+  title: "Mike's portfolio",
+  description: 'Mike is a software engineer and designer.'
 };
 
 export default function RootLayout({
   children
-}: {
-  children: React.ReactNode;
-}) {
+}: Readonly<{
+  children: ReactNode;
+}>) {
   return (
-    <html lang="es">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </head>
-      <body className={inter.className}>
-        <SpeedInsights />
+    <html lang="en">
+      <SpeedInsights />
+      <body className="overflow-scroll overflow-x-hidden">
         <Animations>
           <main>
             <Header />
@@ -36,7 +31,7 @@ export default function RootLayout({
               <main className={`flex-grow ${inter.className}`}>{children}</main>
               <Analytics />
             </div>
-            <Toaster position="bottom-right" />
+            <Toaster />
           </main>
         </Animations>
       </body>
