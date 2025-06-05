@@ -98,7 +98,7 @@ export default function Header() {
             <div className="group relative z-10 flex cursor-pointer items-center p-3">
               <Magnetic>
                 <div className="flex items-center space-x-1 hover:text-[#16db65] transition-colors duration-300">
-                  <Link href={'/contact'}>Contact</Link>
+                  <Link href={'/contact'}>Contacto</Link>
                   <ArrowUpRight size={18} />
                 </div>
               </Magnetic>

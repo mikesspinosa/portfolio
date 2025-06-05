@@ -31,7 +31,7 @@ export default function NavLinks({ links, setIsActive }: NavLinksProps) {
                 <Link
                   href={href!}
                   onClick={() => setIsActive(false)}
-                  className="text-[46px] italic text-white no-underline hover:text-[#16db65] transition-colors duration-300"
+                  className="text-[46px] italic text-[#FFF9C4] no-underline hover:text-[#16db65] transition-colors duration-300"
                 >
                   {title}
                 </Link>

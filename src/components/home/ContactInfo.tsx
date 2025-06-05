@@ -127,7 +127,7 @@ export default function ContactInfo() {
                       href="https://github.com/mikesspinosa"
                       className="flex items-center gap-1 group transition-all duration-300"
                     >
-                      <FaGithub size={24} className="text-white group-hover:text-[#16db65] transition-colors duration-300" />
+                      <FaGithub size={24} className="text-white group-hover:text-[#333] transition-colors duration-300" />
                       <div className="flex items-center">
                         <span className="mr-2">GitHub</span>
                         <span className="text-[#16db65] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
@@ -149,7 +149,7 @@ export default function ContactInfo() {
                       href="https://www.linkedin.com/in/miguel-angel-espinosa-b24992291/"
                       className="flex items-center gap-1 group transition-all duration-300"
                     >
-                      <FaLinkedin size={24} className="text-white group-hover:text-[#16db65] transition-colors duration-300" />
+                      <FaLinkedin size={24} className="text-white group-hover:text-[#0077b5] transition-colors duration-300" />
                       <div className="flex items-center">
                         <span className="mr-2">LinkedIn</span>
                         <span className="text-[#16db65] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
@@ -171,7 +171,7 @@ export default function ContactInfo() {
                       href="https://www.tiktok.com/@mikespinosa"
                       className="flex items-center gap-1 group transition-all duration-300"
                     >
-                      <FaTiktok size={24} className="text-white group-hover:text-[#16db65] transition-colors duration-300" />
+                      <FaTiktok size={24} className="text-white group-hover:text-[#ff0050] transition-colors duration-300" />
                       <div className="flex items-center">
                         <span className="mr-2">TikTok</span>
                         <span className="text-[#16db65] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
