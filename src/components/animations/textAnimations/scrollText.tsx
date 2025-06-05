@@ -22,7 +22,7 @@ const animateLettersOnScroll = (containerRef: MutableRefObject<any>) => {
   const lettersContainer = containerRef.current;
   const letterElements = lettersContainer?.querySelectorAll('.letter');
 
-  letterElements.forEach((letter: Element, index: number) => {
+  letterElements.forEach((letter: Element) => {
     gsap.to(letter, {
       y: (i, el) =>
         (1 - parseFloat(el.getAttribute('data-speed'))) *
@@ -45,7 +45,7 @@ function LetterDisplay({ word }: { word: string }) {
   return word.split('').map((letter, index) => (
     <div
       key={index}
-      className="letter text-6xl font-semibold xs:text-[90px] xs:leading-none md:text-[120px] lg:text-[150px] xl:text-[210px] "
+      className="letter text-6xl font-semibold xs:text-[90px] xs:leading-none md:text-[120px] lg:text-[150px] xl:text-[210px]"
       data-speed={getRandomSpeed()}
     >
       {letter}
@@ -58,7 +58,16 @@ export function LetterCollision() {
 
   useEffect(() => {
     if (!containerRef.current) return;
-    animateLettersOnScroll(containerRef);
+    
+    // Optimización: Usar requestAnimationFrame para la animación inicial
+    requestAnimationFrame(() => {
+      animateLettersOnScroll(containerRef);
+    });
+
+    // Limpiar ScrollTrigger al desmontar
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
   }, []);
 
   return (
