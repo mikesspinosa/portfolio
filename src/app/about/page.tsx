@@ -107,68 +107,6 @@ export default function About() {
                     Mi objetivo es crear tecnología que no solo sea funcional, sino que también genere un 
                     impacto positivo en la sociedad.
                   </p>
-                  <p className="text-lg sm:text-xl">
-                    At{' '}
-                    <Link
-                      href="https://www.sojo.uk/"
-                      className="font-semibold underline"
-                    >
-                      Sojo
-                    </Link>
-                    , I was the founding full-stack engineer, responsible for
-                    the design, development, and deployment of the
-                    company&apos;s core platform. I built a scalable and
-                    user-friendly app that allowed users to order repairs and
-                    customisation clothing services online.
-                  </p>
-                  <p className="text-lg sm:text-xl">
-                    After Sojo, I joined{' '}
-                    <Link
-                      href="https://www.catapultlabs.xyz/"
-                      className="font-semibold underline"
-                    >
-                      Catapult Labs
-                    </Link>
-                    , a startup in the blockchain space, as a founding
-                    full-stack software engineer. I played a key role in the
-                    development of the company&apos;s flagship product, a Web3
-                    profiles platform that enables networking in the
-                    decentralized space.
-                  </p>
-                  <p className="text-lg sm:text-xl">
-                    I then worked on developing decentralised financial
-                    primitives and protocols to enable OTC (Over-The-Counter)
-                    crypto markets on-chain, including collateral management and
-                    margin trading systems. During this time I also learnt
-                    Solidity, to enable the development of smart contracts to
-                    enable new on-chain financial products.
-                  </p>
-                  <p className="text-lg sm:text-xl">
-                    In recent months I have been working on an AI co-pilot for
-                    digital asset trading that unifies client conversations
-                    across chat clients like Telegram using OpenAI&apos;s
-                    models.
-                  </p>
-                  <p className="text-lg sm:text-xl">
-                    At Imperial College London, I studied design engineering.
-                    During my time at university, I worked on a number of
-                    projects, including{' '}
-                    <Link
-                      href="/projects/m31"
-                      className="font-semibold underline"
-                    >
-                      Andromeda
-                    </Link>
-                    , which was awarded a gold prize in the Creative Conscience
-                    Awards, and{' '}
-                    <Link
-                      href="/projects/axo"
-                      className="font-semibold underline"
-                    >
-                      AxoWear
-                    </Link>
-                    , which was exhibited at the Design Museum London.
-                  </p>
                 </div>
               </div>
             </div>

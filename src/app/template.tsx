@@ -25,11 +25,14 @@ export default function RootTemplate({ children }: PropsWithChildren) {
   const pathname = usePathname().split('/').pop();
 
   let bgColour = 'bg-background';
+  let semicircleColor = 'bg-background';
   const darkModeScreens = ['gallery', 'contact', 'm31', 'astra'];
   if (darkModeScreens.includes(pathname!)) {
     bgColour = 'bg-foreground';
+    semicircleColor = 'bg-foreground';
   } else if (pathname === 'about') {
-    bgColour = 'bg-yellow-200';
+    bgColour = 'bg-gradient-to-b from-[#a8e6cf] via-[#dcedc1] to-[#e8f3dc]';
+    semicircleColor = 'bg-[#e8f3dc]';
   }
 
   useEffect(() => {
@@ -52,7 +55,7 @@ export default function RootTemplate({ children }: PropsWithChildren) {
           <div
             className={clsx(
               'absolute left-[-10%] z-10 h-[1050%] w-[120%] rounded-b-[100%] shadow-[0_60px_50px_0px_rgba(0,0,0,0.748)]',
-              bgColour
+              semicircleColor
             )}
           ></div>
         </motion.div>
