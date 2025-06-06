@@ -7,7 +7,16 @@ const nextConfig = {
         hostname: '**',
       },
     ],
+    domains: ['images.unsplash.com'],
+    unoptimized: true,
   },
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  eslint: {
+    ignoreDuringBuilds: false,
+  },
+  swcMinify: true,
 };
 
-export default nextConfig;
+module.exports = nextConfig;
