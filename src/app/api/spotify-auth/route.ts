@@ -10,8 +10,13 @@ const spotifyApi = new SpotifyWebApi({
 });
 
 export async function GET() {
-  const scopes = ['user-top-read'];
-  const state = 'some-state-of-my-choice';
+  const scopes = [
+    'user-read-private',
+    'user-read-email',
+    'playlist-read-private',
+    'user-top-read'
+  ];
+  const state = 'spotify-auth-' + Date.now();
   const authorizeURL = spotifyApi.createAuthorizeURL(scopes, state);
 
   return NextResponse.redirect(authorizeURL);

@@ -15,8 +15,7 @@ export interface SpotifyPlaylist {
   description: string;
   imageUrl: string;
   trackCount: number;
-  firstTrack: string;
-  firstTrackArtist: string;
+  tracks: SpotifyTrack[];
   url: string;
 }
 
