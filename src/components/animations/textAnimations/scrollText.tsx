@@ -20,6 +20,8 @@ function getRandomRotation() {
 }
 
 const animateLettersOnScroll = (containerRef: MutableRefObject<any>) => {
+  if (typeof window === 'undefined') return;
+  
   const lettersContainer = containerRef.current;
   const letterElements = lettersContainer?.querySelectorAll('.letter');
 

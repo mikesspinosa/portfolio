@@ -21,6 +21,8 @@ export default function Header() {
   }, [pathname]);
 
   useLayoutEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(button.current, {
       scrollTrigger: {

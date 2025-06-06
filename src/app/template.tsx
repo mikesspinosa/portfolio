@@ -36,6 +36,8 @@ export default function RootTemplate({ children }: PropsWithChildren) {
   }
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     setTimeout(() => {
       setIsLoading(false);
       document.body.style.cursor = 'default';

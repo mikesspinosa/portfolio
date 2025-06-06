@@ -7,6 +7,8 @@ import PreLoader from '@/components/animations/preLoader';
 export default function Loading() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     (async () => {
       setTimeout(() => {
         setIsLoading(false);

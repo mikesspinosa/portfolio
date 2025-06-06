@@ -25,6 +25,8 @@ export default function Contact() {
   };
 
   const scrollToEmail = () => {
+    if (typeof window === 'undefined') return;
+    
     const emailSection = document.getElementById('email');
     copyEmail();
     if (emailSection) {

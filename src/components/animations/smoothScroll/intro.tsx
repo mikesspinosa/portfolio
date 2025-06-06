@@ -17,6 +17,8 @@ export default function Intro({
   const introImage = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: document.documentElement,
@@ -46,6 +48,11 @@ export default function Intro({
       },
       0
     );
+    
+    return () => {
+      timeline.kill();
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
   }, []);
 
   return (

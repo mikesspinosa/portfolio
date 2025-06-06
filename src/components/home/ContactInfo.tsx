@@ -47,24 +47,33 @@ export default function ContactInfo() {
     toast.success('Correo copiado al portapapeles');
   };
 
-  const sparkleKeyframes = `
-  @keyframes sparkle {
-    0%, 100% {
-      background: radial-gradient(circle at center, rgba(255,255,255,0) 0%, transparent 50%);
-      transform: scale(1);
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
+    const sparkleKeyframes = `
+    @keyframes sparkle {
+      0%, 100% {
+        background: radial-gradient(circle at center, rgba(255,255,255,0) 0%, transparent 50%);
+        transform: scale(1);
+      }
+      50% {
+        background: radial-gradient(circle at center, rgba(255,255,255,0.3) 0%, transparent 50%);
+        transform: scale(1.2);
+      }
     }
-    50% {
-      background: radial-gradient(circle at center, rgba(255,255,255,0.3) 0%, transparent 50%);
-      transform: scale(1.2);
-    }
-  }
-  `;
+    `;
 
-  const style = document.createElement('style');
-  style.textContent = sparkleKeyframes;
-  if (typeof document !== 'undefined') {
+    const style = document.createElement('style');
+    style.textContent = sparkleKeyframes;
     document.head.appendChild(style);
-  }
+    
+    return () => {
+      // Cleanup - remove the style element when component unmounts
+      if (document.head.contains(style)) {
+        document.head.removeChild(style);
+      }
+    };
+  }, []);
 
   return (
     <motion.div
