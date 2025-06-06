@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Magnetic from '@/components/animations/magnetic';
 import RoundedButton from '@/components/animations/roundedButton';
 import Link from 'next/link';
-import { FaGithub, FaLinkedin, FaTiktok } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTiktok, FaEnvelope, FaFileAlt } from 'react-icons/fa';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { toast } from 'sonner';
 
@@ -46,6 +46,25 @@ export default function ContactInfo() {
     navigator.clipboard.writeText(email);
     toast.success('Correo copiado al portapapeles');
   };
+
+  const sparkleKeyframes = `
+  @keyframes sparkle {
+    0%, 100% {
+      background: radial-gradient(circle at center, rgba(255,255,255,0) 0%, transparent 50%);
+      transform: scale(1);
+    }
+    50% {
+      background: radial-gradient(circle at center, rgba(255,255,255,0.3) 0%, transparent 50%);
+      transform: scale(1.2);
+    }
+  }
+  `;
+
+  const style = document.createElement('style');
+  style.textContent = sparkleKeyframes;
+  if (typeof document !== 'undefined') {
+    document.head.appendChild(style);
+  }
 
   return (
     <motion.div
@@ -98,9 +117,21 @@ export default function ContactInfo() {
                 e.preventDefault();
                 handleEmailClick();
               }}
-              className="cursor-pointer"
+              className="cursor-pointer flex items-center gap-2 group"
             >
-              {email}
+              <FaEnvelope className="text-xl group-hover:scale-110 transition-transform duration-300" />
+              <span>{email}</span>
+            </a>
+          </RoundedButton>
+          <RoundedButton>
+            <a 
+              href="/documents/CV-Miguel-Espinosa.pdf"
+              download
+              className="cursor-pointer flex items-center gap-2 group"
+              onClick={() => toast.success('Descargando CV...')}
+            >
+              <FaFileAlt className="text-xl group-hover:scale-110 transition-transform duration-300" />
+              <span>Ver CV</span>
             </a>
           </RoundedButton>
         </div>
@@ -108,7 +139,14 @@ export default function ContactInfo() {
         <div className="mt-20 flex flex-col justify-between p-5 space-y-12 2xs:mt-52 sm:mx-[100px] sm:mt-48 sm:flex-row sm:items-end sm:space-y-0">
           <div className="flex flex-col">
             <p className="min-w-screen text-base sm:max-w-md leading-relaxed">
-              Ingeniero en Tecnologías de la Información y Negocios Digitales | Influencer | AI | Tecnología con impacto positivo, esa es mi misión.
+              Ingeniero en Tecnologías de la Información y Negocios Digitales | 
+              <Link href="https://www.tiktok.com/@mikespinosa" className="group/creator inline-flex items-center mx-2">
+                <span className="relative cursor-pointer transition-all duration-300 group-hover/creator:text-[#ff0050] group-hover/creator:scale-110">
+                  Creador de contenido
+                  <span className="absolute inset-0 group-hover/creator:animate-sparkle opacity-0 group-hover/creator:opacity-100" />
+                </span>
+              </Link>
+              | AI | Tecnología con impacto positivo, esa es mi misión.
             </p>
           </div>
           <div className="flex items-end gap-2">
