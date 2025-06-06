@@ -31,7 +31,6 @@ export async function GET() {
         tracks: tracks.body.items.map(item => ({
           name: item.track?.name || 'Unknown Track',
           artist: item.track?.artists[0].name || 'Unknown Artist',
-          album: item.track?.album?.name || 'Unknown Album',
           albumArt: item.track?.album.images[0]?.url,
           url: item.track?.external_urls.spotify
         })),
