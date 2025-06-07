@@ -14,7 +14,9 @@ export async function GET() {
     'user-read-private',
     'user-read-email',
     'playlist-read-private',
-    'user-top-read'
+    'playlist-read-collaborative',
+    'user-top-read',
+    'user-library-read'
   ];
   const state = 'spotify-auth-' + Date.now();
   const authorizeURL = spotifyApi.createAuthorizeURL(scopes, state);
