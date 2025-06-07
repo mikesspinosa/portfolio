@@ -13,11 +13,8 @@ export async function GET() {
     const data = await spotifyApi.refreshAccessToken();
     spotifyApi.setAccessToken(data.body['access_token']);
 
-    const playlistId = [
-      '5gxD39PRtgwy8GCGMjB7oE',
-      '7uC1v1Juca1fTeng1P9y8Q',
-      '1UKWjkEXm2tYZ5R6BqVJR4'
-    ];
+    // ID de tu playlist
+    const playlistId = ['2lk45v8v1wBksvfiqZzC8x'];
 
     const playlistsData = await Promise.all(
       playlistId.map((id) => spotifyApi.getPlaylist(id))
@@ -42,11 +39,14 @@ export async function GET() {
     );
 
     return NextResponse.json(playlists);
-  } catch (error) {
-    console.error('Error fetching Spotify playlists:', error);
+  } catch (error: any) {
+    console.error('Error fetching Spotify playlists:', error?.body || error);
     return NextResponse.json(
-      { error: 'Failed to fetch Spotify playlists' },
-      { status: 500 }
+      { 
+        error: 'Failed to fetch Spotify playlists',
+        details: error?.body?.error?.message || error.message
+      },
+      { status: error?.body?.error?.status || 500 }
     );
   }
 }
