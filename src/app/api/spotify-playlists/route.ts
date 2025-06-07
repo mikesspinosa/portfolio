@@ -17,13 +17,14 @@ export async function GET() {
     const playlistId = ['2lk45v8v1wBksvfiqZzC8x'];
 
     const playlistsData = await Promise.all(
-      playlistId.map((id) => spotifyApi.getPlaylist(id))
+      playlistId.map((id) => spotifyApi.getPlaylist(id, { market: 'ES' }))
     );
 
     const playlists = await Promise.all(
       playlistsData.map(async (playlist) => {
         const tracks = await spotifyApi.getPlaylistTracks(playlist.body.id, {
-          limit: 1
+          limit: 1,
+          market: 'ES'
         });
         return {
           id: playlist.body.id,
