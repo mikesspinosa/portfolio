@@ -8,9 +8,6 @@ const spotifyApi = new SpotifyWebApi({
   refreshToken: process.env.SPOTIFY_REFRESH_TOKEN
 });
 
-// ID de tu playlist principal
-const MAIN_PLAYLIST_ID = '2lk45v8v1wBksvfiqZzC8x';
-
 export async function GET() {
   try {
     // Refresh the access token
@@ -22,41 +19,50 @@ export async function GET() {
       throw new Error('Missing SPOTIFY_REFRESH_TOKEN');
     }
 
-    // Intentar obtener la playlist
-    console.log('Fetching playlist:', MAIN_PLAYLIST_ID);
-    const playlist = await spotifyApi.getPlaylist(MAIN_PLAYLIST_ID);
-    
-    // Verificar que la playlist existe
-    if (!playlist.body) {
-      throw new Error('Playlist not found');
-    }
+    // Lista de IDs de playlists a mostrar
+    const playlistIds = [
+      '2lk45v8v1wBksvfiqZzC8x', // Tu playlist principal
+      '5gxD39PRtgwy8GCGMjB7oE', // Playlist del otro proyecto
+      '7uC1v1Juca1fTeng1P9y8Q', // Playlist del otro proyecto
+      '1UKWjkEXm2tYZ5R6BqVJR4'  // Playlist del otro proyecto
+    ];
 
-    console.log('Playlist found:', playlist.body.name);
-    console.log('Is public:', playlist.body.public);
-    console.log('Owner:', playlist.body.owner.display_name);
+    console.log('Fetching playlists:', playlistIds);
 
-    // Obtener las canciones
-    const tracks = await spotifyApi.getPlaylistTracks(MAIN_PLAYLIST_ID, {
-      limit: 1
-    });
+    // Obtener todas las playlists
+    const playlistsData = await Promise.all(
+      playlistIds.map(id => spotifyApi.getPlaylist(id))
+    );
 
-    const playlistData = {
-      id: playlist.body.id,
-      name: playlist.body.name,
-      description: playlist.body.description,
-      imageUrl: playlist.body.images[0]?.url,
-      trackCount: playlist.body.tracks.total,
-      firstTrack: tracks.body.items[0]?.track?.name || 'No tracks',
-      firstTrackArtist: tracks.body.items[0]?.track?.artists[0].name || 'Unknown artist',
-      url: playlist.body.external_urls.spotify,
-      isPublic: playlist.body.public,
-      owner: playlist.body.owner.display_name
-    };
+    // Procesar cada playlist
+    const playlists = await Promise.all(
+      playlistsData.map(async (playlist) => {
+        console.log('Processing playlist:', playlist.body.name);
+        console.log('Is public:', playlist.body.public);
+        console.log('Owner:', playlist.body.owner.display_name);
 
-    // Devolver la playlist como un array de un elemento para mantener la compatibilidad
-    return NextResponse.json([playlistData]);
+        const tracks = await spotifyApi.getPlaylistTracks(playlist.body.id, {
+          limit: 1
+        });
+
+        return {
+          id: playlist.body.id,
+          name: playlist.body.name,
+          description: playlist.body.description,
+          imageUrl: playlist.body.images[0]?.url,
+          trackCount: playlist.body.tracks.total,
+          firstTrack: tracks.body.items[0]?.track?.name || 'No tracks',
+          firstTrackArtist: tracks.body.items[0]?.track?.artists[0].name || 'Unknown artist',
+          url: playlist.body.external_urls.spotify,
+          isPublic: playlist.body.public,
+          owner: playlist.body.owner.display_name
+        };
+      })
+    );
+
+    return NextResponse.json(playlists);
   } catch (error: any) {
-    console.error('Error fetching Spotify playlist:', error?.body || error);
+    console.error('Error fetching Spotify playlists:', error?.body || error);
     
     // Intentar obtener información más detallada del error
     const errorDetails = {
@@ -70,7 +76,7 @@ export async function GET() {
 
     return NextResponse.json(
       { 
-        error: 'Failed to fetch Spotify playlist', 
+        error: 'Failed to fetch Spotify playlists', 
         details: errorDetails
       },
       { status: errorDetails.status }

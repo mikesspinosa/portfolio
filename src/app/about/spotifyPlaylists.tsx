@@ -1,8 +1,8 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 // Interfaz para la estructura de una playlist de Spotify
-interface SpotifyPlaylist {
+interface Track {
   id: string;
   name: string;
   description: string;
@@ -11,70 +11,95 @@ interface SpotifyPlaylist {
   firstTrack: string;
   firstTrackArtist: string;
   url: string;
+  isPublic: boolean;
+  owner: string;
 }
 
-// Props que recibe el componente
-interface SpotifyPlaylistsProps {
-  playlists: SpotifyPlaylist[];
-}
+export default function SpotifyPlaylists() {
+  const [playlists, setPlaylists] = useState<Track[]>([]);
+  const [error, setError] = useState<string>('');
+  const [loading, setLoading] = useState(true);
 
-const SpotifyPlaylists: React.FC<SpotifyPlaylistsProps> = ({ playlists }) => {
-  // Obtener el ID de la primera playlist si existe
-  const mainPlaylistId = playlists[0]?.id;
+  useEffect(() => {
+    const fetchPlaylists = async () => {
+      try {
+        const response = await fetch('/api/spotify-playlists');
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.details?.message || 'Failed to fetch playlists');
+        }
+        const data = await response.json();
+        setPlaylists(data);
+        setError('');
+      } catch (err: any) {
+        console.error('Error fetching playlists:', err);
+        setError(err.message || 'Failed to load playlists');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPlaylists();
+  }, []);
+
+  if (loading) {
+    return <div className="text-center py-10">Loading playlists...</div>;
+  }
+
+  if (error) {
+    return (
+      <div className="text-center py-10 text-red-500">
+        Error: {error}
+      </div>
+    );
+  }
 
   return (
-    <div className="rounded-3xl bg-[#1DB954]/90 p-6 text-white shadow-lg h-full flex flex-col">
-      <h3 className="mb-6 text-3xl font-bold text-white text-center">
-        Mis canciones más escuchadas
-      </h3>
-      <div className="grid grid-cols-1 gap-4 flex-1">
-        {mainPlaylistId && (
-          <div className="aspect-square w-full bg-white/10 rounded-lg overflow-hidden">
-            <iframe
-              title="Mi Playlist de Spotify"
-              src={`https://open.spotify.com/embed/playlist/${mainPlaylistId}?utm_source=generator&theme=0`}
-              width="100%"
-              height="100%"
-              style={{ minHeight: '100%' }}
-              frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            />
-          </div>
-        )}
-        <div className="aspect-square w-full bg-white/10 rounded-lg p-6">
-          {playlists.map((playlist) => (
-            <a
-              key={playlist.id}
-              href={playlist.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center rounded-md bg-white/20 p-4 transition-all duration-300 hover:bg-white/30 h-full w-full mb-12"
-            >
-              <div className="relative aspect-square w-full max-w-md mb-8">
+    <div className="w-full">
+      <h2 className="text-2xl font-bold mb-6">My Spotify Playlists</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {playlists.map((playlist) => (
+          <a
+            key={playlist.id}
+            href={playlist.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-200"
+          >
+            <div className="relative aspect-square">
+              {playlist.imageUrl && (
                 <Image
-                  src={playlist.imageUrl || '/placeholder-playlist.png'}
-                  alt={`Portada de ${playlist.name}`}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-lg shadow-xl"
-                  priority
+                  src={playlist.imageUrl}
+                  alt={playlist.name}
+                  fill
+                  className="rounded-t-lg object-cover"
                 />
+              )}
+            </div>
+            <div className="p-4">
+              <h3 className="text-xl font-semibold mb-2">{playlist.name}</h3>
+              {playlist.description && (
+                <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
+                  {playlist.description}
+                </p>
+              )}
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                {playlist.trackCount} tracks
+              </p>
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                Created by: {playlist.owner}
+              </p>
+              <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-700">
+                <p className="font-medium">Now Playing:</p>
+                <p className="text-sm">{playlist.firstTrack}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  by {playlist.firstTrackArtist}
+                </p>
               </div>
-              <div className="flex flex-col items-center w-full">
-                <h4 className="text-xl font-bold text-white mb-2">
-                  {playlist.name}
-                </h4>
-              </div>
-            </a>
-          ))}
-          <p className="text-base text-white/90 text-center mt-20">
-            Mi gusto musical refleja mi personalidad ecléctica: desde el hip-hop alternativo de Travis Scott y Gorillaz hasta la electrónica experimental. Me apasiona especialmente la música que fusiona géneros y rompe barreras convencionales, siempre buscando sonidos innovadores que inspiren mi creatividad en el desarrollo.
-          </p>
-        </div>
+            </div>
+          </a>
+        ))}
       </div>
     </div>
   );
-};
-
-export default SpotifyPlaylists;
+}
