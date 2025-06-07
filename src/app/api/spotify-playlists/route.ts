@@ -8,53 +8,40 @@ const spotifyApi = new SpotifyWebApi({
   refreshToken: process.env.SPOTIFY_REFRESH_TOKEN
 });
 
+// ID de tu playlist principal
+const MAIN_PLAYLIST_ID = '2lk45v8v1wBksvfiqZzC8x';
+
 export async function GET() {
   try {
     const data = await spotifyApi.refreshAccessToken();
     spotifyApi.setAccessToken(data.body['access_token']);
 
-    // Tu playlist específica
-    const playlistId = '2lk45v8v1wBksvfiqZzC8x';
+    // Obtener la playlist principal
+    const playlist = await spotifyApi.getPlaylist(MAIN_PLAYLIST_ID);
+    const tracks = await spotifyApi.getPlaylistTracks(MAIN_PLAYLIST_ID, {
+      limit: 1
+    });
 
-    try {
-      const playlist = await spotifyApi.getPlaylist(playlistId);
-      const tracks = await spotifyApi.getPlaylistTracks(playlistId, {
-        limit: 10 // Obtenemos más tracks para mostrar
-      });
+    const playlistData = {
+      id: playlist.body.id,
+      name: playlist.body.name,
+      description: playlist.body.description,
+      imageUrl: playlist.body.images[0]?.url,
+      trackCount: playlist.body.tracks.total,
+      firstTrack: tracks.body.items[0]?.track?.name || 'No tracks',
+      firstTrackArtist: tracks.body.items[0]?.track?.artists[0].name || 'Unknown artist',
+      url: playlist.body.external_urls.spotify
+    };
 
-      const playlistData = {
-        id: playlist.body.id,
-        name: playlist.body.name,
-        description: playlist.body.description,
-        imageUrl: playlist.body.images[0]?.url,
-        trackCount: playlist.body.tracks.total,
-        tracks: tracks.body.items.map(item => ({
-          name: item.track?.name || 'Unknown Track',
-          artist: item.track?.artists[0].name || 'Unknown Artist',
-          albumArt: item.track?.album.images[0]?.url,
-          url: item.track?.external_urls.spotify
-        })),
-        url: playlist.body.external_urls.spotify
-      };
-
-      return NextResponse.json([playlistData]);
-    } catch (playlistError: any) {
-      console.error('Error fetching specific playlist:', playlistError?.body || playlistError);
-      return NextResponse.json(
-        { 
-          error: 'Failed to fetch playlist', 
-          details: playlistError?.body?.error?.message || playlistError.message,
-          playlistId: playlistId 
-        },
-        { status: playlistError?.body?.error?.status || 500 }
-      );
-    }
+    // Devolver la playlist como un array de un elemento para mantener la compatibilidad
+    return NextResponse.json([playlistData]);
   } catch (error: any) {
-    console.error('Error refreshing token:', error?.body || error);
+    console.error('Error fetching Spotify playlist:', error?.body || error);
     return NextResponse.json(
       { 
-        error: 'Failed to refresh access token', 
-        details: error?.body?.error?.message || error.message 
+        error: 'Failed to fetch Spotify playlist', 
+        details: error?.body?.error?.message || error.message,
+        status: error?.body?.error?.status || 500
       },
       { status: error?.body?.error?.status || 500 }
     );

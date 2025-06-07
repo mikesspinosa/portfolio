@@ -8,12 +8,8 @@ interface SpotifyPlaylist {
   description: string;
   imageUrl: string;
   trackCount: number;
-  tracks?: {
-    name: string;
-    artist: string;
-    albumArt: string;
-    url: string;
-  }[];
+  firstTrack: string;
+  firstTrackArtist: string;
   url: string;
 }
 
@@ -23,74 +19,60 @@ interface SpotifyPlaylistsProps {
 }
 
 const SpotifyPlaylists: React.FC<SpotifyPlaylistsProps> = ({ playlists }) => {
+  // Obtener el ID de la primera playlist si existe
+  const mainPlaylistId = playlists[0]?.id;
+
   return (
     <div className="rounded-3xl bg-[#1DB954]/90 p-6 text-white shadow-lg h-full flex flex-col">
       <h3 className="mb-6 text-3xl font-bold text-white text-center">
         Mis canciones más escuchadas
       </h3>
       <div className="grid grid-cols-1 gap-4 flex-1">
-        {playlists.map((playlist) => (
-          <div key={playlist.id} className="w-full rounded-lg overflow-hidden bg-white/10 p-6 flex flex-col items-center">
-            <div className="relative aspect-square w-full max-w-xs mb-4">
-              <Image
-                src={playlist.imageUrl || '/placeholder-playlist.png'}
-                alt={`Portada de ${playlist.name}`}
-                layout="fill"
-                objectFit="cover"
-                className="rounded-lg shadow-xl"
-                priority
-              />
-            </div>
-            <h4 className="text-xl font-bold text-center mb-2">
-              {playlist.name}
-            </h4>
-            <p className="text-sm text-center mb-4 opacity-80">
-              {playlist.description || 'Playlist personalizada'}
-            </p>
-
-            {playlist.tracks && (
-              <ul className="w-full space-y-2 max-h-72 overflow-y-auto pr-2">
-                {playlist.tracks.map((track, idx) => (
-                  <li key={idx} className="flex items-center space-x-3">
-                    <div className="relative h-10 w-10 flex-shrink-0">
-                      {track.albumArt ? (
-                        <Image
-                          src={track.albumArt}
-                          alt={track.name}
-                          layout="fill"
-                          objectFit="cover"
-                          className="rounded"
-                        />
-                      ) : (
-                        <div className="h-10 w-10 bg-gray-500 rounded" />
-                      )}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium truncate">
-                        {track.name}
-                      </p>
-                      <p className="text-xs opacity-70 truncate">
-                        {track.artist}
-                      </p>
-                    </div>
-                    <a
-                      href={track.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs text-[#1DB954] hover:underline whitespace-nowrap"
-                    >
-                      Ver en Spotify
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            )}
+        {mainPlaylistId && (
+          <div className="aspect-square w-full bg-white/10 rounded-lg overflow-hidden">
+            <iframe
+              title="Mi Playlist de Spotify"
+              src={`https://open.spotify.com/embed/playlist/${mainPlaylistId}?utm_source=generator&theme=0`}
+              width="100%"
+              height="100%"
+              style={{ minHeight: '100%' }}
+              frameBorder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            />
           </div>
-        ))}
+        )}
+        <div className="aspect-square w-full bg-white/10 rounded-lg p-6">
+          {playlists.map((playlist) => (
+            <a
+              key={playlist.id}
+              href={playlist.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center rounded-md bg-white/20 p-4 transition-all duration-300 hover:bg-white/30 h-full w-full mb-12"
+            >
+              <div className="relative aspect-square w-full max-w-md mb-8">
+                <Image
+                  src={playlist.imageUrl || '/placeholder-playlist.png'}
+                  alt={`Portada de ${playlist.name}`}
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-lg shadow-xl"
+                  priority
+                />
+              </div>
+              <div className="flex flex-col items-center w-full">
+                <h4 className="text-xl font-bold text-white mb-2">
+                  {playlist.name}
+                </h4>
+              </div>
+            </a>
+          ))}
+          <p className="text-base text-white/90 text-center mt-20">
+            Mi gusto musical refleja mi personalidad ecléctica: desde el hip-hop alternativo de Travis Scott y Gorillaz hasta la electrónica experimental. Me apasiona especialmente la música que fusiona géneros y rompe barreras convencionales, siempre buscando sonidos innovadores que inspiren mi creatividad en el desarrollo.
+          </p>
+        </div>
       </div>
-      <p className="text-base text-white/90 text-center mt-10">
-        Mi gusto musical refleja mi personalidad ecléctica: desde el hip-hop alternativo de Travis Scott y Gorillaz hasta la electrónica experimental. Me apasiona especialmente la música que fusiona géneros y rompe barreras convencionales, siempre buscando sonidos innovadores que inspiren mi creatividad en el desarrollo.
-      </p>
     </div>
   );
 };
