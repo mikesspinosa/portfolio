@@ -77,30 +77,33 @@ export default function CertificateTimeline() {
             <div className="relative">
               <Carousel
                 opts={{
-                  align: "start",
+                  align: "center",
                   loop: true,
                 }}
-                className="w-full max-w-6xl mx-auto py-12"
+                className="w-full max-w-6xl mx-auto py-4 px-4 sm:py-12 sm:px-8"
               >
-                <CarouselContent className="-ml-2 md:-ml-4 overflow-visible px-4">
+                <CarouselContent className="overflow-visible">
                   {certificates.map((cert, index) => (
-                    <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3 overflow-visible px-2">
+                    <CarouselItem 
+                      key={index} 
+                      className="basis-[85%] sm:basis-1/2 lg:basis-1/3 overflow-visible"
+                    >
                       <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
-                        className="h-full overflow-visible py-8"
+                        className="h-full overflow-visible py-2 sm:py-8"
                       >
                         <Link 
                           href={cert.certificateUrl}
                           target="_blank"
                           className="group block h-full transform-gpu will-change-transform"
                         >
-                          <Card className="relative h-[450px] overflow-hidden rounded-[15px] transition-all duration-500 ease-out group-hover:scale-105 bg-black/10 backdrop-blur-[2px] border-0">
+                          <Card className="relative h-[520px] sm:h-[450px] overflow-hidden rounded-[15px] transition-all duration-500 ease-out group-hover:scale-105 bg-black/10 backdrop-blur-[2px] border-0">
                             <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent opacity-80" />
                             
-                            <CardContent className="relative h-full p-6 flex flex-col">
-                              <div className="relative w-full h-[180px] mb-4 rounded-lg overflow-hidden">
+                            <CardContent className="relative h-full p-4 sm:p-6 flex flex-col">
+                              <div className="relative w-full h-[200px] sm:h-[180px] mb-4 rounded-lg overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent" />
                                 <Image
                                   src={cert.imageUrl}
@@ -108,7 +111,7 @@ export default function CertificateTimeline() {
                                   fill
                                   priority
                                   className={`${cert.organization === "Amigos para Siempre" ? "object-cover object-center scale-[1.2] transform translate-y-2" : "object-contain"}`}
-                                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                  sizes="(max-width: 640px) 85vw, (max-width: 768px) 45vw, 30vw"
                                   style={{
                                     objectPosition: cert.organization === "Amigos para Siempre" ? "50% 35%" : "center",
                                     width: '100%',
@@ -118,11 +121,11 @@ export default function CertificateTimeline() {
                               </div>
 
                               <div className="flex-1 flex flex-col">
-                                <h3 className="text-lg font-semibold text-white/90 group-hover:text-white transition-colors duration-300">
+                                <h3 className="text-xl sm:text-lg font-semibold text-white/90 group-hover:text-white transition-colors duration-300">
                                   {cert.organization}
                                 </h3>
-                                <p className="text-sm text-white/70 mt-1">{cert.date}</p>
-                                <p className="mt-3 text-sm text-white/80 line-clamp-6 leading-relaxed">
+                                <p className="text-sm sm:text-sm text-white/70 mt-2">{cert.date}</p>
+                                <p className="mt-3 text-base sm:text-sm text-white/80 leading-relaxed line-clamp-[8] sm:line-clamp-6">
                                   {cert.description}
                                 </p>
                               </div>
@@ -144,8 +147,8 @@ export default function CertificateTimeline() {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="absolute -left-12 top-1/2 transform -translate-y-1/2" />
-                <CarouselNext className="absolute -right-12 top-1/2 transform -translate-y-1/2" />
+                <CarouselPrevious className="absolute -left-2 sm:-left-12 top-1/2 transform -translate-y-1/2 z-10" />
+                <CarouselNext className="absolute -right-2 sm:-right-12 top-1/2 transform -translate-y-1/2 z-10" />
               </Carousel>
             </div>
           </div>
