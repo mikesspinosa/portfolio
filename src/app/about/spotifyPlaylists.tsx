@@ -69,7 +69,7 @@ const SpotifyPlaylists: React.FC<SpotifyPlaylistsProps> = ({ playlists }) => {
             </a>
           ))}
           <p className="text-base text-white/90 text-center mt-20">
-            Mi gusto musical refleja mi personalidad ecléctica: desde el hip-hop alternativo de Travis Scott y Gorillaz hasta la electrónica experimental. Me apasiona especialmente la música que fusiona géneros y rompe barreras convencionales, siempre buscando sonidos innovadores que inspiren mi creatividad en el desarrollo.
+            Mi gusto musical refleja mi personalidad ecléctica: desde el indie alternativo de The Marías y Steve Lacy hasta el art pop de Gorillaz. Me apasiona especialmente la música que combina elementos del dream pop con ritmos electrónicos, siempre buscando sonidos que evoquen atmósferas únicas e inspiren mi proceso creativo.
           </p>
         </div>
       </div>

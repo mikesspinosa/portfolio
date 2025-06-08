@@ -59,30 +59,33 @@ export default function About() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
             <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
               <div className="flex flex-col gap-10">
-                <div className="relative">
+                <div className="relative flex-grow">
                   <div className="rounded-full blur-3xl" />
                   <Image
-                    className="relative z-10 mx-auto h-auto w-full max-w-sm rounded-t-full shadow-lg"
+                    className="relative z-10 mx-auto h-auto w-full max-w-md rounded-t-full shadow-lg"
                     width={1440}
                     height={1800}
                     src="/images/profile2.jpg"
                     alt="Foto de perfil de Mike Espinosa"
+                    priority
                   />
                 </div>
-                {spotifyLoading ? (
-                  <p>Cargando playlists...</p>
-                ) : spotifyError ? (
-                  <p>Error: {spotifyError}</p>
-                ) : playlists.length > 0 ? (
-                  <div className="flex-1">
-                    <SpotifyPlaylists playlists={playlists} />
-                  </div>
-                ) : null}
+                <div className="flex-shrink-0">
+                  {spotifyLoading ? (
+                    <p>Cargando playlists...</p>
+                  ) : spotifyError ? (
+                    <p>Error: {spotifyError}</p>
+                  ) : playlists.length > 0 ? (
+                    <div className="w-full">
+                      <SpotifyPlaylists playlists={playlists} />
+                    </div>
+                  ) : null}
+                </div>
               </div>
 
               <div className="flex flex-col">
                 <div className="text-primary-950/70 dark:text-primary-200/70 space-y-8">
-                  <p className="text-2xl font-semibold">
+                  <p className="text-2xl font-semibold rainbow-text">
                     Ingeniero en Tecnologías de la Información y Negocios Digitales con pasión por la innovación y la tecnología de vanguardia.
                   </p>
                   <p className="text-lg sm:text-xl">
@@ -319,6 +322,35 @@ export default function About() {
 
         .animate-heartbeat {
           animation: heartbeat 4s infinite;
+        }
+
+        @keyframes rainbow-animation {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+
+        .rainbow-text {
+          background: linear-gradient(
+            to right,
+            #2C3E50,    /* Azul oscuro */
+            #8E44AD,    /* Púrpura */
+            #16A085,    /* Verde azulado oscuro */
+            #2C3E50     /* Vuelve al azul oscuro */
+          );
+          background-size: 400% 400%;
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          animation: rainbow-animation 12s ease infinite;
+          text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+          font-weight: 700;
         }
       `}</style>
     </div>

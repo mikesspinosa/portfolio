@@ -1,0 +1,19 @@
+.perspective {
+  perspective: 1000px;
+}
+
+.transform-container {
+  perspective: 1000px;
+}
+
+.transform-3d {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.mask-text {
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  position: relative;
+  z-index: 1;
+} 

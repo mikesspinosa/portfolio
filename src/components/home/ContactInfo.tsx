@@ -109,10 +109,10 @@ export default function ContactInfo() {
           </span>
           <motion.div
             style={{ x }}
-            className="absolute left-[calc(100%-200px)] top-[calc(100%+65px)] sm:left-[calc(100%-400px)] sm:top-[calc(100%-75px)]"
+            className="absolute left-[calc(100%-150px)] top-[calc(100%+100px)] sm:left-[calc(100%-400px)] sm:top-[calc(100%-75px)]"
           >
             <Link href={'/contact'}>
-              <RoundedButton className="absolute h-[100px] w-[100px] cursor-pointer items-center justify-center rounded-full bg-destructive text-white text-xl sm:h-[200px] sm:w-[200px] sm:text-3xl">
+              <RoundedButton className="absolute h-[80px] w-[80px] cursor-pointer items-center justify-center rounded-full bg-destructive text-white text-base sm:h-[200px] sm:w-[200px] sm:text-3xl">
                 Contáctame
               </RoundedButton>
             </Link>
