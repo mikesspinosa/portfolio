@@ -24,6 +24,14 @@ export default function ProjectHero({
   const toggleMute = () => {
     setIsMuted(!isMuted);
   };
+
+  const getVideoSrc = () => {
+    if (media.includes('vimeo')) {
+      return `${media}?autoplay=1&muted=1&loop=1&color=E73C39&title=0&portrait=0&background=1#t=1m33s`;
+    }
+    return `${media}?autoplay=1&mute=${isMuted ? '1' : '0'}&controls=0&loop=1&playlist=${media.split('/').pop()}`;
+  };
+
   return (
     <div
       className={clsx(
@@ -45,12 +53,11 @@ export default function ProjectHero({
         </div>
       ) : (
         <iframe
-          src={`${media}?autoplay=1&mute=${
-            isMuted ? '1' : '0'
-          }&controls=0&loop=1&playlist=${media.split('/').pop()}`}
+          src={getVideoSrc()}
           className="aspect-video h-full w-full"
           allow="accelerometer; autoplay; modestbranding; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
+          frameBorder="0"
         ></iframe>
       )}
       {!isImage && (

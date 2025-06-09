@@ -135,9 +135,10 @@ export default function ContactInfo() {
           <RoundedButton>
             <a 
               href="/documents/CV-Miguel-Espinosa.pdf"
-              download
+              target="_blank"
+              rel="noopener noreferrer"
               className="cursor-pointer flex items-center gap-2 group"
-              onClick={() => toast.success('Descargando CV...')}
+              onClick={() => toast.success('Abriendo CV...')}
             >
               <FaFileAlt className="text-xl group-hover:scale-110 transition-transform duration-300" />
               <span>Ver CV</span>

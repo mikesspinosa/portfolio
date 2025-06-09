@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { motion, MotionValue, useScroll, useTransform } from 'framer-motion';
 import TextFormatter from '@/components/util/textFormatter';
+import { clsx } from 'clsx';
 
 interface ImageProps {
   src: StaticImageData;
@@ -14,12 +15,17 @@ interface Props {
   word: string;
   title: string;
   body: string;
+  textColor?: string;
+  textOpacity?: number;
 }
+
 export default function PageScrollParallax({
   staticImgs,
   word,
   title,
-  body
+  body,
+  textColor = 'text-primary',
+  textOpacity = 1
 }: Props) {
   const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -50,7 +56,7 @@ export default function PageScrollParallax({
           <TextFormatter text={body} />
         </div>
         <div>
-          <p className="mt-12 text-[2vw] uppercase text-primary">
+          <p className={clsx("mt-12 text-[2vw] uppercase", textColor)} style={{ opacity: textOpacity }}>
             {word.split('').map((letter, i) => (
               <motion.span
                 key={`l_${i}`}

@@ -9,13 +9,13 @@ import { ModalContext } from './modalContext';
 
 const projects = [
   {
-    title: 'M31 Controller',
-    src: 'm31/controller.jpg',
+    title: 'APS',
+    src: 'aps/APS1.jpg',
     description:
       'A video/audio game controller to make digital entertainment more approachable to those with visual impairments.',
-    href: '/projects/m31',
-    tag: 'Prototyping',
-    color: '#000000'
+    href: '/projects/aps',
+    tag: 'Voluntariado',
+    color: '#FF1493'
   },
   {
     title: 'AXO',
@@ -104,7 +104,7 @@ export default function ProjectsHome() {
   const [modal, setModal] = useState({ active: false, index: 0 });
   return (
     <ModalContext.Provider value={{ modal, setModal }}>
-      <Layout title={'My Work'}>
+      <Layout title={'Mi Trayecto'}>
         <div className="m-0">
           <div className="m-0 overflow-hidden">
             {projects.map((project, index) => {

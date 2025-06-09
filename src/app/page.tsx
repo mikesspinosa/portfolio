@@ -23,13 +23,13 @@ const slider1 = [
   },
   {
     color: '#21242b',
-    src: 'm31/controller.jpg'
+    src: 'aps/APS1.jpg'
   }
 ];
 const slider2 = [
   {
     color: '#d4e3ec',
-    src: 'm31/specs.png'
+    src: 'aps/APS1.png'
   },
   {
     color: '#9289BD',
@@ -37,7 +37,7 @@ const slider2 = [
   },
   {
     color: 'white',
-    src: 'm31/app.png'
+    src: 'aps/APS2.png'
   },
   {
     color: 'white',

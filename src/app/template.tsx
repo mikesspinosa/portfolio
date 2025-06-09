@@ -26,7 +26,7 @@ export default function RootTemplate({ children }: PropsWithChildren) {
 
   let bgColour = 'bg-background';
   let semicircleColor = 'bg-background';
-  const darkModeScreens = ['gallery', 'contact', 'm31', 'astra'];
+  const darkModeScreens = ['gallery', 'contact', 'aps', 'astra'];
   if (darkModeScreens.includes(pathname!)) {
     bgColour = 'bg-foreground';
     semicircleColor = 'bg-foreground';
