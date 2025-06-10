@@ -25,7 +25,7 @@ const projects = [
     color: '#e3f6f0'
   },
   {
-    title: 'Hemodialisis Renal',
+    title: 'Hemodiálisis Renal',
     src: 'stylesync/stylesync.png',
     href: 'https://renal-seven.vercel.app/',
     tag: 'Health Tech',
