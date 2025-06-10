@@ -96,7 +96,7 @@ export default function CertificateTimeline() {
                       >
                         <Link 
                           href={cert.certificateUrl}
-                          target="_blank"
+                          target={cert.certificateUrl.startsWith('/') ? '_self' : '_blank'}
                           className="group block h-full transform-gpu will-change-transform"
                         >
                           <Card className="relative h-[520px] sm:h-[450px] overflow-hidden rounded-[15px] transition-all duration-500 ease-out group-hover:scale-105 bg-black/10 backdrop-blur-[2px] border-0">
