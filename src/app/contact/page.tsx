@@ -43,13 +43,11 @@ export default function Contact() {
             <p className="m-0">Ángel</p>
           </div>
           <div className="flex justify-between uppercase">
-            <p className="m-0">ING. en T.I.</p>
-            <p className="m-0">y</p>
+            <p className="m-0">ING. en T.I. y</p>
+            <p className="m-0">Negocios</p>
           </div>
-          <div className="flex justify-center uppercase">
-            <p className="m-0">Negocios Digitales</p>
-          </div>
-          <div className="flex justify-end uppercase">
+          <div className="flex justify-between uppercase">
+            <p className="m-0">Digitales</p>
             <p className="m-0">| MEX</p>
           </div>
           <Link href={'https://www.linkedin.com/in/miguel-angel-espinosa-de-los-monteros-283bb930b/'}>
