@@ -18,18 +18,18 @@ const projects = [
     color: '#FF1493'
   },
   {
-    title: 'AXO',
+    title: '2Garzas',
     src: 'axo/astronaut-square.png',
-    href: '/projects/axo',
-    tag: 'Bio Materials',
-    color: '#ee5622'
+    href: 'https://2garzas.com.mx/',
+    tag: 'E-commerce',
+    color: '#e3f6f0'
   },
   {
-    title: 'StyleSync',
+    title: 'Hemodialisis Renal',
     src: 'stylesync/stylesync.png',
-    href: '/projects/stylesync',
-    tag: 'ML / AI',
-    color: 'pink'
+    href: 'https://renal-seven.vercel.app/',
+    tag: 'Health Tech',
+    color: '#b6c1e1'
   },
   {
     title: 'StackeRs',
@@ -108,6 +108,23 @@ export default function ProjectsHome() {
         <div className="m-0">
           <div className="m-0 overflow-hidden">
             {projects.map((project, index) => {
+              const isExternal = project.href.startsWith('http');
+              if (isExternal) {
+                return (
+                  <a
+                    href={project.href}
+                    key={index}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ProjectLink
+                      index={index}
+                      title={project.title}
+                      tag={project.tag}
+                    />
+                  </a>
+                );
+              }
               return (
                 <Link href={project.href} key={index}>
                   <ProjectLink
