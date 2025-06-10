@@ -46,18 +46,17 @@ export default function Contact() {
             <p className="m-0">ING. en T.I.</p>
             <p className="m-0">y</p>
           </div>
-          <div className="flex justify-between uppercase">
-            <p className="m-0">Negocios</p>
-            <p className="m-0">Digitales</p>
+          <div className="flex justify-center uppercase">
+            <p className="m-0">Negocios Digitales</p>
           </div>
-          <div className="flex justify-between uppercase">
+          <div className="flex justify-end uppercase">
             <p className="m-0">| MEX</p>
-            <Link href={'https://www.linkedin.com/in/miguel-angel-espinosa-de-los-monteros-283bb930b/'}>
-              <TextDisperse setBackground={setBackground}>
-                <p>→LinkedIn</p>
-              </TextDisperse>
-            </Link>
           </div>
+          <Link href={'https://www.linkedin.com/in/miguel-angel-espinosa-de-los-monteros-283bb930b/'}>
+            <TextDisperse setBackground={setBackground}>
+              <p>→LinkedIn</p>
+            </TextDisperse>
+          </Link>
           <a href="mailto:mike.espinosa1203@gmail.com">
             <TextDisperse
               setBackground={setBackground}
