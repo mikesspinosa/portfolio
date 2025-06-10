@@ -14,7 +14,7 @@ const CERTIFICATES = [
     title: "Voluntariado Social",
     date: "2023",
     imageUrl: "/images/amigos-para-siempre.png",
-    certificateUrl: "#",
+    certificateUrl: "/projects/APS",
     organization: "Amigos para Siempre",
     description: "Participación activa en programa de voluntariado social enfocado en crear espacios de diversión y aprendizaje para niños. Desarrollo de habilidades de liderazgo, trabajo en equipo y gestión de actividades recreativas con impacto social directo."
   },
