@@ -43,7 +43,7 @@ export default function Contact() {
             <p className="m-0">Ángel</p>
           </div>
           <div className="flex justify-between uppercase">
-            <p className="m-0">Ingeniero en T.I.</p>
+            <p className="m-0">ING. en T.I.</p>
             <p className="m-0">y</p>
           </div>
           <div className="flex justify-between uppercase">
