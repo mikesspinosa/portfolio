@@ -28,7 +28,7 @@ export function ContactForm() {
 
   const onSubmit = (data: ContactFormData) => {
     const { subject, email, body } = data;
-    window.location.href = `mailto:bettinasosarohl@gmail.com?subject=${encodeURIComponent(
+    window.location.href = `mailto:mike.espinosa1203@gmail.com?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}%0D%0A%0D%0AFrom: ${encodeURIComponent(
       email
@@ -40,11 +40,10 @@ export function ContactForm() {
       <div className="flex flex-col gap-12 lg:grid lg:grid-cols-3 lg:gap-8">
         <div className="flex flex-col gap-4 sm:gap-6">
           <h2 className="text-3xl font-medium tracking-tight sm:text-4xl">
-            Let&apos;s talk!
+            ¡Hablemos!
           </h2>
           <p className="text-primary-950/70 dark:text-primary-200/70 max-w-lg text-lg sm:text-xl">
-            I&apos;m always looking for new and innovative ways to use my
-            skills.
+            Siempre estoy en busca de formas nuevas e innovadoras de aplicar mis habilidades.
           </p>
         </div>
         <div className="col-span-2">
@@ -58,10 +57,10 @@ export function ContactForm() {
                 name="subject"
                 render={({ field }) => (
                   <FormItem className="flex flex-col space-y-1">
-                    <FormLabel className="text-xl">Subject</FormLabel>
+                    <FormLabel className="text-xl">Asunto</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="Full name"
+                        placeholder="Nombre completo"
                         className="w-full rounded-xl bg-background text-foreground"
                         {...field}
                       />
@@ -75,12 +74,12 @@ export function ContactForm() {
                 name="email"
                 render={({ field }) => (
                   <FormItem className="flex flex-col space-y-1">
-                    <FormLabel className="text-xl">Email</FormLabel>
+                    <FormLabel className="text-xl">Correo Electrónico</FormLabel>
                     <FormControl>
                       <Input
                         className="w-full rounded-xl bg-background text-foreground"
                         type="email"
-                        placeholder="Email"
+                        placeholder="Tu correo"
                         {...field}
                       />
                     </FormControl>
@@ -93,11 +92,11 @@ export function ContactForm() {
                 name="body"
                 render={({ field }) => (
                   <FormItem className="flex flex-col space-y-1">
-                    <FormLabel className="text-xl">Message</FormLabel>
+                    <FormLabel className="text-xl">Mensaje</FormLabel>
                     <FormControl>
                       <Textarea
                         className="w-full rounded-xl bg-background text-foreground"
-                        placeholder="Message"
+                        placeholder="Escribe tu mensaje aquí..."
                         {...field}
                       />
                     </FormControl>
@@ -106,7 +105,7 @@ export function ContactForm() {
                 )}
               />
               <div className="flex justify-end">
-                <RoundedButton>Submit</RoundedButton>
+                <RoundedButton>Enviar</RoundedButton>
               </div>
             </form>
           </FormProvider>

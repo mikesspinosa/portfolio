@@ -19,7 +19,7 @@ export default function Contact() {
   };
 
   const copyEmail = () => {
-    navigator.clipboard.writeText('bettinasosarohl@gmail.com');
+    navigator.clipboard.writeText('mike.espinosa1203@gmail.com');
     setEmailCopied(true);
     setTimeout(() => setEmailCopied(false), 2000);
   };
@@ -39,39 +39,41 @@ export default function Contact() {
       <div className="flex min-h-screen w-full items-center justify-center pt-44 align-middle text-[8.6vw] xs:text-[5.6vw]">
         <div className="p-12 xs:w-1/2 xs:p-0">
           <div className="flex justify-between uppercase">
-            <p className="m-0">Bettina</p>
-            <p className="m-0">Sosa</p>
+            <p className="m-0">Miguel</p>
+            <p className="m-0">Angel</p>
           </div>
           <div className="flex justify-between uppercase">
-            <p className="m-0">software</p>
-            <p className="m-0">&</p>
+            <p className="m-0">Ing. en</p>
+            <p className="m-0">Tecnologías de</p>
           </div>
           <div className="flex justify-between uppercase">
-            <p className="m-0">design</p>
-            <p className="m-0">engineer</p>
+            <p className="m-0">la Información</p>
+            <p className="m-0">y Negocios</p>
           </div>
           <div className="flex justify-between uppercase">
-            <p className="m-0">Ldn </p>
-            <Link href={'https://www.linkedin.com/in/bettina-sosa/'}>
+            <p className="m-0">Digitales</p>
+            <Link href={'https://www.linkedin.com/in/miguel-angel-espinosa-de-los-monteros-283bb930b/'}>
               <TextDisperse setBackground={setBackground}>
-                <p>→Linkedin</p>
+                <p>→LinkedIn | MEX</p>
               </TextDisperse>
             </Link>
           </div>
-          <TextDisperse
-            setBackground={setBackground}
-            onClick={() => {
-              toast({
-                description:
-                  'Email copied to clipboard, alternatively write your enquiry on the form!'
-              });
-              scrollToEmail();
-            }}
-          >
-            <p className="m-0">→Email</p>
-          </TextDisperse>
+          <a href="mailto:mike.espinosa1203@gmail.com">
+            <TextDisperse
+              setBackground={setBackground}
+              onClick={() => {
+                toast({
+                  description:
+                    'Correo copiado al portapapeles. ¡También puedes usar el formulario!'
+                });
+                scrollToEmail();
+              }}
+            >
+              <p className="m-0">→Email</p>
+            </TextDisperse>
+          </a>
 
-          <Link href={'https://github.com/bettinasosa'}>
+          <Link href={'https://github.com/mikesspinosa'}>
             <TextDisperse setBackground={setBackground}>
               <p>→Github</p>
             </TextDisperse>
