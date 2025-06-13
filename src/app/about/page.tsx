@@ -5,8 +5,6 @@ import Image from 'next/image';
 import { gsap } from 'gsap';
 import { useSpotify } from '@/hooks/useSpotify';
 import Layout from '@/components/layout';
-import { useGitHub } from '@/hooks/useGithub';
-import GitHubContributionsGraph from '@/app/about/githubActivity';
 import SpotifyPlaylists from '@/app/about/spotifyPlaylists';
 import Link from 'next/link';
 
@@ -18,12 +16,6 @@ export default function About() {
     error: spotifyError,
     topTracks
   } = useSpotify();
-
-  const {
-    githubData,
-    isLoading: githubLoading,
-    error: githubError
-  } = useGitHub();
 
   useEffect(() => {
     if (!starsRef.current) return;
@@ -141,22 +133,9 @@ export default function About() {
                 </div>
               </div>
             </div>
-            <Link
-              className="flex flex-col gap-10 pt-10"
-              href="https://github.com/bettinasosa"
-            >
-              {githubLoading ? (
-                <div></div>
-              ) : githubError ? (
-                <div></div>
-              ) : githubData ? (
-                <GitHubContributionsGraph
-                  contributions={githubData.contributions}
-                  totalContributions={githubData.totalContributions}
-                  restrictedContributions={githubData.restrictedContributions}
-                />
-              ) : null}
-            </Link>
+            <div className="flex flex-col gap-8">
+              {/* Removed GitHub link */}
+            </div>
           </div>
         </div>
       </Layout>

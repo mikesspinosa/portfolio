@@ -10,7 +10,7 @@ import { ModalContext } from './modalContext';
 const projects = [
   {
     title: 'APS',
-    src: 'aps/APS1.jpg',
+    src: 'APS/APS1.jpg',
     description:
       'A video/audio game controller to make digital entertainment more approachable to those with visual impairments.',
     href: '/projects/aps',
@@ -19,34 +19,37 @@ const projects = [
   },
   {
     title: '2Garzas',
-    src: 'axo/astronaut-square.png',
+    src: '2Garzas/2Garzas1.png',
     href: 'https://2garzas.com.mx/',
-    tag: 'E-commerce',
+    tag: 'Comida Gourmet',
     color: '#e3f6f0'
   },
   {
-    title: 'Hemodiálisis Renal',
-    src: 'stylesync/stylesync.png',
+    title: 'Hemodialisis Renal',
+    description: 'UX/UI & Dev',
+    src: 'HemodialisisRenal/HemodialisisRenal.png',
     href: 'https://renal-seven.vercel.app/',
-    tag: 'Health Tech',
+    tag: 'Suministros Médicos',
     color: '#b6c1e1'
   },
   {
-    title: 'StackeRs',
+    title: 'GlucoMind',
     description:
       'Reusable packaging made of highly recyclable materials for baby bathing products.',
-    src: 'bottles/block.png',
-    href: '/projects/stackers',
-    tag: 'Packaging',
-    color: '#EFE8D3'
+    src: 'GlucoMind/GlucoMind1.png',
+    href: 'https://github.com/mikesspinosa/diabetes-app',
+    tag: 'App para Diabetes',
+    color: '#1a6ad8',
+    wip: true
   },
   {
-    title: 'ASTRA',
+    title: 'Creemos algo juntos',
     description: 'An interstellar games arcade with a hologram screen.',
-    src: 'astra/astra.png',
-    href: '/projects/astra',
-    tag: 'GIZMO',
-    color: '#303030'
+    src: 'CreemosAlgoJuntos/CreemosAlgoJuntos1.png',
+    href: '/contact',
+    tag: '',
+    color: '#303030',
+    special: 'rainbow'
   }
 
   // {
@@ -97,7 +100,14 @@ const projects = [
   //   href: '/projects/tetris',
   //   tag: 'Software',
   //   color: '#EFE8D3'
-  // }
+  // },
+  // {
+  //   title: 'Bike',
+  //   description: 'UX/UI & Dev',
+  //   src: 'bike.png',
+  //   link: '/projects/bike',
+  //   color: '#000000',
+  // },
 ];
 
 export default function ProjectsHome() {
@@ -121,6 +131,9 @@ export default function ProjectsHome() {
                       index={index}
                       title={project.title}
                       tag={project.tag}
+                      wip={project.wip}
+                      special={project.special}
+                      color={project.color}
                     />
                   </a>
                 );
@@ -131,6 +144,9 @@ export default function ProjectsHome() {
                     index={index}
                     title={project.title}
                     tag={project.tag}
+                    wip={project.wip}
+                    special={project.special}
+                    color={project.color}
                   />
                 </Link>
               );

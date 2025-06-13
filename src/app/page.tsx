@@ -11,37 +11,37 @@ import Description from '@/components/home/Description/description';
 const slider1 = [
   {
     color: 'white',
-    src: 'stylesync/pca.png'
+    src: 'HemodialisisRenal/Mike2.png'
   },
   {
     color: 'white',
-    src: 'stylesync/diagram.png'
+    src: 'mockups/mockup2.png'
   },
   {
     color: '#21242b',
-    src: 'catapult-trading/dashboard.png'
+    src: 'mockups/mockup3.png'
   },
   {
     color: '#21242b',
-    src: 'aps/APS1.jpg'
+    src: 'APS/APS1.jpg'
   }
 ];
 const slider2 = [
   {
     color: '#d4e3ec',
-    src: 'aps/APS1.png'
+    src: 'APS/APS2.png'
   },
   {
     color: '#9289BD',
-    src: 'axo/prototype.png'
+    src: 'mockups/mockup.png'
   },
   {
     color: 'white',
-    src: 'aps/APS2.png'
+    src: 'APS/APS3.png'
   },
   {
     color: 'white',
-    src: 'stylesync/hero.svg'
+    src: 'HemodialisisRenal/Mike1.png'
   }
 ];
 

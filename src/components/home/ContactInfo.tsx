@@ -5,9 +5,38 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Magnetic from '@/components/animations/magnetic';
 import RoundedButton from '@/components/animations/roundedButton';
 import Link from 'next/link';
-import { FaGithub, FaLinkedin, FaTiktok, FaEnvelope, FaFileAlt } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTiktok, FaEnvelope } from 'react-icons/fa6';
+import { FaFileLines } from 'react-icons/fa6';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { toast } from 'sonner';
+
+const contact = [
+    {
+        icon: <FaGithub />,
+        link: 'https://github.com/mikespinosa',
+        ariaLabel: 'GitHub de Mike Espinosa'
+    },
+    {
+        icon: <FaLinkedin />,
+        link: 'https://www.linkedin.com/in/mikespinosa/',
+        ariaLabel: 'LinkedIn de Mike Espinosa'
+    },
+    {
+        icon: <FaTiktok />,
+        link: 'https://www.tiktok.com/@dev.mikespinosa',
+        ariaLabel: 'TikTok de Mike Espinosa'
+    },
+    {
+        icon: <FaEnvelope />,
+        link: 'mailto:mikespinosa92@gmail.com',
+        ariaLabel: 'Enviar correo a Mike Espinosa'
+    },
+    {
+        icon: <FaFileLines />,
+        link: '/mikespinosa-cv.pdf',
+        ariaLabel: 'Descargar CV de Mike Espinosa'
+    }
+];
 
 export default function ContactInfo() {
   const container = useRef(null);
@@ -92,6 +121,7 @@ export default function ContactInfo() {
                   src={`/images/profile.jpg`}
                   priority
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
               <div className="ml-6 flex flex-col space-y-4">
@@ -140,7 +170,7 @@ export default function ContactInfo() {
               className="cursor-pointer flex items-center gap-2 group"
               onClick={() => toast.success('Abriendo CV...')}
             >
-              <FaFileAlt className="text-xl group-hover:scale-110 transition-transform duration-300" />
+              <FaFileLines className="text-xl group-hover:scale-110 transition-transform duration-300" />
               <span>Ver CV</span>
             </a>
           </RoundedButton>
@@ -184,12 +214,12 @@ export default function ContactInfo() {
                 <Tooltip>
                   <TooltipTrigger>
                     <Link
-                      href="https://github.com/mikesspinosa"
+                      href="https://github.com/mikespinosa"
                       className="flex items-center gap-1 group transition-all duration-300"
                     >
                       <FaGithub size={24} className="text-white group-hover:text-[#6e7681] transition-colors duration-300" />
                       <div className="flex items-center">
-                        <span className="mr-2">GitHub</span>
+                        <span className="mr-2 transition-colors duration-300 group-hover:text-[#6e7681]">GitHub</span>
                         <span className="text-[#6e7681] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                           @mikesspinosa
                         </span>
@@ -211,7 +241,7 @@ export default function ContactInfo() {
                     >
                       <FaLinkedin size={24} className="text-white group-hover:text-[#0077b5] transition-colors duration-300" />
                       <div className="flex items-center">
-                        <span className="mr-2">LinkedIn</span>
+                        <span className="mr-2 transition-colors duration-300 group-hover:text-[#0077b5]">LinkedIn</span>
                         <span className="text-[#0077b5] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                           Miguel Angel Espinosa
                         </span>
@@ -233,7 +263,7 @@ export default function ContactInfo() {
                     >
                       <FaTiktok size={24} className="text-white group-hover:text-[#ff0050] transition-colors duration-300" />
                       <div className="flex items-center">
-                        <span className="mr-2">TikTok</span>
+                        <span className="mr-2 transition-colors duration-300 group-hover:text-[#ff0050]">TikTok</span>
                         <span className="text-[#ff0050] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                           @mikespinosa
                         </span>

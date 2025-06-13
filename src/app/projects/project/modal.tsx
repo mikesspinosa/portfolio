@@ -4,6 +4,7 @@ import { useContext, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import Link from 'next/link';
 import { ModalContext } from '@/app/projects/modalContext';
+import { Plus } from 'lucide-react';
 
 const scaleAnimation = {
   initial: { scale: 0, x: '-50%', y: '-50%' },
@@ -26,6 +27,7 @@ interface ModalProps {
     src: string;
     color: string;
     href: string;
+    special?: string;
   }[];
 }
 
@@ -98,7 +100,20 @@ export default function Modal({ projects }: ModalProps) {
           className="transition-top ease-custom-cubic absolute h-full w-full duration-500"
         >
           {projects.map((project, index) => {
-            const { src, color, href } = project;
+            const { src, color, special } = project;
+            const isSpecial = special === 'rainbow';
+
+            if (isSpecial) {
+              return (
+                <div
+                  className="flex h-full w-full items-center justify-center rainbow-bg"
+                  key={`modal_${index}`}
+                >
+                  <Plus className="h-24 w-24 text-white" />
+                </div>
+              );
+            }
+
             return (
               <div
                 className="flex h-full w-full items-center justify-center"
@@ -108,7 +123,7 @@ export default function Modal({ projects }: ModalProps) {
                 <Image
                   src={`/images/${src}`}
                   width={350}
-                  height={0}
+                  height={350}
                   alt="image"
                   className="h-auto"
                 />

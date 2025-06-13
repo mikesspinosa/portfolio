@@ -3,6 +3,14 @@ import { NextResponse } from 'next/server';
 // Certificaciones predefinidas que mantendremos actualizadas manualmente
 const CERTIFICATES = [
   {
+    title: "Cisco Academy",
+    date: "2024",
+    imageUrl: "/images/certificates/cisco.png",
+    certificateUrl: "https://www.credly.com/badges/ddf9f80d-2648-4764-a9f5-bfdd2cbab1bb/public_url",
+    organization: "Cisco",
+    description: "Fundamentos de redes, incluyendo configuración de switches, routers y protocolos de red. Desarrollo de habilidades prácticas en la administración de infraestructuras de red para soluciones empresariales."
+  },
+  {
     title: "Inteligencia Artificial con Machine Learning en Java",
     date: "2025",
     imageUrl: "/images/certificates/oracle-ai.png",

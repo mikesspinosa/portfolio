@@ -83,21 +83,21 @@ export default function TextParallax() {
       <div />
       <div ref={container}>
         <Slide
-          src={'/images/posters/sustainability.jpg'}
+          src={'/images/mockups/mockup.png'}
           direction={'left'}
           left={'-40%'}
           progress={scrollYProgress}
         />
 
         <Slide
-          src={'/images/posters/coffee.jpg'}
+          src={'/images/mockups/mockup.png'}
           direction={'right'}
           left={'-25%'}
           progress={scrollYProgress}
         />
 
         <Slide
-          src={'/images/posters/talksposter.jpg'}
+          src={'/images/mockups/mockup.png'}
           direction={'left'}
           left={'-75%'}
           progress={scrollYProgress}

@@ -1,5 +1,4 @@
-import React, { PropsWithChildren, useEffect, useRef } from 'react';
-import gsap from 'gsap';
+import React, { PropsWithChildren, useRef } from 'react';
 import Magnetic from '@/components/animations/magnetic';
 import { clsx } from 'clsx';
 import { Button } from '@/components/ui/button';
@@ -12,58 +11,25 @@ interface Props {
 export default function RoundedButton({
   children,
   backgroundColor = 'secondary',
+  className,
   ...attributes
 }: PropsWithChildren<Props>) {
-  const circle = useRef(null);
-  let timeline = useRef<gsap.core.Timeline | null>(null);
-  let timeoutId: NodeJS.Timeout;
-  useEffect(() => {
-    timeline.current = gsap.timeline({ paused: true });
-    timeline.current
-      .to(
-        circle.current,
-        { top: '-25%', width: '150%', duration: 0.4, ease: 'power3.in' },
-        'enter'
-      )
-      .to(
-        circle.current,
-        { top: '-150%', width: '125%', duration: 0.25 },
-        'exit'
-      );
-  }, []);
-
-  const manageMouseEnter = () => {
-    if (timeoutId) clearTimeout(timeoutId);
-    timeline.current!.tweenFromTo('enter', 'exit');
-  };
-
-  const manageMouseLeave = () => {
-    timeoutId = setTimeout(() => {
-      timeline.current!.play();
-    }, 300);
-  };
-
   return (
     <Magnetic>
       <Button
         variant="rounded"
-        className="relative flex cursor-pointer items-center justify-center overflow-hidden rounded-full border border-secondary px-6 py-8 text-lg sm:text-xl"
-        style={{ overflow: 'hidden' }}
-        onMouseEnter={() => {
-          manageMouseEnter();
-        }}
-        onMouseLeave={() => {
-          manageMouseLeave();
-        }}
+        className={clsx(
+          "relative flex cursor-pointer items-center justify-center overflow-hidden rounded-full border border-secondary px-6 py-8 text-lg sm:text-xl group",
+          className
+        )}
         {...attributes}
       >
-        <div className="relative z-10 transition-colors duration-300 ease-linear hover:text-white">
+        <div className="relative z-10 transition-colors duration-300 ease-linear group-hover:text-white">
           {children}
         </div>
         <div
-          ref={circle}
           className={clsx(
-            'absolute top-[100%] h-[150%] w-full rounded-full',
+            'absolute top-[100%] h-[150%] w-full rounded-full transition-all duration-500 ease-in-out group-hover:top-[-25%]',
             backgroundColor === 'secondary' ? 'bg-[#058c42]' : 'bg-[#16db65]'
           )}
         ></div>

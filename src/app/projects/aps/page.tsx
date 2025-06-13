@@ -1,16 +1,16 @@
 'use client';
 import ProjectHero from '@/app/projects/project/hero';
 import PageScrollParallax from '@/components/pageScrollParallax';
-import Picture1 from '../../../../public/images/aps/APS1.jpg';
-import Picture3 from '../../../../public/images/aps/APS3.webp';
-import Picture2 from '../../../../public/images/aps/APS4.png';
+import Picture1 from '../../../../public/images/APS/APS1.jpg';
+import Picture3 from '../../../../public/images/APS/APS3.webp';
+import Picture2 from '../../../../public/images/APS/APS4.png';
 import Image from 'next/image';
 import React from 'react';
 
 export default function APSProject() {
   const researchAssets = [
-    '/images/aps/APS1.png',
-    '/images/aps/APS2.png'
+    '/images/APS/APS3.png',
+    '/images/APS/APS2.png'
   ];
   const introduction =
     'Una experiencia que transforma vidas y construye puentes entre personas. ' +

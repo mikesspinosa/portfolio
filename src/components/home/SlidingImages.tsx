@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import RoundedButton from '@/components/animations/roundedButton';
 import Link from 'next/link';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 
 type Slider = {
   color: string;
@@ -19,22 +20,27 @@ export default function SlidingImages({ slider1, slider2 }: Props) {
     target: container,
     offset: ['start end', 'end start']
   });
+
+  const isDesktop = useMediaQuery('(min-width: 768px)');
+
   const x1 = useTransform(scrollYProgress, [0, 1], [0, 150]);
   const x2 = useTransform(scrollYProgress, [0, 1], [0, -150]);
+  const x1Mobile = useTransform(scrollYProgress, [0, 1], [0, 50]);
+  const x2Mobile = useTransform(scrollYProgress, [0, 1], [0, -50]);
 
   return (
     <div
       ref={container}
-      className="relative z-20 mt-[200px] flex flex-col gap-[3vw] bg-background"
+      className="relative z-20 flex flex-col gap-8 md:gap-12 py-20 md:py-32 bg-background overflow-hidden"
     >
       <motion.div
-        style={{ x: x1 }}
-        className="relative left-[-10vw] flex w-[300vw] gap-4 sm:w-[120vw] sm:gap-12"
+        style={{ x: isDesktop ? x1 : x1Mobile }}
+        className="flex gap-4 md:gap-8 justify-center"
       >
         {slider1.map((project, index) => {
           const projectPath = project.src.includes('aps/') ? '/projects/aps' : '/projects';
           return (
-            <Link href={projectPath} key={index} className="flex h-60 w-1/2 items-center justify-center shadow-lg sm:h-80 sm:w-1/4">
+            <Link href={projectPath} key={index} className="flex-shrink-0 w-4/5 md:w-1/3 lg:w-1/4 h-60 md:h-80 shadow-lg">
               <div
                 className="w-full h-full"
                 style={{ backgroundColor: project.color }}
@@ -44,7 +50,7 @@ export default function SlidingImages({ slider1, slider2 }: Props) {
                     alt="image"
                     src={`/images/${project.src}`}
                     fill
-                    style={{ objectFit: 'contain' }}
+                    style={{ objectFit: 'cover' }}
                   />
                 </div>
               </div>
@@ -53,13 +59,13 @@ export default function SlidingImages({ slider1, slider2 }: Props) {
         })}
       </motion.div>
       <motion.div
-        style={{ x: x2 }}
-        className="relative left-[-10vw] flex w-[300vw] gap-6 sm:w-[120vw] sm:gap-12"
+        style={{ x: isDesktop ? x2 : x2Mobile }}
+        className="flex gap-4 md:gap-8 justify-center"
       >
         {slider2.map((project, index) => {
           const projectPath = project.src.includes('aps/') ? '/projects/aps' : '/projects';
           return (
-            <Link href={projectPath} key={index} className="flex h-60 w-3/4 items-center justify-center sm:h-80 sm:w-1/4">
+            <Link href={projectPath} key={index} className="flex-shrink-0 w-4/5 md:w-1/3 lg:w-1/4 h-60 md:h-80 shadow-lg">
               <div
                 className="w-full h-full"
                 style={{ backgroundColor: project.color }}
@@ -69,7 +75,7 @@ export default function SlidingImages({ slider1, slider2 }: Props) {
                     fill
                     alt="image"
                     src={`/images/${project.src}`}
-                    style={{ objectFit: 'contain' }}
+                    style={{ objectFit: 'cover' }}
                   />
                 </div>
               </div>
@@ -77,9 +83,9 @@ export default function SlidingImages({ slider1, slider2 }: Props) {
           );
         })}
       </motion.div>
-      <div className="flex w-full justify-center">
+      <div className="flex w-full justify-center mt-8 md:mt-12">
         <Link href={'/projects'}>
-          <RoundedButton>Ver Experiencia</RoundedButton>
+          <RoundedButton className="text-lg md:text-xl px-8 py-4">Ver Experiencia</RoundedButton>
         </Link>
       </div>
     </div>
