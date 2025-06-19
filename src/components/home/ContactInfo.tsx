@@ -9,6 +9,7 @@ import { FaGithub, FaLinkedin, FaTiktok, FaEnvelope } from 'react-icons/fa6';
 import { FaFileLines } from 'react-icons/fa6';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { toast } from 'sonner';
+import { useRouter } from 'next/navigation';
 
 const contact = [
     {
@@ -52,6 +53,7 @@ export default function ContactInfo() {
     'relative after:absolute after:left-1/2 after:mt-0.5 after:block after:h-px after:w-0' +
     ' after:-translate-x-1/2 after:transform after:bg-white after:duration-200 ' +
     "after:ease-linear after:content-[''] hover:after:w-full";
+  const router = useRouter();
 
   useEffect(() => {
     const updateTime = () => {
@@ -108,30 +110,30 @@ export default function ContactInfo() {
     <motion.div
       style={{ y }}
       ref={container}
-      className="relative flex min-h-screen flex-col items-center justify-between bg-foreground p-6 pt-32 text-white sm:justify-center"
+      className="relative flex min-h-screen flex-col items-center justify-between bg-foreground p-4 sm:p-6 pt-20 sm:pt-32 text-white sm:justify-center"
     >
-      <div className="w-full bg-foreground pt-[150px] sm:max-w-[1800px]">
-        <div className="relative border-b border-gray-600 pb-12 sm:mx-[100px]">
-          <span className="flex flex-col space-y-8">
+      <div className="w-full bg-foreground pt-[100px] sm:pt-[150px] sm:max-w-[1800px]">
+        <div className="relative border-b border-gray-600 pb-8 sm:pb-12 px-4 sm:px-0 sm:mx-[100px]">
+          <span className="flex flex-col space-y-6 sm:space-y-8">
             <div className="flex items-start">
-              <div className="relative h-16 w-16 overflow-hidden rounded-full sm:h-[100px] sm:w-[100px]">
+              <div className="relative h-14 w-14 sm:h-16 sm:w-16 md:h-[100px] md:w-[100px] overflow-hidden rounded-full flex-shrink-0">
                 <Image
                   fill
                   alt={'profile'}
                   src={`/images/profile.jpg`}
                   priority
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  style={{ objectFit: 'cover' }}
+                  sizes="(max-width: 640px) 56px, (max-width: 768px) 64px, 100px"
+                  style={{ objectFit: 'cover', objectPosition: 'center top' }}
                 />
               </div>
-              <div className="ml-6 flex flex-col space-y-4">
-                <h2 className="text-xl font-medium sm:text-[5vh]">
+              <div className="ml-4 sm:ml-6 flex flex-col space-y-2 sm:space-y-4 flex-1 min-w-0">
+                <h2 className="text-2xl sm:text-3xl md:text-[5vh] font-medium">
                   ¡Trabajemos juntos!
                 </h2>
-                <h3 className="text-lg font-medium text-[#058c42] sm:text-2xl">
+                <h3 className="text-base sm:text-lg md:text-2xl font-medium text-[#058c42]">
                   Miguel Angel Espinosa de los Monteros
                 </h3>
-                <div className="text-sm text-gray-400 sm:text-base">
+                <div className="text-xs sm:text-sm md:text-base text-gray-400">
                   <span>Ingeniero en Tecnologías de la Información y Negocios Digitales & Creador de Contenido</span>
                 </div>
               </div>
@@ -139,48 +141,48 @@ export default function ContactInfo() {
           </span>
           <motion.div
             style={{ x }}
-            className="absolute left-[calc(100%-150px)] top-[calc(100%+100px)] sm:left-[calc(100%-400px)] sm:top-[calc(100%-75px)]"
+            className="absolute left-[calc(100%-120px)] top-[calc(100%+60px)] sm:left-[calc(100%-150px)] sm:top-[calc(100%+100px)] md:left-[calc(100%-400px)] md:top-[calc(100%-75px)] hidden lg:block"
           >
             <Link href={'/contact'}>
-              <RoundedButton className="absolute h-[80px] w-[80px] cursor-pointer items-center justify-center rounded-full bg-destructive text-white text-base sm:h-[200px] sm:w-[200px] sm:text-3xl">
+              <RoundedButton className="absolute h-[60px] w-[60px] sm:h-[80px] sm:w-[80px] md:h-[200px] md:w-[200px] cursor-pointer items-center justify-center rounded-full bg-destructive text-white text-sm sm:text-base md:text-3xl border-0">
                 Contáctame
               </RoundedButton>
             </Link>
           </motion.div>
         </div>
-        <div className="mt-6 flex gap-5 sm:mx-[100px]">
-          <RoundedButton>
+        <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row gap-3 sm:gap-5 px-4 sm:px-0 sm:mx-[100px]">
+          <RoundedButton className="w-full sm:w-auto">
             <a 
               href={`mailto:${email}`}
               onClick={(e) => {
                 e.preventDefault();
                 handleEmailClick();
               }}
-              className="cursor-pointer flex items-center gap-2 group"
+              className="cursor-pointer flex items-center justify-center sm:justify-start gap-2 group text-sm sm:text-base"
             >
-              <FaEnvelope className="text-xl group-hover:scale-110 transition-transform duration-300" />
-              <span>{email}</span>
+              <FaEnvelope className="text-lg sm:text-xl group-hover:scale-110 transition-transform duration-300" />
+              <span className="truncate">{email}</span>
             </a>
           </RoundedButton>
-          <RoundedButton>
+          <RoundedButton className="w-full sm:w-auto">
             <a 
               href="/documents/CV-Miguel-Espinosa.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="cursor-pointer flex items-center gap-2 group"
+              className="cursor-pointer flex items-center justify-center sm:justify-start gap-2 group text-sm sm:text-base"
               onClick={() => toast.success('Abriendo CV...')}
             >
-              <FaFileLines className="text-xl group-hover:scale-110 transition-transform duration-300" />
+              <FaFileLines className="text-lg sm:text-xl group-hover:scale-110 transition-transform duration-300" />
               <span>Ver CV</span>
             </a>
           </RoundedButton>
         </div>
 
-        <div className="mt-20 flex flex-col justify-between p-5 space-y-12 2xs:mt-52 sm:mx-[100px] sm:mt-48 sm:flex-row sm:items-end sm:space-y-0">
+        <div className="mt-6 sm:mt-8 md:mt-20 flex flex-col justify-between p-4 sm:p-5 space-y-6 sm:space-y-8 md:space-y-12 2xs:mt-16 sm:mt-20 md:mt-48 sm:flex-row sm:items-end sm:space-y-0 sm:mx-[100px]">
           <div className="flex flex-col">
-            <p className="min-w-screen text-base sm:max-w-md leading-relaxed">
+            <p className="text-sm sm:text-base max-w-full sm:max-w-md leading-relaxed">
               Ingeniero en Tecnologías de la Información y Negocios Digitales | 
-              <Link href="https://www.tiktok.com/@mikespinosa" className="group/creator inline-flex items-center mx-2">
+              <Link href="https://www.tiktok.com/@mikespinosa" className="group/creator inline-flex items-center mx-1 sm:mx-2">
                 <span className="relative cursor-pointer transition-all duration-300 group-hover/creator:text-[#ff0050] group-hover/creator:scale-110">
                   Creador de contenido
                   <span className="absolute inset-0 group-hover/creator:animate-sparkle opacity-0 group-hover/creator:opacity-100" />
@@ -189,25 +191,25 @@ export default function ContactInfo() {
               | AI | Tecnología con impacto positivo, esa es mi misión.
             </p>
           </div>
-          <div className="flex items-end gap-2">
-            <span className="flex flex-col gap-3">
-              <h3 className="m-0 cursor-default p-1 text-base font-light text-gray-500">
+          <div className="flex flex-col sm:flex-row items-start sm:items-end gap-4 sm:gap-2">
+            <span className="flex flex-col gap-2 sm:gap-3">
+              <h3 className="m-0 cursor-default p-1 text-sm sm:text-base font-light text-gray-500">
                 Versión
               </h3>
-              <p className="relative m-0 cursor-pointer p-1">2025.6.4</p>
+              <p className="relative m-0 cursor-pointer p-1 text-sm sm:text-base">2025.6.4</p>
             </span>
-            <span className="flex flex-col gap-3">
-              <h3 className="m-0 cursor-default p-1 text-base font-light text-gray-500">
+            <span className="flex flex-col gap-2 sm:gap-3">
+              <h3 className="m-0 cursor-default p-1 text-sm sm:text-base font-light text-gray-500">
                 Timezone
               </h3>
-              <p className="relative m-0 cursor-pointer p-1">
+              <p className="relative m-0 cursor-pointer p-1 text-sm sm:text-base">
                 {currentTime} (GMT-6) Mérida
               </p>
             </span>
           </div>
-          <div className="flex items-end gap-2">
-            <span className="flex flex-col gap-3">
-              <h3 className="m-0 cursor-default text-base font-light text-gray-500">
+          <div className="flex flex-col sm:flex-row items-start sm:items-end gap-4 sm:gap-2">
+            <span className="flex flex-col gap-2 sm:gap-3">
+              <h3 className="m-0 cursor-default text-sm sm:text-base font-light text-gray-500">
                 Redes Sociales
               </h3>
               <TooltipProvider>
@@ -217,10 +219,10 @@ export default function ContactInfo() {
                       href="https://github.com/mikespinosa"
                       className="flex items-center gap-1 group transition-all duration-300"
                     >
-                      <FaGithub size={24} className="text-white group-hover:text-[#6e7681] transition-colors duration-300" />
+                      <FaGithub size={20} className="sm:w-6 sm:h-6 text-white group-hover:text-[#6e7681] transition-colors duration-300" />
                       <div className="flex items-center">
-                        <span className="mr-2 transition-colors duration-300 group-hover:text-[#6e7681]">GitHub</span>
-                        <span className="text-[#6e7681] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        <span className="mr-1 sm:mr-2 text-sm sm:text-base transition-colors duration-300 group-hover:text-[#6e7681]">GitHub</span>
+                        <span className="text-[#6e7681] opacity-0 transition-opacity duration-300 group-hover:opacity-100 text-sm sm:text-base">
                           @mikesspinosa
                         </span>
                       </div>
@@ -239,10 +241,10 @@ export default function ContactInfo() {
                       href="https://www.linkedin.com/in/miguel-angel-espinosa-b24992291/"
                       className="flex items-center gap-1 group transition-all duration-300"
                     >
-                      <FaLinkedin size={24} className="text-white group-hover:text-[#0077b5] transition-colors duration-300" />
+                      <FaLinkedin size={20} className="sm:w-6 sm:h-6 text-white group-hover:text-[#0077b5] transition-colors duration-300" />
                       <div className="flex items-center">
-                        <span className="mr-2 transition-colors duration-300 group-hover:text-[#0077b5]">LinkedIn</span>
-                        <span className="text-[#0077b5] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        <span className="mr-1 sm:mr-2 text-sm sm:text-base transition-colors duration-300 group-hover:text-[#0077b5]">LinkedIn</span>
+                        <span className="text-[#0077b5] opacity-0 transition-opacity duration-300 group-hover:opacity-100 text-sm sm:text-base">
                           Miguel Angel Espinosa
                         </span>
                       </div>
@@ -261,10 +263,10 @@ export default function ContactInfo() {
                       href="https://www.tiktok.com/@mikespinosa"
                       className="flex items-center gap-1 group transition-all duration-300"
                     >
-                      <FaTiktok size={24} className="text-white group-hover:text-[#ff0050] transition-colors duration-300" />
+                      <FaTiktok size={20} className="sm:w-6 sm:h-6 text-white group-hover:text-[#ff0050] transition-colors duration-300" />
                       <div className="flex items-center">
-                        <span className="mr-2 transition-colors duration-300 group-hover:text-[#ff0050]">TikTok</span>
-                        <span className="text-[#ff0050] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        <span className="mr-1 sm:mr-2 text-sm sm:text-base transition-colors duration-300 group-hover:text-[#ff0050]">TikTok</span>
+                        <span className="text-[#ff0050] opacity-0 transition-opacity duration-300 group-hover:opacity-100 text-sm sm:text-base">
                           @mikespinosa
                         </span>
                       </div>

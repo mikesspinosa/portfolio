@@ -19,8 +19,8 @@ export default function RootTemplate({ children }: PropsWithChildren) {
     offset: ['start end', 'end start']
   });
 
-  const input = isMobile() ? 0.9 : 1.2;
-  const height = useTransform(scrollYProgress, [0, input], [50, 0]);
+  const input = isMobile() ? 0.95 : 1.0;
+  const height = useTransform(scrollYProgress, [0, input], [100, 0]);
   const [isLoading, setIsLoading] = useState(true);
   const pathname = usePathname().split('/').pop();
 

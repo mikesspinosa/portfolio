@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import { ModalContext } from '@/app/projects/modalContext';
 import { Wrench, Plus } from 'lucide-react';
 import { type HSL } from '@/lib/types';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 
 interface Props {
   index: number;
@@ -73,6 +74,8 @@ export default function ProjectLink({
   const { setModal } = useContext(ModalContext);
   const isRainbow = special === 'rainbow';
   const hslColor = hexToHsl(color);
+  const isMobile = useMediaQuery('(max-width: 1024px)');
+
   const style = hslColor
     ? ({
         '--project-h': hslColor.h,
@@ -82,10 +85,14 @@ export default function ProjectLink({
   return (
     <div
       onMouseEnter={() => {
-        setModal({ active: true, index });
+        if (!isMobile) {
+          setModal({ active: true, index });
+        }
       }}
       onMouseLeave={() => {
-        setModal({ active: false, index });
+        if (!isMobile) {
+          setModal({ active: false, index });
+        }
       }}
       className="align-center flex w-full cursor-pointer justify-between border-b border-b-gray-600
       px-5 py-10 transition-all duration-200 hover:opacity-50"
@@ -104,7 +111,7 @@ export default function ProjectLink({
           </div>
         )}
       </h2>
-      <p className="text-sm font-light transition-all duration-300 hover:translate-x-[10px]">
+      <p className="whitespace-nowrap text-sm font-light transition-all duration-300 hover:translate-x-[10px]">
         {tag}
       </p>
     </div>

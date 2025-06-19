@@ -65,7 +65,7 @@ export default function ProjectHero({
       )}
       {!isImage && (
         <Button
-          className="absolute bottom-32 right-6 z-10 rounded sm:bottom-16"
+          className="absolute bottom-32 right-6 z-10 h-8 rounded px-3 sm:bottom-16"
           onClick={toggleMute}
         >
           {isMuted ? 'Unmute' : 'Mute'}

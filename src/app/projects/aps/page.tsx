@@ -31,14 +31,16 @@ export default function APSProject() {
         isImage={false}
         title={'Amigos Para Siempre'}
       />
-      <PageScrollParallax
-        title={'Un Viaje de Amistad y Aprendizaje'}
-        body={introduction}
-        word={description}
-        staticImgs={[Picture1, Picture2, Picture3]}
-        textColor="text-[#FF5722]"
-        textOpacity={0.8}
-      />
+      <div className="hidden lg:block">
+        <PageScrollParallax
+          title={'Un Viaje de Amistad y Aprendizaje'}
+          body={introduction}
+          word={description}
+          staticImgs={[Picture1, Picture2, Picture3]}
+          textColor="text-[#FF5722]"
+          textOpacity={0.8}
+        />
+      </div>
       <div className="flex flex-col items-center justify-center gap-8 p-8">
         {researchAssets.map((asset, index) => (
           <Image

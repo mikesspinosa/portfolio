@@ -27,9 +27,9 @@ const SpotifyPlaylists: React.FC<SpotifyPlaylistsProps> = ({ playlists }) => {
       <h3 className="mb-6 text-3xl font-bold text-white text-center">
         Mis canciones más escuchadas
       </h3>
-      <div className="grid grid-cols-1 gap-4 flex-1">
+      <div className="flex flex-col gap-8 lg:grid lg:grid-cols-1 lg:gap-4 lg:flex-1">
         {mainPlaylistId && (
-          <div className="aspect-square w-full bg-white/10 rounded-lg overflow-hidden">
+          <div className="h-96 w-full overflow-hidden rounded-lg lg:h-auto lg:aspect-square">
             <iframe
               title="Mi Playlist de Spotify"
               src={`https://open.spotify.com/embed/playlist/${mainPlaylistId}?utm_source=generator&theme=0`}
@@ -42,16 +42,16 @@ const SpotifyPlaylists: React.FC<SpotifyPlaylistsProps> = ({ playlists }) => {
             />
           </div>
         )}
-        <div className="aspect-square w-full bg-white/10 rounded-lg p-6">
+        <div className="w-full rounded-lg bg-white/10 p-6 lg:aspect-square">
           {playlists.map((playlist) => (
             <a
               key={playlist.id}
               href={playlist.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center rounded-md bg-white/20 p-4 transition-all duration-300 hover:bg-white/30 h-full w-full mb-12"
+              className="mb-8 flex w-full flex-col items-center rounded-md bg-white/20 p-4 transition-all duration-300 hover:bg-white/30"
             >
-              <div className="relative aspect-square w-full max-w-md mb-8">
+              <div className="relative mb-4 w-full max-w-xs aspect-square">
                 <Image
                   src={playlist.imageUrl || '/placeholder-playlist.png'}
                   alt={`Portada de ${playlist.name}`}
@@ -61,14 +61,14 @@ const SpotifyPlaylists: React.FC<SpotifyPlaylistsProps> = ({ playlists }) => {
                   priority
                 />
               </div>
-              <div className="flex flex-col items-center w-full">
-                <h4 className="text-xl font-bold text-white mb-2">
+              <div className="flex w-full flex-col items-center text-center">
+                <h4 className="mb-2 text-xl font-bold text-white">
                   {playlist.name}
                 </h4>
               </div>
             </a>
           ))}
-          <p className="text-base text-white/90 text-center mt-20">
+          <p className="mt-4 text-center text-base text-white/90">
             Mi gusto musical refleja mi personalidad ecléctica: desde el indie alternativo de The Marías y Steve Lacy hasta el art pop de Gorillaz. Me apasiona especialmente la música que combina elementos del dream pop con ritmos electrónicos, siempre buscando sonidos que evoquen atmósferas únicas e inspiren mi proceso creativo.
           </p>
         </div>

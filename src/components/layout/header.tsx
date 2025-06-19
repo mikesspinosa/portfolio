@@ -59,22 +59,10 @@ export default function Header() {
                 style={{ objectFit: 'cover' }}
               />
             </Magnetic>
-            <div className="hidden lg:flex items-center space-x-2">
+            <div className="flex items-center space-x-2">
                 <div className="hover:rotate-[360deg]">©</div>
-                <div className="relative flex overflow-hidden">
-                  <div className="ease-custom-cubic transition-transform duration-500 group-hover:translate-x-[-100%]">
-                    diseñado por
-                  </div>
-                  <div className="ease-custom-cubic px-1 transition-transform duration-500 group-hover:translate-x-[-65px]">
+                <div className="text-base sm:text-lg">
                     Mike
-                  </div>
-
-                  <div
-                    className="ease-custom-cubic
-              translate-x-full transition-transform duration-500 group-hover:translate-x-[-65px]"
-                  >
-                    Espinosa
-                  </div>
                 </div>
             </div>
           </Link>

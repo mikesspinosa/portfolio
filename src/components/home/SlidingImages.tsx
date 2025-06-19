@@ -85,7 +85,7 @@ export default function SlidingImages({ slider1, slider2 }: Props) {
       </motion.div>
       <div className="flex w-full justify-center mt-8 md:mt-12">
         <Link href={'/projects'}>
-          <RoundedButton className="text-lg md:text-xl px-8 py-4">Ver Experiencia</RoundedButton>
+          <RoundedButton className="text-lg md:text-xl px-8 py-6">Ver trayecto</RoundedButton>
         </Link>
       </div>
     </div>

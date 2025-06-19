@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 type NavLinksProps = {
   links: { title: string; href?: string }[];
-  setIsActive: (isActive: boolean) => void;
+  setIsActive?: (isActive: boolean) => void;
 };
 
 export default function NavLinks({ links, setIsActive }: NavLinksProps) {
@@ -30,7 +30,7 @@ export default function NavLinks({ links, setIsActive }: NavLinksProps) {
               >
                 <Link
                   href={href!}
-                  onClick={() => setIsActive(false)}
+                  onClick={() => setIsActive && setIsActive(false)}
                   className="text-[46px] italic text-[#FFF9C4] no-underline hover:text-[#16db65] transition-colors duration-300"
                 >
                   {title}
