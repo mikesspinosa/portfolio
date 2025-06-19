@@ -1,9 +1,6 @@
 'use client';
 import ProjectHero from '@/app/projects/project/hero';
 import PageScrollParallax from '@/components/pageScrollParallax';
-import Picture1 from '../../../../public/images/APS/APS1.jpg';
-import Picture3 from '../../../../public/images/APS/APS3.webp';
-import Picture2 from '../../../../public/images/APS/APS4.png';
 import Image from 'next/image';
 import React from 'react';
 
@@ -23,6 +20,12 @@ export default function APSProject() {
     'que me enseñaron lecciones de vida fundamentales. Las visitas se convirtieron en espacios de ' +
     'alegría, aprendizaje mutuo y crecimiento personal. Cada experiencia fortaleció un vínculo especial que perdurará para siempre.';
 
+  const staticImgs = [
+    '/images/APS/APS1.jpg',
+    '/images/APS/APS4.png',
+    '/images/APS/APS3.webp',
+  ];
+
   return (
     <div className="bg-foreground">
       <ProjectHero
@@ -36,7 +39,7 @@ export default function APSProject() {
           title={'Un Viaje de Amistad y Aprendizaje'}
           body={introduction}
           word={description}
-          staticImgs={[Picture1, Picture2, Picture3]}
+          staticImgs={staticImgs}
           textColor="text-[#FF5722]"
           textOpacity={0.8}
         />

@@ -6,12 +6,12 @@ import TextFormatter from '@/components/util/textFormatter';
 import { clsx } from 'clsx';
 
 interface ImageProps {
-  src: StaticImageData;
+  src: string;
   y: MotionValue<number> | number;
 }
 
 interface Props {
-  staticImgs: StaticImageData[];
+  staticImgs: string[];
   word: string;
   title: string;
   body: string;
