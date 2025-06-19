@@ -59,11 +59,23 @@ export default function Header() {
                 style={{ objectFit: 'cover' }}
               />
             </Magnetic>
-            <div className="flex items-center space-x-2">
+            
+            {/* Mobile and Tablet Text */}
+            <div className="flex items-center space-x-2 lg:hidden">
                 <div className="hover:rotate-[360deg]">©</div>
                 <div className="text-base sm:text-lg">
                     Mike
                 </div>
+            </div>
+
+            {/* Desktop Text with Animation */}
+            <div className="relative hidden items-center space-x-1.5 overflow-hidden lg:flex">
+              <p className="transition-transform duration-500 ease-in-out group-hover:-translate-x-[110%]">
+                diseñado por
+              </p>
+              <div className="absolute left-0 translate-x-[150%] transition-transform duration-500 ease-in-out group-hover:translate-x-0">
+                <p>Mike Espinosa</p>
+              </div>
             </div>
           </Link>
         </div>
