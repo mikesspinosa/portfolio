@@ -48,7 +48,8 @@ export default function Header() {
         className="absolute top-0 z-20 box-border flex w-full items-center justify-between p-4 font-light text-white mix-blend-difference lg:p-8"
       >
         <div className="flex">
-          <Link href={'/'} className="group z-10 flex items-center space-x-2">
+          {/* Mobile and Tablet Logo */}
+          <Link href={'/'} className="group z-10 flex items-center space-x-2 lg:hidden">
             <Magnetic>
               <Image
                 height={32}
@@ -59,21 +60,30 @@ export default function Header() {
                 style={{ objectFit: 'cover' }}
               />
             </Magnetic>
-            
-            {/* Mobile and Tablet Text */}
-            <div className="flex items-center space-x-2 lg:hidden">
+            <div className="flex items-center space-x-2">
                 <div className="hover:rotate-[360deg]">©</div>
                 <div className="text-base sm:text-lg">
                     Mike
                 </div>
             </div>
-
-            {/* Desktop Text with Animation */}
-            <div className="relative hidden items-center space-x-1.5 overflow-hidden lg:flex">
-              <p className="transition-transform duration-500 ease-in-out group-hover:-translate-x-[110%]">
-                diseñado por
-              </p>
-              <div className="absolute left-0 translate-x-[150%] transition-transform duration-500 ease-in-out group-hover:translate-x-0">
+          </Link>
+          {/* Desktop Logo */}
+          <Link href={'/'} className="group z-10 hidden items-center space-x-2 lg:flex">
+            <Magnetic>
+              <Image
+                height={32}
+                width={32}
+                src="/images/logo.jpg"
+                alt="Mikes logo"
+                priority
+                style={{ objectFit: 'cover' }}
+              />
+            </Magnetic>
+            <div className="relative flex h-6 items-center overflow-hidden">
+              <div className="absolute whitespace-nowrap transition-transform duration-500 ease-in-out group-hover:-translate-x-full">
+                <p>© diseñado por Mike</p>
+              </div>
+              <div className="absolute translate-x-[120%] whitespace-nowrap transition-transform duration-500 ease-in-out group-hover:translate-x-0">
                 <p>Mike Espinosa</p>
               </div>
             </div>
