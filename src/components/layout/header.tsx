@@ -79,13 +79,16 @@ export default function Header() {
                 style={{ objectFit: 'cover' }}
               />
             </Magnetic>
-            <div className="relative flex h-6 items-center overflow-hidden">
-              <div className="absolute whitespace-nowrap transition-transform duration-500 ease-in-out group-hover:-translate-x-full">
-                <p>© diseñado por Mike</p>
-              </div>
-              <div className="absolute translate-x-[120%] whitespace-nowrap transition-transform duration-500 ease-in-out group-hover:translate-x-0">
-                <p>Mike Espinosa</p>
-              </div>
+            <div className="relative flex items-center overflow-hidden whitespace-nowrap">
+              {/* Texto inicial completo */}
+              <p className="transition-transform duration-500 ease-in-out group-hover:-translate-x-full inline-block">
+                © diseñado por&nbsp;Mike
+              </p>
+
+              {/* Texto final centrado */}
+              <p className="absolute inset-0 flex justify-center transition-transform duration-500 ease-in-out translate-x-full group-hover:translate-x-0">
+                Mike&nbsp;Espinosa
+              </p>
             </div>
           </Link>
         </div>

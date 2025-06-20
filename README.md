@@ -1,83 +1,72 @@
-# Portafolio de Mike
+# Portafolio Profesional de Miguel Espinosa – Desarrollador Full-Stack
 
-¡Bienvenido a mi portafolio! Este sitio muestra mi trabajo como ingeniero de software y diseñador.
+¡Bienvenido a mi portafolio! Este proyecto es más que una simple colección de mi trabajo; es una demostración de mis habilidades en desarrollo front-end, diseño de experiencia de usuario y optimización de rendimiento, construido con las tecnologías más modernas.
 
-## Tecnologías Utilizadas
+**Visita la versión en producción:** [**https://mike-espinosa-portfolio.vercel.app/**](https://mike-espinosa-portfolio.vercel.app/)
 
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- GSAP
-- Integración con API de Spotify
+---
 
-## Inicio Rápido
+## ✨ Características Destacadas
 
-Primero, ejecuta el servidor de desarrollo:
+Este portafolio ha sido diseñado y desarrollado con un enfoque en la interactividad, el rendimiento y la estética.
 
+-   **Diseño 100% Responsivo:** Experiencia de usuario fluida y adaptativa en cualquier dispositivo, desde móviles hasta pantallas de escritorio, utilizando **Tailwind CSS**.
+-   **Animaciones Avanzadas y Fluidas:** Implementación de animaciones complejas y de alto rendimiento con **GSAP (GreenSock Animation Platform)** y **Framer Motion** para crear una navegación atractiva y dinámica.
+-   **Integración con la API de Spotify:** Conexión en tiempo real para mostrar mis canciones y listas de reproducción favoritas, utilizando **Next.js API Routes** para gestionar la lógica del backend de forma segura.
+-   **Máxima Optimización de Rendimiento:**
+    -   **Carga Diferida (Lazy Loading):** Las imágenes y componentes pesados se cargan únicamente cuando son visibles para el usuario.
+    -   **Importaciones Dinámicas:** Librerías como `Particles.js` se cargan de forma asíncrona para no bloquear el renderizado inicial de la página, mejorando significativamente el *Time to Interactive*.
+    -   **Optimización de Imágenes con `next/image`:** Entrega de imágenes en formatos modernos (WebP) y con el tamaño adecuado para cada resolución, reduciendo el peso de la página.
+-   **Arquitectura Moderna con Next.js:** Construido sobre el **App Router** de Next.js, garantizando una estructura escalable, un enrutado eficiente y renderizado híbrido (SSR y SSG).
+
+---
+
+## 🛠️ Stack Tecnológico
+
+La elección de cada tecnología se basó en su capacidad para crear una aplicación web moderna, rápida y mantenible.
+
+| Tecnología                               | Propósito                                                                                              |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| **Next.js (App Router)**                  | Framework de React para producción, que permite renderizado del lado del servidor y generación estática. |
+| **React**                                 | Biblioteca para construir interfaces de usuario interactivas y componentizadas.                        |
+| **TypeScript**                            | Superset de JavaScript que añade tipado estático para un código más robusto y libre de errores.          |
+| **Tailwind CSS**                          | Framework CSS de utilidad primero para un diseño rápido y personalizado sin salir del HTML.            |
+| **GSAP & Framer Motion**                  | Librerías líderes para crear animaciones de alto rendimiento y controladas por gestos.                 |
+| **Spotify API**                           | Integración para traer datos dinámicos y personalizar la experiencia.                                  |
+| **Vercel**                                | Plataforma de despliegue optimizada para Next.js, con CI/CD integrado.                                 |
+
+---
+
+## 🚀 Cómo Empezar
+
+Para ejecutar este proyecto en tu entorno local, sigue estos pasos:
+
+### 1. Clonar el Repositorio
 ```bash
-npm run dev
-# o
-yarn dev
+git clone https://github.com/mikesspinosa/portfolio.git
+cd portfolio
 ```
 
-Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el resultado.
-
-## Características:
-
-- Rápido y eficiente
-- Optimizado para SEO
-- Fácil de actualizar y mantener
-- Compatible con dispositivos móviles
-- Diseño responsivo
-- Integración en tiempo real con Spotify
-- Animaciones interactivas
-- Soporte para modo claro/oscuro
-
-## Comenzar
-
-### Instalar dependencias
-
-Navega a la carpeta del proyecto e instala sus dependencias:
-
+### 2. Instalar Dependencias
 ```bash
 npm install
 ```
 
-```bash
-yarn install
+### 3. Configurar Variables de Entorno
+Crea un archivo `.env.local` en la raíz del proyecto y añade tus credenciales de la API de Spotify. Puedes obtenerlas desde el [Dashboard de Desarrolladores de Spotify](https://developer.spotify.com/dashboard/).
+
+```env
+SPOTIFY_CLIENT_ID=TU_CLIENT_ID
+SPOTIFY_CLIENT_SECRET=TU_CLIENT_SECRET
+SPOTIFY_REFRESH_TOKEN=TU_REFRESH_TOKEN
 ```
 
-### Iniciar
-
-Una vez completada la instalación, puedes ejecutar la aplicación:
-
+### 4. Ejecutar el Servidor de Desarrollo
 ```bash
 npm run dev
 ```
 
-```bash
-yarn run dev
-```
-
-Esto ejecuta la aplicación en modo desarrollo. Abre http://localhost:3000 para verla en el navegador.
-
-### Compilar
-
-```bash
-npm run build
-```
-
-```bash
-yarn build
-```
-
-Esto compila la aplicación para producción en la carpeta `./dist/`.
-
-### Mi Sitio Web Personal
-
-Este es mi portafolio personal, que muestra mis habilidades y experiencia en desarrollo de software, con énfasis en tecnologías web y soluciones creativas. Construido con Next.js y desplegado en Vercel, cuenta con integración en tiempo real con Spotify y animaciones interactivas.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el resultado.
 
 ## Licencia
 

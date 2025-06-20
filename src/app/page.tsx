@@ -3,10 +3,18 @@ import React, { useEffect, useRef, useState } from 'react';
 import { ArrowDownRight } from 'lucide-react';
 import SlidingImages from '@/components/home/SlidingImages';
 import ContrastCursor from '@/components/animations/cursor/contrastCursor';
-import { LetterCollision } from '@/components/animations/textAnimations/scrollText';
+import dynamic from 'next/dynamic';
 import Magnetic from '@/components/animations/magnetic';
 import Hero from '@/components/home/hero';
 import Description from '@/components/home/Description/description';
+
+const LetterCollision = dynamic(
+  () =>
+    import('@/components/animations/textAnimations/scrollText').then(
+      (mod) => mod.LetterCollision
+    ),
+  { ssr: false }
+);
 
 const slider1 = [
   {

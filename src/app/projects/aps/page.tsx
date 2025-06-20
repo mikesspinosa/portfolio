@@ -52,8 +52,8 @@ export default function APSProject() {
             alt="Momentos compartidos"
             width={700}
             height={500}
-            quality={100}
-            layout="responsive"
+            quality={80}
+            className="h-auto w-full max-w-[700px] object-cover"
           />
         ))}
       </div>

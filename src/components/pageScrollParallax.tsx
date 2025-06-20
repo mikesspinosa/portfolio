@@ -89,9 +89,11 @@ export default function PageScrollParallax({
             <Image
               src={src}
               placeholder="blur"
-              layout="responsive"
+              width={1920}
+              height={1080}
+              quality={80}
               alt="image"
-              className="object-cover"
+              className="h-auto w-full object-cover"
             />
           </motion.div>
         ))}

@@ -1,6 +1,11 @@
 import React from 'react';
 import CertificateTimeline from './CertificateTimeline';
-import Particles from '../animations/Particles';
+import dynamic from 'next/dynamic';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
+
+const Particles = dynamic(() => import('../animations/Particles'), {
+  ssr: false,
+});
 
 export default function Hero() {
   return (

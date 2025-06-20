@@ -1,3 +1,5 @@
+import withBundleAnalyzer from '@next/bundle-analyzer';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -7,7 +9,7 @@ const nextConfig = {
         hostname: '**',
       },
     ],
-    domains: ['images.unsplash.com'],
+    domains: ['images.unsplash.com', 'i.scdn.co'],
     unoptimized: true,
   },
   typescript: {
@@ -16,6 +18,13 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: false,
   },
+  experimental: {
+    esmExternals: 'loose'
+  }
 };
 
-export default nextConfig; 
+const analyzer = withBundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true'
+});
+
+export default analyzer(nextConfig); 
