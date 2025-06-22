@@ -1,17 +1,17 @@
 'use client';
 import { useRef } from 'react';
-import Image, { StaticImageData } from 'next/image';
+import Image, { type StaticImageData } from 'next/image';
 import { motion, MotionValue, useScroll, useTransform } from 'framer-motion';
 import TextFormatter from '@/components/util/textFormatter';
 import { clsx } from 'clsx';
 
 interface ImageProps {
-  src: string;
+  src: StaticImageData;
   y: MotionValue<number> | number;
 }
 
 interface Props {
-  staticImgs: string[];
+  staticImgs: StaticImageData[];
   word: string;
   title: string;
   body: string;

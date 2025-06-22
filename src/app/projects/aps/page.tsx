@@ -4,11 +4,14 @@ import PageScrollParallax from '@/components/pageScrollParallax';
 import Image from 'next/image';
 import React from 'react';
 
+import Img1 from '../../../../public/images/aps/APS1.jpg';
+import Img2 from '../../../../public/images/aps/APS2.png';
+import Img3 from '../../../../public/images/aps/APS3.png';
+import Img4 from '../../../../public/images/aps/APS4.png';
+import Img5 from '../../../../public/images/aps/APS3.webp';
+
 export default function APSProject() {
-  const researchAssets = [
-    '/images/aps/APS3.png',
-    '/images/aps/APS2.png'
-  ];
+  const researchAssets = [Img3, Img2];
   const introduction =
     'Una experiencia que transforma vidas y construye puentes entre personas. ' +
     'A través de visitas y momentos compartidos, se forman conexiones genuinas ' +
@@ -20,11 +23,7 @@ export default function APSProject() {
     'que me enseñaron lecciones de vida fundamentales. Las visitas se convirtieron en espacios de ' +
     'alegría, aprendizaje mutuo y crecimiento personal. Cada experiencia fortaleció un vínculo especial que perdurará para siempre.';
 
-  const staticImgs = [
-    '/images/aps/APS1.jpg',
-    '/images/aps/APS4.png',
-    '/images/aps/APS3.webp',
-  ];
+  const staticImgs = [Img1, Img4, Img5];
 
   return (
     <div className="bg-foreground">
