@@ -180,7 +180,7 @@ export default function ContactInfo() {
         <div className="mt-6 sm:mt-8 md:mt-20 flex flex-col justify-between p-4 sm:p-5 space-y-8 md:space-y-12 sm:flex-row sm:items-end sm:space-y-0 sm:mx-[100px]">
           <div className="flex flex-col gap-8">
             <p className="text-sm sm:text-base max-w-full sm:max-w-md leading-relaxed">
-              Ingeniero en Tecnologías de la Información y Negocios Digitales | 
+              Ingeniero en Tecnologías de la Información y Negocios Digitales |
               <Link href="https://www.tiktok.com/@mikespinosa" className="group/creator inline-flex items-center mx-1 sm:mx-2">
                 <span className="relative cursor-pointer transition-all duration-300 group-hover/creator:text-[#ff0050] group-hover/creator:scale-110">
                   Creador de contenido
@@ -191,26 +191,26 @@ export default function ContactInfo() {
             </p>
             <div className="flex flex-row items-start gap-4 sm:gap-2">
               <span className="flex flex-col gap-2 sm:gap-3">
-                <h3 className="m-0 cursor-default p-1 text-sm sm:text-base font-light text-gray-500">
+                <h3 className="m-0 cursor-default text-sm sm:text-base font-light text-gray-500">
                   Versión
                 </h3>
-                <p className="relative m-0 cursor-pointer p-1 text-sm sm:text-base">2025.6.4</p>
+                <p className="relative m-0 cursor-pointer text-sm sm:text-base">2025.6.4</p>
               </span>
               <span className="flex flex-col gap-2 sm:gap-3">
-                <h3 className="m-0 cursor-default p-1 text-sm sm:text-base font-light text-gray-500">
+                <h3 className="m-0 cursor-default text-sm sm:text-base font-light text-gray-500">
                   Timezone
                 </h3>
-                <p className="relative m-0 cursor-pointer p-1 text-sm sm:text-base">
+                <p className="relative m-0 cursor-pointer text-sm sm:text-base">
                   {currentTime} (GMT-6) Mérida
                 </p>
               </span>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row items-start sm:items-end gap-4 sm:gap-2">
-            <span className="flex flex-col gap-2 sm:gap-3">
-              <h3 className="m-0 cursor-default text-sm sm:text-base font-light text-gray-500">
-                Redes Sociales
-              </h3>
+          <div className="flex flex-col sm:items-start gap-4 sm:gap-2">
+            <h3 className="m-0 cursor-default text-sm sm:text-base font-light text-gray-500">
+              Redes Sociales
+            </h3>
+            <div className="flex flex-col gap-2 sm:gap-3">
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger>
@@ -276,7 +276,7 @@ export default function ContactInfo() {
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
-            </span>
+            </div>
           </div>
         </div>
       </div>
