@@ -45,7 +45,7 @@ const slider2 = [
   },
   {
     color: 'white',
-    src: 'APS/APS3.png'
+    src: 'APS/APS3.webp'
   },
   {
     color: 'white',
