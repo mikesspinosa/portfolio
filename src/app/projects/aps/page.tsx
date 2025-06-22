@@ -6,8 +6,8 @@ import React from 'react';
 
 export default function APSProject() {
   const researchAssets = [
-    '/images/aps/APS3.png',
-    '/images/aps/APS2.png'
+    '/images/APS/APS3.png',
+    '/images/APS/APS2.png'
   ];
   const introduction =
     'Una experiencia que transforma vidas y construye puentes entre personas. ' +
@@ -16,8 +16,9 @@ export default function APSProject() {
 
   const description = 'Construyendo Lazos que Perduran';
   const myRole =
-    'Como voluntario, tuve el privilegio de compartir momentos invaluables ' +
-    'que me enseñaron lecciones de vida fundamentales. Las visitas se convirtieron en espacios de ' +
+    'Mi rol fue guiar y acompañar a jóvenes en su desarrollo personal y espiritual, creando un entorno de confianza ' +
+    'y apoyo. Organicé actividades que fomentaron la amistad, el trabajo en equipo y el servicio a la comunidad. ' +
+    'Fue una experiencia enriquecedora, llena de ' +
     'alegría, aprendizaje mutuo y crecimiento personal. Cada experiencia fortaleció un vínculo especial que perdurará para siempre.';
 
   const staticImgs = [
