@@ -45,7 +45,7 @@ export default function APSProject() {
       </div>
       <div className="flex flex-col items-center justify-center gap-8 p-8">
         {researchAssets.map((asset, index) => (
-          <div key={index} className="relative h-[50vh] w-full overflow-hidden rounded-lg">
+          <div key={index} className="relative w-full aspect-[4/3] overflow-hidden rounded-lg">
             <Image
               src={asset}
               alt="Momentos compartidos"
