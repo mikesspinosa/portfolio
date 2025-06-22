@@ -10,7 +10,7 @@ import { ModalContext } from './modalContext';
 const projects = [
   {
     title: 'APS',
-    src: 'APS/APS1.jpg',
+    src: 'aps/APS1.jpg',
     description:
       'A video/audio game controller to make digital entertainment more approachable to those with visual impairments.',
     href: '/projects/aps',

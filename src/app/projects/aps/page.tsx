@@ -6,8 +6,8 @@ import React from 'react';
 
 export default function APSProject() {
   const researchAssets = [
-    '/images/APS/APS3.png',
-    '/images/APS/APS2.png'
+    '/images/aps/APS3.png',
+    '/images/aps/APS2.png'
   ];
   const introduction =
     'Una experiencia que transforma vidas y construye puentes entre personas. ' +
@@ -21,9 +21,9 @@ export default function APSProject() {
     'alegría, aprendizaje mutuo y crecimiento personal. Cada experiencia fortaleció un vínculo especial que perdurará para siempre.';
 
   const staticImgs = [
-    '/images/APS/APS1.jpg',
-    '/images/APS/APS4.png',
-    '/images/APS/APS3.webp',
+    '/images/aps/APS1.jpg',
+    '/images/aps/APS4.png',
+    '/images/aps/APS3.webp',
   ];
 
   return (

@@ -96,11 +96,17 @@ export default function Home() {
           </div>
         </Magnetic>
       )}
-      <div id="hero" ref={heroRef}>
-        <Hero />
+      <div className="snap-y snap-mandatory h-screen w-screen overflow-y-scroll overflow-x-hidden">
+        <div id="hero" ref={heroRef} className="snap-start">
+          <Hero />
+        </div>
+        <div className="snap-start">
+          <Description />
+        </div>
+        <div className="snap-start">
+          <SlidingImages slider1={slider1} slider2={slider2} />
+        </div>
       </div>
-      <Description />
-      <SlidingImages slider1={slider1} slider2={slider2} />
       <ContrastCursor isActive={false} text={'Go to project'} />
     </div>
   );
