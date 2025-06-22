@@ -45,10 +45,10 @@ export default function ContactInfo() {
   const email = 'mike.espinosa1203@gmail.com';
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ['start end', 'end end']
+    offset: ['start end', 'end start']
   });
   const x = useTransform(scrollYProgress, [0, 1], [0, 100]);
-  const y = useTransform(scrollYProgress, [0, 1], [-500, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], [-200, 0]);
   const animatedUnderlineStyle =
     'relative after:absolute after:left-1/2 after:mt-0.5 after:block after:h-px after:w-0' +
     ' after:-translate-x-1/2 after:transform after:bg-white after:duration-200 ' +
