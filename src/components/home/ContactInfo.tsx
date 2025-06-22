@@ -15,7 +15,7 @@ import { useMediaQuery } from '@/hooks/useMediaQuery';
 const contact = [
     {
         icon: <FaGithub />,
-        link: 'https://github.com/mikespinosa',
+        link: 'https://github.com/mikesspinosa',
         ariaLabel: 'GitHub de Mike Espinosa'
     },
     {
@@ -77,7 +77,7 @@ export default function ContactInfo() {
 
   const handleEmailClick = () => {
     navigator.clipboard.writeText(email);
-    toast.success('Correo copiado al portapapeles');
+    toast.success('Abriendo cliente de correo...');
   };
 
   useEffect(() => {
@@ -154,12 +154,9 @@ export default function ContactInfo() {
         </div>
         <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row gap-3 sm:gap-5 px-4 sm:px-0 sm:mx-[100px]">
           <RoundedButton className="w-full sm:w-auto">
-            <a 
+            <a
               href={`mailto:${email}`}
-              onClick={(e) => {
-                e.preventDefault();
-                handleEmailClick();
-              }}
+              onClick={() => toast.success('Abriendo cliente de correo...')}
               className="cursor-pointer flex items-center justify-center sm:justify-start gap-2 group text-sm sm:text-base"
             >
               <FaEnvelope className="text-lg sm:text-xl group-hover:scale-110 transition-transform duration-300" />
@@ -218,7 +215,7 @@ export default function ContactInfo() {
                 <Tooltip>
                   <TooltipTrigger>
                     <Link
-                      href="https://github.com/mikespinosa"
+                      href="https://github.com/mikesspinosa"
                       className="flex items-center gap-1 group transition-all duration-300"
                     >
                       <FaGithub size={20} className="sm:w-6 sm:h-6 text-white group-hover:text-[#6e7681] transition-colors duration-300" />

@@ -145,13 +145,13 @@ export default function About() {
                   <p className="text-2xl font-semibold rainbow-text">
                     Ingeniero en Tecnologías de la Información y Negocios Digitales con pasión por la innovación y la tecnología de vanguardia.
                   </p>
-                  <p className="text-lg sm:text-xl">
+                  <p className="text-base sm:text-lg lg:text-xl">
                     Soy <strong className="interactive-word inline-block hover:scale-105 hover:text-[#FF6B6B] hover:skew-y-2 transition-all duration-300 ease-in-out cursor-pointer">Mike Espinosa</strong>, estudiante de Ingeniería en Tecnologías de la Información y Negocios Digitales en la Universidad Anáhuac Mayab, especializado en integrar soluciones técnicas con estrategias de negocio digital. Mi trayectoria combina emprendimiento temprano colaborando con marcas internacionales desde los 16 años con una visión global adquirida en proyectos transfronterizos. Como podrás notar por el diseño de mi portafolio, tengo cierta afinidad por el color <strong className="interactive-word inline-block hover:animate-pulse hover:text-[#1DB954] transition-all duration-300 ease-in-out cursor-pointer relative group">verde<span className="absolute -top-1 -right-1 w-2 h-2 bg-[#1DB954] rounded-full opacity-0 group-hover:opacity-100 animate-ping"></span></strong> y la tecnología que impacta positivamente.
                   </p>
-                  <p className="text-lg sm:text-xl">
+                  <p className="text-base sm:text-lg lg:text-xl">
                     Mi expertise técnica incluye dominio avanzado de <strong className="interactive-word inline-block hover:scale-105 hover:text-[#4ECDC4] hover:tracking-wider transition-all duration-300 ease-in-out cursor-pointer">Java, Python, C++, C# y SQL</strong>, complementado con frameworks como <strong className="interactive-word inline-block hover:scale-105 hover:text-[#FFD93D] hover:blur-[0.5px] hover:brightness-110 transition-all duration-300 ease-in-out cursor-pointer">React, Node.js y Docker</strong>. Actualmente trabajo como freelancer desarrollando aplicaciones web full-stack para clientes internacionales, priorizando arquitecturas escalables y experiencias de usuario intuitivas. Mi metodología integra prácticas ágiles con documentación precisa para garantizar calidad y mantenibilidad.
                   </p>
-                  <p className="text-lg sm:text-xl">
+                  <p className="text-base sm:text-lg lg:text-xl">
                     La <strong className="interactive-word inline-block relative hover:scale-105 group transition-all duration-500 ease-in-out cursor-pointer">
                       <span className="relative z-10 text-black transition-colors duration-300 group-hover:text-[#ff4757] group-hover:animate-pulse">resiliencia</span>
                       <span className="absolute inset-0 bg-gradient-to-r from-[#ff4757]/20 to-transparent rounded-lg transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
@@ -186,13 +186,13 @@ export default function About() {
                       &ldquo;los límites existen para ser reprogramados&rdquo;
                     </span>.
                   </p>
-                  <p className="text-lg sm:text-xl">
+                  <p className="text-base sm:text-lg lg:text-xl">
                     A corto plazo, enfoco mis esfuerzos en mi intercambio académico en la <a href="https://www.ufv.es/" target="_blank" rel="noopener noreferrer"><strong className="interactive-word group inline-block relative hover:text-[#6C5CE7] transition-all duration-300 ease-in-out cursor-pointer after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#6C5CE7] after:transition-transform after:duration-300 hover:after:scale-x-100">Universidad Francisco de Vitoria (UFV)</strong></a> en Madrid, donde profundizaré en inteligencia artificial y ciberseguridad. Paralelamente, busco proyectos freelance desafiantes que amplíen mi experiencia en sistemas distribuidos. A largo plazo, aspiro a liderar iniciativas tecnológicas con impacto social significativo, especialmente en economías emergentes.
                   </p>
-                  <p className="text-lg sm:text-xl">
+                  <p className="text-base sm:text-lg lg:text-xl">
                     Mis <strong className="interactive-word inline-block relative hover:text-[#00B894] transition-all duration-300 ease-in-out cursor-pointer hover:[text-shadow:_2px_2px_2px_rgb(0_0_0_/_20%)]">soft skills</strong> incluyen liderazgo adaptativo, resolución creativa de problemas, comunicación efectiva, inteligencia emocional, trabajo colaborativo, gestión del tiempo y resiliencia. Estas habilidades se nutren de hobbies como edición profesional de video (Adobe Premiere, DaVinci Resolve), diseño de experiencias interactivas y análisis de narrativas digitales. Estas competencias me permiten crear soluciones técnicas con perspectiva humana.
                   </p>
-                  <p className="text-lg sm:text-xl">
+                  <p className="text-base sm:text-lg lg:text-xl">
                     Mi <strong className="interactive-word inline-block hover:scale-105 hover:text-[#E84393] hover:rotate-2 transition-all duration-300 ease-in-out cursor-pointer">trayectoria</strong> refleja una combinación única de habilidades técnicas y perspectiva humana. Como estudiante y desarrollador freelance, me impulsa la pasión por crear tecnología que no solo sea técnicamente sólida, sino que también genere un impacto positivo. Mi experiencia con desafíos personales ha forjado una mentalidad resiliente y creativa, mientras que mi formación técnica y experiencia práctica me permiten transformar ideas innovadoras en soluciones tangibles. Estoy comprometido con el <strong className="interactive-word inline-block hover:scale-105 hover:text-[#6C5CE7] hover:blur-[0.5px] transition-all duration-300 ease-in-out cursor-pointer">aprendizaje continuo</strong> y la aplicación de la tecnología para crear un futuro más inclusivo y sostenible.
                   </p>
                 </div>
