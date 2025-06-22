@@ -82,13 +82,8 @@ export default function Home() {
   };
 
   return (
-    <div
-      ref={scrollContainerRef}
-      className="h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth"
-    >
-      <div className="snap-start">
-        <LetterCollision />
-      </div>
+    <div ref={scrollContainerRef}>
+      <LetterCollision />
       {showScrollButton && (
         <Magnetic>
           <div
@@ -101,15 +96,11 @@ export default function Home() {
           </div>
         </Magnetic>
       )}
-      <div id="hero" ref={heroRef} className="snap-start">
+      <div id="hero" ref={heroRef}>
         <Hero />
       </div>
-      <div className="snap-start">
-        <Description />
-      </div>
-      <div className="snap-start">
-        <SlidingImages slider1={slider1} slider2={slider2} />
-      </div>
+      <Description />
+      <SlidingImages slider1={slider1} slider2={slider2} />
       <ContrastCursor isActive={false} text={'Go to project'} />
     </div>
   );
