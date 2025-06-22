@@ -66,7 +66,7 @@ export function LetterCollision() {
 
   return (
     <div ref={containerRef} className="ml-8 scroll-smooth">
-      <div className="-mt-28 mb-36 flex h-screen flex-col justify-end lg:mb-24">
+      <div className="-mt-28 mb-36 flex h-screen flex-col justify-center md:justify-end lg:mb-24">
         <div className="flex flex-wrap p-0">
           <LetterDisplay word={mi} />
           <div className="w-2 xs:w-4 sm:w-10"></div>
