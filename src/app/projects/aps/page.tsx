@@ -45,15 +45,16 @@ export default function APSProject() {
       </div>
       <div className="flex flex-col items-center justify-center gap-8 p-8">
         {researchAssets.map((asset, index) => (
-          <Image
-            key={index}
-            src={asset}
-            alt="Momentos compartidos"
-            width={700}
-            height={500}
-            quality={80}
-            className="h-auto w-full max-w-[700px] object-cover"
-          />
+          <div key={index} className="relative h-[50vh] w-full overflow-hidden rounded-lg">
+            <Image
+              src={asset}
+              alt="Momentos compartidos"
+              fill
+              quality={80}
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 80vw"
+            />
+          </div>
         ))}
       </div>
     </div>

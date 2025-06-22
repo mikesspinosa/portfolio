@@ -58,6 +58,7 @@ export default function ProjectHero({
           allow="accelerometer; autoplay; modestbranding; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           frameBorder="0"
+          loading="lazy"
         ></iframe>
       )}
       {!isImage && (
