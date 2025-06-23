@@ -49,7 +49,7 @@ export default function Contact() {
           <div className="flex justify-center uppercase">
             <p className="m-0">Negocios Digitales</p>
           </div>
-          <Link href={'https://www.linkedin.com/in/miguel-angel-espinosa-de-los-monteros-283bb930b/'}>
+          <Link href={'https://www.linkedin.com/in/miguel-angel-espinosa-de-los-monteros-283bb930b'}>
             <TextDisperse setBackground={setBackground}>
               <p>→LinkedIn</p>
             </TextDisperse>

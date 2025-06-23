@@ -11,6 +11,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
+import { Button } from '@/components/ui/button';
 
 const contact = [
     {
@@ -169,10 +170,10 @@ export default function ContactInfo() {
               target="_blank"
               rel="noopener noreferrer"
               className="cursor-pointer flex items-center justify-center sm:justify-start gap-2 group text-sm sm:text-base"
-              onClick={() => toast.success('Abriendo CV Español...')}
+              onClick={() => toast.success('Abriendo CV...')}
             >
               <FaFileLines className="text-lg sm:text-xl group-hover:scale-110 transition-transform duration-300" />
-              <span>Ver CV (ES)</span>
+              <span>CV Español</span>
             </a>
           </RoundedButton>
           <RoundedButton className="w-full sm:w-auto">
@@ -181,10 +182,10 @@ export default function ContactInfo() {
               target="_blank"
               rel="noopener noreferrer"
               className="cursor-pointer flex items-center justify-center sm:justify-start gap-2 group text-sm sm:text-base"
-              onClick={() => toast.success('Opening English CV...')}
+              onClick={() => toast.success('Abriendo CV...')}
             >
               <FaFileLines className="text-lg sm:text-xl group-hover:scale-110 transition-transform duration-300" />
-              <span>View CV (EN)</span>
+              <span>CV Inglés</span>
             </a>
           </RoundedButton>
         </div>
@@ -249,7 +250,7 @@ export default function ContactInfo() {
                 <Tooltip>
                   <TooltipTrigger>
                     <Link
-                      href="https://www.linkedin.com/in/miguel-angel-espinosa-b24992291/"
+                      href="https://www.linkedin.com/in/miguel-angel-espinosa-de-los-monteros-283bb930b"
                       className="flex items-center gap-1 group transition-all duration-300"
                     >
                       <FaLinkedin size={20} className="sm:w-6 sm:h-6 text-white group-hover:text-[#0077b5] transition-colors duration-300" />
