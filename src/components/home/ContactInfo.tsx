@@ -154,40 +154,46 @@ export default function ContactInfo() {
           </motion.div>
         </div>
         <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row gap-3 sm:gap-5 px-4 sm:px-0 sm:mx-[100px]">
-          <RoundedButton className="w-full sm:w-auto">
-            <a 
-              href={`mailto:${email}`}
-              onClick={() => toast.success('Abriendo cliente de correo...')}
-              className="cursor-pointer flex items-center justify-center sm:justify-start gap-2 group text-sm sm:text-base"
-            >
-              <FaEnvelope className="text-lg sm:text-xl group-hover:scale-110 transition-transform duration-300" />
-              <span className="truncate">{email}</span>
-            </a>
-          </RoundedButton>
-          <RoundedButton className="w-full sm:w-auto">
-            <a 
-              href="/documents/CVEspanol.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cursor-pointer flex items-center justify-center sm:justify-start gap-2 group text-sm sm:text-base"
-              onClick={() => toast.success('Abriendo CV...')}
-            >
-              <FaFileLines className="text-lg sm:text-xl group-hover:scale-110 transition-transform duration-300" />
-              <span>CV Español</span>
-            </a>
-          </RoundedButton>
-          <RoundedButton className="w-full sm:w-auto">
-            <a 
-              href="/documents/CVEnglish.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cursor-pointer flex items-center justify-center sm:justify-start gap-2 group text-sm sm:text-base"
-              onClick={() => toast.success('Abriendo CV...')}
-            >
-              <FaFileLines className="text-lg sm:text-xl group-hover:scale-110 transition-transform duration-300" />
-              <span>CV Inglés</span>
-            </a>
-          </RoundedButton>
+          <a 
+            href={`mailto:${email}`}
+            onClick={() => toast.success('Abriendo cliente de correo...')}
+            className="w-full sm:w-auto"
+          >
+            <RoundedButton>
+              <div className="cursor-pointer flex items-center justify-center sm:justify-start gap-2 group text-sm sm:text-base">
+                <FaEnvelope className="text-lg sm:text-xl group-hover:scale-110 transition-transform duration-300" />
+                <span className="truncate">{email}</span>
+              </div>
+            </RoundedButton>
+          </a>
+          <a 
+            href="/documents/CVEspanol.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => toast.success('Abriendo CV...')}
+            className="w-full sm:w-auto"
+          >
+            <RoundedButton>
+              <div className="cursor-pointer flex items-center justify-center sm:justify-start gap-2 group text-sm sm:text-base">
+                <FaFileLines className="text-lg sm:text-xl group-hover:scale-110 transition-transform duration-300" />
+                <span>CV Español</span>
+              </div>
+            </RoundedButton>
+          </a>
+          <a 
+            href="/documents/CVEnglish.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => toast.success('Abriendo CV...')}
+            className="w-full sm:w-auto"
+          >
+            <RoundedButton>
+              <div className="cursor-pointer flex items-center justify-center sm:justify-start gap-2 group text-sm sm:text-base">
+                <FaFileLines className="text-lg sm:text-xl group-hover:scale-110 transition-transform duration-300" />
+                <span>CV Inglés</span>
+              </div>
+            </RoundedButton>
+          </a>
         </div>
 
         <div className="mt-6 sm:mt-8 md:mt-20 flex flex-col justify-between p-4 sm:p-5 space-y-8 md:space-y-12 sm:flex-row sm:items-end sm:space-y-0 sm:mx-[100px]">
