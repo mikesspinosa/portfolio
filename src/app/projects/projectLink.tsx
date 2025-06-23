@@ -86,12 +86,12 @@ export default function ProjectLink({
     <div
       onMouseEnter={() => {
         if (!isMobile) {
-          setModal({ active: true, index });
+        setModal({ active: true, index });
         }
       }}
       onMouseLeave={() => {
         if (!isMobile) {
-          setModal({ active: false, index });
+        setModal({ active: false, index });
         }
       }}
       className="align-center flex w-full cursor-pointer justify-between border-b border-b-gray-600

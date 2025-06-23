@@ -60,7 +60,7 @@ export default function Description() {
             >
               Ingeniero en Tecnologías de la Información y Negocios Digitales | Creador de contenido | AI | Tecnología con impacto positivo, esa es mi misión.
             </motion.p>
-            <div data-scroll-speed={0.1} className="relative mt-8 flex w-full justify-center">
+            <div data-scroll-speed={0.1} className="relative mt-8 flex justify-center md:justify-start">
               <Link href={'/about'}>
                 <RoundedButton className="flex h-[120px] w-[120px] sm:h-[150px] sm:w-[150px] cursor-pointer items-center justify-center rounded-full bg-destructive text-white text-xl">
                   Sobre mí

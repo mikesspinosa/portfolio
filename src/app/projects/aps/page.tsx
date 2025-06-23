@@ -34,26 +34,26 @@ export default function APSProject() {
         title={'Amigos Para Siempre'}
       />
       <div className="hidden lg:block">
-        <PageScrollParallax
-          title={'Un Viaje de Amistad y Aprendizaje'}
-          body={introduction}
-          word={description}
+      <PageScrollParallax
+        title={'Un Viaje de Amistad y Aprendizaje'}
+        body={introduction}
+        word={description}
           staticImgs={staticImgs}
-          textColor="text-[#FF5722]"
-          textOpacity={0.8}
-        />
+        textColor="text-[#FF5722]"
+        textOpacity={0.8}
+      />
       </div>
       <div className="flex flex-col items-center justify-center gap-8 p-8">
         {researchAssets.map((asset, index) => (
           <div key={index} className="relative w-full aspect-[4/3] overflow-hidden rounded-lg">
-            <Image
-              src={asset}
-              alt="Momentos compartidos"
+          <Image
+            src={asset}
+            alt="Momentos compartidos"
               fill
               quality={80}
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 80vw"
-            />
+          />
           </div>
         ))}
       </div>
