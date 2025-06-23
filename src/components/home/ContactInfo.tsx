@@ -165,14 +165,26 @@ export default function ContactInfo() {
           </RoundedButton>
           <RoundedButton className="w-full sm:w-auto">
             <a 
-              href="/documents/CV-Miguel-Espinosa.pdf"
+              href="/documents/CVEspanol.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="cursor-pointer flex items-center justify-center sm:justify-start gap-2 group text-sm sm:text-base"
-              onClick={() => toast.success('Abriendo CV...')}
+              onClick={() => toast.success('Abriendo CV Español...')}
             >
               <FaFileLines className="text-lg sm:text-xl group-hover:scale-110 transition-transform duration-300" />
-              <span>Ver CV</span>
+              <span>Ver CV (ES)</span>
+            </a>
+          </RoundedButton>
+          <RoundedButton className="w-full sm:w-auto">
+            <a 
+              href="/documents/CVEnglish.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer flex items-center justify-center sm:justify-start gap-2 group text-sm sm:text-base"
+              onClick={() => toast.success('Opening English CV...')}
+            >
+              <FaFileLines className="text-lg sm:text-xl group-hover:scale-110 transition-transform duration-300" />
+              <span>View CV (EN)</span>
             </a>
           </RoundedButton>
         </div>
